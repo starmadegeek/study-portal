@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style data-rc-order="prepend" rc-util-key="@ant-design-icons">
+   .anticon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  </style>
+  <style data-css-hash="1hz4ua6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   a:where(.css-133v4sd){color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}a:where(.css-133v4sd):hover{color:#69b1ff;}a:where(.css-133v4sd):active{color:#0958d9;}a:where(.css-133v4sd):active,a:where(.css-133v4sd):hover{text-decoration:none;outline:0;}a:where(.css-133v4sd):focus{text-decoration:none;outline:0;}a:where(.css-133v4sd)[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd) a{color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}:where(.css-133v4sd) a:hover{color:#69b1ff;}:where(.css-133v4sd) a:active{color:#0958d9;}:where(.css-133v4sd) a:active,:where(.css-133v4sd) a:hover{text-decoration:none;outline:0;}:where(.css-133v4sd) a:focus{text-decoration:none;outline:0;}:where(.css-133v4sd) a[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).anticon >*{line-height:1;}:where(.css-133v4sd).anticon svg{display:inline-block;}:where(.css-133v4sd).anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <style data-css-hash="9jgas6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-dropdown{position:absolute;top:-9999px;left:-9999px;z-index:1050;display:block;}:where(.css-133v4sd).ant-dropdown::before{position:absolute;inset-block:-4px;z-index:-9999;opacity:0.0001;content:"";}:where(.css-133v4sd).ant-dropdown-menu-vertical{max-height:100vh;overflow-y:auto;}:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.anticon-down,:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.ant-btn-icon>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .ant-btn>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .anticon-down::before{transition:transform 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap-open .anticon-down::before{transform:rotate(180deg);}:where(.css-133v4sd).ant-dropdown-hidden,:where(.css-133v4sd).ant-dropdown-menu-hidden,:where(.css-133v4sd).ant-dropdown-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomRight,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topRight,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpOut;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownOut;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:#ffffff;clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow:before{background:#ffffff;}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topRight>.ant-dropdown-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-topLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-topRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomRight>.ant-dropdown-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-bottomRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu{position:relative;margin:0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup{position:absolute;z-index:1050;background:transparent;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup ul,:where(.css-133v4sd).ant-dropdown-menu-submenu-popup li{list-style:none;margin:0;}:where(.css-133v4sd).ant-dropdown,:where(.css-133v4sd).ant-dropdown-menu-submenu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu{padding:4px;list-style-type:none;background-color:#ffffff;background-clip:padding-box;border-radius:8px;outline:none;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:empty,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:empty{padding:0;box-shadow:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-title{padding:5px 12px;color:rgba(0,0,0,0.45);transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item{position:relative;display:flex;align-items:center;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-icon{min-width:14px;margin-inline-end:8px;font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content{flex:auto;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a{color:inherit;transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover{color:inherit;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after{position:absolute;inset:0;content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra{padding-inline-start:16px;margin-inline-start:auto;font-size:12px;color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{display:flex;margin:0;padding:5px 12px;color:rgba(0,0,0,0.88);font-weight:normal;font-size:14px;line-height:1.5714285714285714;cursor:pointer;transition:all 0.2s;border-radius:4px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active{background-color:rgba(0,0,0,0.04);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected{color:#05673d;background-color:#95a69c;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active{background-color:#6a997e;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a{pointer-events:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider{height:1px;margin:4px 0;overflow:hidden;line-height:0;background-color:rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon{position:absolute;inset-inline-end:8px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon{margin-inline-end:0!important;color:rgba(0,0,0,0.45);font-size:12px;font-style:normal;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-list,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-list{margin:0 8px;padding:0;list-style:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{padding-inline-end:24px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-enter.ant-move-up-enter-active,:where(.css-133v4sd).ant-move-up-appear.ant-move-up-appear-active{animation-name:css-133v4sd-antMoveUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-up-leave.ant-move-up-leave-active{animation-name:css-133v4sd-antMoveUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-up-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-enter.ant-move-down-enter-active,:where(.css-133v4sd).ant-move-down-appear.ant-move-down-appear-active{animation-name:css-133v4sd-antMoveDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-down-leave.ant-move-down-leave-active{animation-name:css-133v4sd-antMoveDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-down-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled),:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled){color:#ff4d4f;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover{color:#fff;background-color:#ff4d4f;}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpIn{0%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}100%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownIn{0%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}100%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpOut{0%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownOut{0%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpIn{0%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownIn{0%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigIn{0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigOut{0%{transform:scale(1);}100%{transform:scale(0.8);opacity:0;}}
+  </style>
+  <style data-css-hash="1ihmimc" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout::before,:where(.css-133v4sd).ant-layout::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"],:where(.css-133v4sd).ant-layout [class*=" ant-layout"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"]::before,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::before,:where(.css-133v4sd).ant-layout [class^="ant-layout"]::after,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout{display:flex;flex:auto;flex-direction:column;min-height:0;background:#f5f5f5;}:where(.css-133v4sd).ant-layout,:where(.css-133v4sd).ant-layout *{box-sizing:border-box;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider{flex-direction:row;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout,:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout-content{width:0;}:where(.css-133v4sd).ant-layout .ant-layout-header,:where(.css-133v4sd).ant-layout.ant-layout-footer{flex:0 0 auto;}:where(.css-133v4sd).ant-layout-rtl{direction:rtl;}:where(.css-133v4sd).ant-layout-header{height:64px;padding:0 50px;color:rgba(0,0,0,0.88);line-height:64px;background:#001529;}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-layout-footer{padding:24px 50px;color:rgba(0,0,0,0.88);font-size:14px;background:#f5f5f5;}:where(.css-133v4sd).ant-layout-content{flex:auto;color:rgba(0,0,0,0.88);min-height:0;}
+  </style>
+  <style data-css-hash="yuvirj" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-tooltip{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:absolute;z-index:1070;display:block;width:max-content;max-width:250px;visibility:visible;--valid-offset-x:var(--arrow-offset-horizontal, var(--arrow-x));transform-origin:var(--valid-offset-x, 50%) var(--arrow-y, 50%);--antd-arrow-background-color:rgba(0,0,0,0.85);}:where(.css-133v4sd).ant-tooltip-hidden{display:none;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-inner{min-width:28px;min-height:32px;padding:6px 8px;color:#fff;text-align:start;text-decoration:none;word-wrap:break-word;background-color:rgba(0,0,0,0.85);border-radius:6px;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);box-sizing:border-box;}:where(.css-133v4sd).ant-tooltip-placement-topLeft,:where(.css-133v4sd).ant-tooltip-placement-topRight,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft,:where(.css-133v4sd).ant-tooltip-placement-bottomRight{min-width:34px;}:where(.css-133v4sd).ant-tooltip-placement-left .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftBottom .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-right .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightBottom .ant-tooltip-inner{border-radius:6px;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-content{position:relative;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-inner{background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-arrow{--antd-arrow-background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-inner{background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-arrow{--antd-arrow-background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-inner{background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-arrow{--antd-arrow-background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-inner{background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-arrow{--antd-arrow-background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-inner{background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-arrow{--antd-arrow-background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-inner{background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-arrow{--antd-arrow-background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-inner{background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-arrow{--antd-arrow-background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-inner{background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-arrow{--antd-arrow-background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-inner{background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-arrow{--antd-arrow-background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-inner{background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-arrow{--antd-arrow-background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-inner{background-color:#faad14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-arrow{--antd-arrow-background-color:#faad14;}:where(.css-133v4sd).ant-tooltip-rtl{direction:rtl;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:var(--antd-arrow-background-color);clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow:before{background:var(--antd-arrow-background-color);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topRight>.ant-tooltip-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-topLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-topRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomRight>.ant-tooltip-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-bottomRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{right:0;transform:translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{left:0;transform:translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-pure{position:relative;max-width:none;margin:16px;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-enter.ant-zoom-big-fast-enter-active,:where(.css-133v4sd).ant-zoom-big-fast-appear.ant-zoom-big-fast-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-fast-leave.ant-zoom-big-fast-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-fast-enter-prepare,:where(.css-133v4sd).ant-zoom-big-fast-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="4mhxit" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd)[class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"]{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd) .ant-menu::before{display:table;content:"";}:where(.css-133v4sd) .ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd) .ant-menu-hidden{display:none;}:where(.css-133v4sd).ant-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-menu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:0;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';margin-bottom:0;padding-inline-start:0;outline:none;transition:width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;}:where(.css-133v4sd).ant-menu::before{display:table;content:"";}:where(.css-133v4sd).ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd).ant-menu ul,:where(.css-133v4sd).ant-menu ol{margin:0;padding:0;list-style:none;}:where(.css-133v4sd).ant-menu-overflow{display:flex;}:where(.css-133v4sd).ant-menu-overflow .ant-menu-item{flex:none;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{border-radius:8px;}:where(.css-133v4sd).ant-menu .ant-menu-item-group-title{padding:8px 16px;font-size:14px;line-height:1.5714285714285714;transition:all 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-inline{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu .ant-menu-sub{cursor:initial;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-title-content{transition:color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-menu .ant-menu-title-content >.ant-typography-ellipsis-single-line{display:inline;vertical-align:unset;}:where(.css-133v4sd).ant-menu .ant-menu-title-content .ant-menu-item-extra{margin-inline-start:auto;padding-inline-start:16px;}:where(.css-133v4sd).ant-menu .ant-menu-item a::before{position:absolute;inset:0;background-color:transparent;content:"";}:where(.css-133v4sd).ant-menu .ant-menu-item-divider{overflow:hidden;line-height:0;border-color:rgba(5,5,5,0.06);border-style:solid;border-width:0;border-top-width:1px;margin-block:1px;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-divider-dashed{border-style:dashed;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list{margin:0;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-submenu-title{padding-inline:28px 16px;}:where(.css-133v4sd).ant-menu-submenu-popup{position:absolute;z-index:1050;border-radius:8px;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-popup.ant-menu-submenu{background:transparent;}:where(.css-133v4sd).ant-menu-submenu-popup::before{position:absolute;inset:0;z-index:-1;width:100%;height:100%;opacity:0;content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu{border-radius:8px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu>.ant-menu-submenu-title{border-radius:4px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title::after{transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft,:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom{padding-inline-end:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom{padding-inline-start:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft{padding-bottom:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft{padding-top:8px;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateX(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow{transform:translateY(-2px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before{transform:rotate(45deg) translateX(2.5px);}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-menu-horizontal{line-height:46px;border:0;border-bottom:1px solid rgba(5,5,5,0.06);box-shadow:none;}:where(.css-133v4sd).ant-menu-horizontal::after{display:block;clear:both;height:0;content:"\20";}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{position:relative;display:inline-block;vertical-align:bottom;padding-inline:16px;}:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-submenu .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-title{transition:border-color 0.3s,background 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-arrow{display:none;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root,:where(.css-133v4sd).ant-menu-vertical.ant-menu-root{box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-inline >.ant-menu-item,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline >.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub{min-width:160px;max-height:calc(100vh - 100px);padding:0;overflow:hidden;border-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub:not([class*='-active']){overflow-x:hidden;overflow-y:auto;}:where(.css-133v4sd).ant-menu-inline{width:100%;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title{display:flex;align-items:center;transition:border-color 0.3s,background 0.3s,padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >.ant-menu-title-content{flex:auto;min-width:0;overflow:hidden;text-overflow:ellipsis;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >*,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >*{flex:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline{padding:0;border:0;border-radius:0;box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title{padding-inline-start:32px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline-collapsed{width:80px;}:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-item >.ant-menu-inline-collapsed-noicon,:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-submenu .ant-menu-submenu-title >.ant-menu-inline-collapsed-noicon{font-size:16px;text-align:center;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title{inset-inline-start:0;padding-inline:calc(50% - 8px - 4px);text-overflow:clip;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon{opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon{margin:0;font-size:16px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon +span{display:inline-block;opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed .anticon{display:inline-block;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip{pointer-events:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .anticon{display:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a:hover{color:#fff;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-group-title{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding-inline:8px;}:where(.css-133v4sd).ant-menu-light,:where(.css-133v4sd).ant-menu-light>.ant-menu{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-extra{color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-disabled{color:rgba(0,0,0,0.25)!important;}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#fff2f0;}:where(.css-133v4sd).ant-menu-light .ant-menu-item a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-light .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#fff2f0;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:1px;margin-top:-1px;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:2px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#05673d;background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:rgba(0,0,0,0.02);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #05673d;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-dark,:where(.css-133v4sd).ant-menu-dark>.ant-menu{color:rgba(255,255,255,0.65);background:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-extra{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-disabled{color:rgba(255,255,255,0.25)!important;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:#fff;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff7875;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal{border-bottom:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:0;margin-top:0;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:0px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#fff;background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:0px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #fff;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-rtl{direction:rtl;}:where(.css-133v4sd).ant-menu-submenu-rtl{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy{overflow:hidden;}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy-active{transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-menu .ant-motion-collapse{overflow:hidden;transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="3hhlaq" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout-sider{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider::before,:where(.css-133v4sd).ant-layout-sider::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"],:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::after,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider{position:relative;min-width:0;background:#001529;transition:all 0.2s,background 0s;}:where(.css-133v4sd).ant-layout-sider-has-trigger{padding-bottom:48px;}:where(.css-133v4sd).ant-layout-sider-right{order:1;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children{height:100%;margin-top:-0.1px;padding-top:0.1px;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed{width:auto;}:where(.css-133v4sd).ant-layout-sider-zero-width .ant-layout-sider-children{overflow:hidden;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-trigger{position:fixed;bottom:0;z-index:1;height:48px;color:#fff;line-height:48px;text-align:center;background:#002140;cursor:pointer;transition:all 0.2s;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger{position:absolute;top:64px;inset-inline-end:-40px;z-index:1;width:40px;height:40px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;background:#001529;border-radius:0 8px 8px 0;cursor:pointer;transition:background 0.3s ease;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger::after{position:absolute;inset:0;background:transparent;transition:all 0.3s;content:"";}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger:hover::after{background:rgba(255, 255, 255, 0.2);}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger-right{inset-inline-start:-40px;border-radius:8px 0 0 8px;}:where(.css-133v4sd).ant-layout-sider-light{background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-trigger{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-zero-width-trigger{color:rgba(0,0,0,0.88);background:#ffffff;border:1px solid #f5f5f5;border-inline-start:0;}
+  </style>
+  <style data-css-hash="z0j72v" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-drawer{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-drawer::before,:where(.css-133v4sd).ant-drawer::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"],:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::after,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer{position:fixed;inset:0;z-index:1000;pointer-events:none;color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-drawer-pure{position:relative;background:#ffffff;display:flex;flex-direction:column;}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-left{box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-right{box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-top{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-bottom{box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-inline{position:absolute;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask{position:absolute;inset:0;z-index:1000;background:rgba(0,0,0,0.45);pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper{position:absolute;z-index:1000;max-width:100vw;transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper-hidden{display:none;}:where(.css-133v4sd).ant-drawer-left>.ant-drawer-content-wrapper{top:0;bottom:0;left:0;box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-right>.ant-drawer-content-wrapper{top:0;right:0;bottom:0;box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-top>.ant-drawer-content-wrapper{top:0;inset-inline:0;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-bottom>.ant-drawer-content-wrapper{bottom:0;inset-inline:0;box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer .ant-drawer-content{display:flex;flex-direction:column;width:100%;height:100%;overflow:auto;background:#ffffff;pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-header{display:flex;flex:0;align-items:center;padding:16px 24px;font-size:16px;line-height:1.5;border-bottom:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer .ant-drawer-header-title{display:flex;flex:1;align-items:center;min-width:0;min-height:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-extra{flex:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close{display:inline-flex;width:24px;height:24px;border-radius:4px;justify-content:center;align-items:center;margin-inline-end:8px;color:rgba(0,0,0,0.45);font-weight:600;font-size:16px;font-style:normal;line-height:1;text-align:center;text-transform:none;text-decoration:none;background:transparent;border:0;cursor:pointer;transition:all 0.2s;text-rendering:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:hover{color:rgba(0,0,0,0.88);background-color:rgba(0,0,0,0.06);text-decoration:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:active{background-color:rgba(0,0,0,0.15);}:where(.css-133v4sd).ant-drawer .ant-drawer-close:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-drawer .ant-drawer-title{flex:1;margin:0;font-weight:600;font-size:16px;line-height:1.5;}:where(.css-133v4sd).ant-drawer .ant-drawer-body{flex:1;min-width:0;min-height:0;padding:24px;overflow:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-body .ant-drawer-body-skeleton{width:100%;height:100%;display:flex;justify-content:center;}:where(.css-133v4sd).ant-drawer .ant-drawer-footer{flex-shrink:0;padding:8px 16px;border-top:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer-rtl{direction:rtl;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{transform:translateY(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transform:translateY(100%);}
+  </style>
+  <style data-css-hash="1orkko5" data-rc-order="prependQueue" data-token-hash="8yftb1">
+   .anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.anticon >*{line-height:1;}.anticon svg{display:inline-block;}.anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <meta charset="utf-8" data-next-head=""/>
+  <title data-next-head="">
+   ByteByteGo | Technical Interview Prep
+  </title>
+  <meta content="index,follow" data-next-head="" name="robots"/>
+  <meta content="Everything you need to take your system design skill to the next level" data-next-head="" name="description"/>
+  <meta content="summary_large_image" data-next-head="" name="twitter:card"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:site"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:creator"/>
+  <meta content="System Design · Coding · Behavioral · Machine Learning Interviews" data-next-head="" property="og:title"/>
+  <meta content="Ace Every Stage of Your Next Technical Interview" data-next-head="" property="og:description"/>
+  <meta content="https://bytebytego.com" data-next-head="" property="og:url"/>
+  <meta content="website" data-next-head="" property="og:type"/>
+  <meta content="https://bytebytego.com/social2.png" data-next-head="" property="og:image"/>
+  <meta content="ByteByteGo Logo" data-next-head="" property="og:image:alt"/>
+  <meta content="image/png" data-next-head="" property="og:image:type"/>
+  <meta content="2400" data-next-head="" property="og:image:width"/>
+  <meta content="1260" data-next-head="" property="og:image:height"/>
+  <meta content="en_US" data-next-head="" property="og:locale"/>
+  <meta content="ByteByteGo" data-next-head="" property="og:site_name"/>
+  <link href="https://firebase.googleapis.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <link href="https://vercel.live" rel="preconnect"/>
+  <link href="https://www.googleapis.com" rel="preconnect"/>
+  <link as="style" href="/_next/static/css/0d37f0f31c99e98b.css" rel="preload"/>
+  <link data-n-g="" href="/_next/static/css/0d37f0f31c99e98b.css" rel="stylesheet"/>
+  <link as="style" href="/_next/static/css/7e19b5f69d036867.css" rel="preload"/>
+  <link data-n-p="" href="/_next/static/css/7e19b5f69d036867.css" rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <meta content="#da532c" data-next-head="" name="msapplication-TileColor"/>
+  <meta content="#ffffff" data-next-head="" name="theme-color"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" data-next-head="" name="viewport"/>
+  <link data-next-head="" href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link data-next-head="" href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link data-next-head="" href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link data-next-head="" href="/site.webmanifest" rel="manifest"/>
+  <link color="#5bbad5" data-next-head="" href="/safari-pinned-tab.svg" rel="mask-icon"/>
+  <link as="image" data-next-head="" imagesrcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Farrow-right.42e8816e.png&amp;w=16&amp;q=75 1x" rel="preload"/>
+  <link as="image" data-next-head="" href="/_next/static/media/avatar.c6a6bd4f.svg" rel="preload"/>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" rel="stylesheet"/>
+  <style>
+   .katex {
+        font-size: 15px !important;
+        color: #000 !important;
+      }
+      .katex-display {
+        overflow: auto hidden;
+        padding: 10px 0;
+      }
+  </style>
+  <link as="script" href="/_next/static/chunks/3892-7bc5549e31e6db74.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/my-courses-43c3e051d4c0003e.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/index-4338ea953541cde2.js" rel="prefetch"/>
+  <style>
+   body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 40px; } img { max-width: 100%; }
+  </style>
+ </head>
+ <body>
+  <div id="__next">
+   <!--$-->
+   <!--/$-->
+   <div class="ant-layout css-133v4sd">
+    <main class="ant-layout-content css-133v4sd" style="margin-top: 64px;">
+     <div class="style_container__9mWse" id="content-container">
+      <div class="ant-layout ant-layout-has-sider style_learn__wJdK1 css-133v4sd">
+       <div class="ant-layout css-133v4sd" style="margin-left: 295px;">
+        <main class="ant-layout-content style_content__Qif_T css-133v4sd">
+         <div class="style_articleWrap__Xn2yv" id="content">
+          <article class="style_learnContent__K5K7M">
+           <p>
+            A key-value store, also referred to as a key-value database, is a non-relational database. Each unique identifier is stored as a key with its associated value. This data pairing is known as a “key-value” pair.
+           </p>
+           <p>
+            In a key-value pair, the key must be unique, and the value associated with the key can be accessed through the key. Keys can be plain text or hashed values. For performance reasons, a short key works better. What do keys look like? Here are a few examples:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Plain text key: “last_logged_in_at”
+             </p>
+            </li>
+            <li>
+             <p>
+              Hashed key: 253DDEC4
+             </p>
+            </li>
+           </ul>
+           <p>
+            The value in a key-value pair can be strings, lists, objects, etc. The value is usually treated as an opaque object in key-value stores, such as Amazon dynamo [1], Memcached [2], Redis [3], etc.
+           </p>
+           <p>
+            Here is a data snippet in a key-value store:
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               <strong>
+                key
+               </strong>
+              </th>
+              <th>
+               <strong>
+                value
+               </strong>
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               145
+              </td>
+              <td>
+               john
+              </td>
+             </tr>
+             <tr>
+              <td>
+               147
+              </td>
+              <td>
+               bob
+              </td>
+             </tr>
+             <tr>
+              <td>
+               160
+              </td>
+              <td>
+               julia
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p class="tableCaption">
+            Table 1
+           </p>
+           <p>
+            In this chapter, you are asked to design a key-value store that supports the following operations:
+           </p>
+           <p>
+            - put(key, value) // insert “value” associated with “key”
+           </p>
+           <p>
+            - get(key) // get “value” associated with “key”
+           </p>
+           <h2 id="understand-the-problem-and-establish-design-scope">
+            Understand the problem and establish design scope
+           </h2>
+           <p>
+            There is no perfect design. Each design achieves a specific balance regarding the tradeoffs of the read, write, and memory usage. Another tradeoff has to be made was between consistency and availability. In this chapter, we design a key-value store that comprises of the following characteristics:
+           </p>
+           <ul>
+            <li>
+             <p>
+              The size of a key-value pair is small: less than 10 KB.
+             </p>
+            </li>
+            <li>
+             <p>
+              Ability to store big data.
+             </p>
+            </li>
+            <li>
+             <p>
+              High availability: The system responds quickly, even during failures.
+             </p>
+            </li>
+           </ul>
+           <ul>
+            <li>
+             <p>
+              High scalability: The system can be scaled to support large data set.
+             </p>
+            </li>
+            <li>
+             <p>
+              Automatic scaling: The addition/deletion of servers should be automatic based on traffic.
+             </p>
+            </li>
+            <li>
+             <p>
+              Tunable consistency.
+             </p>
+            </li>
+            <li>
+             <p>
+              Low latency.
+             </p>
+            </li>
+           </ul>
+           <h2 id="single-server-key-value-store">
+            Single server key-value store
+           </h2>
+           <p>
+            Developing a key-value store that resides in a single server is easy. An intuitive approach is to store key-value pairs in a hash table, which keeps everything in memory. Even though memory access is fast, fitting everything in memory may be impossible due to the space constraint. Two optimizations can be done to fit more data in a single server:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Data compression
+             </p>
+            </li>
+            <li>
+             <p>
+              Store only frequently used data in memory and the rest on disk
+             </p>
+            </li>
+           </ul>
+           <p>
+            Even with these optimizations, a single server can reach its capacity very quickly. A distributed key-value store is required to support big data.
+           </p>
+           <h2 id="distributed-key-value-store">
+            Distributed key-value store
+           </h2>
+           <p>
+            A distributed key-value store is also called a distributed hash table, which distributes key-value pairs across many servers. When designing a distributed system, it is important to understand CAP (
+            <strong>
+             C
+            </strong>
+            onsistency,
+            <strong>
+             A
+            </strong>
+            vailability,
+            <strong>
+             P
+            </strong>
+            artition Tolerance) theorem.
+           </p>
+           <h3 id="cap-theorem">
+            CAP theorem
+           </h3>
+           <p>
+            CAP theorem states it is impossible for a distributed system to simultaneously provide more than two of these three guarantees: consistency, availability, and partition tolerance. Let us establish a few definitions.
+           </p>
+           <p>
+            <strong>
+             Consistency
+            </strong>
+            : consistency means all clients see the same data at the same time no matter which node they connect to.
+           </p>
+           <p>
+            <strong>
+             Availability:
+            </strong>
+            availability means any client which requests data gets a response even if some of the nodes are down.
+           </p>
+           <p>
+            <strong>
+             Partition Tolerance:
+            </strong>
+            a partition indicates a communication break between two nodes. Partition tolerance means the system continues to operate despite network partitions.
+           </p>
+           <p>
+            CAP theorem states that one of the three properties must be sacrificed to support 2 of the 3 properties as shown in Figure 1.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents the CAP theorem, visualized using three overlapping circles.  Each circle represents one of the three core guarantees in distributed data stores: Consistency, Availability, and Partition Tolerance.  The largest circle, teal in color, is labeled 'Consistency,' signifying that all nodes see the same data at the same time. The green circle, labeled 'Availability,' indicates that every request receives a response, even if it's not the most up-to-date data. The yellow circle, labeled 'Partition Tolerance,' represents the system's ability to continue operating even when network partitions occur. The overlapping regions show the possible combinations achievable:  The intersection of Consistency and Partition Tolerance is labeled 'CP,' indicating systems prioritizing these two guarantees (at the cost of Availability). The intersection of Availability and Partition Tolerance is labeled 'AP,' showing systems prioritizing these two (at the cost of Consistency). The small intersection of all three circles is labeled 'CA,' which is not practically achievable according to the CAP theorem.  Finally, a small text at the bottom reads 'Viewer does not support full SVG 1.1,' indicating a limitation of the image rendering software." data-nimg="1" decoding="async" height="370" loading="lazy" src="images/img_4530764814562416407.svg" style="color: transparent;" width="392"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 1
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Nowadays, key-value stores are classified based on the two CAP characteristics they support:
+           </p>
+           <p>
+            <strong>
+             CP (consistency and partition tolerance) systems
+            </strong>
+            : a CP key-value store supports consistency and partition tolerance while sacrificing availability.
+           </p>
+           <p>
+            <strong>
+             AP (availability and partition tolerance) systems
+            </strong>
+            : an AP key-value store supports availability and partition tolerance while sacrificing consistency.
+           </p>
+           <p>
+            <strong>
+             CA (consistency and availability) systems
+            </strong>
+            : a CA key-value store supports consistency and availability while sacrificing partition tolerance. Since network failure is unavoidable, a distributed system must tolerate network partition. Thus, a CA system cannot exist in real-world applications.
+           </p>
+           <p>
+            What you read above is mostly the definition part. To make it easier to understand, let us take a look at some concrete examples. In distributed systems, data is usually replicated multiple times. Assume data are replicated on three replica nodes,
+            <em>
+             n1
+            </em>
+            ,
+            <em>
+             n2
+            </em>
+            and
+            <em>
+             n3
+            </em>
+            as shown in Figure 2.
+           </p>
+           <p>
+            <strong>
+             Ideal situation
+            </strong>
+           </p>
+           <p>
+            In the ideal world, network partition never occurs. Data written to
+            <em>
+             n1
+            </em>
+            is automatically replicated to
+            <em>
+             n2
+            </em>
+            and
+            <em>
+             n3
+            </em>
+            . Both consistency and availability are achieved.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simple network topology diagram showing three nodes, labeled n1, n2, and n3, depicted as cylindrical database-like icons.  Each node is connected to the other two nodes via lines representing communication links, forming a complete graph or triangle.  Node n1 is connected to both n2 and n3, and n2 and n3 are directly connected to each other.  No specific data flow direction or type is indicated on the connecting lines; the diagram only illustrates the existence of connections between the nodes.  The text 'Viewer does not support full SVG 1.1' is present below the diagram, indicating a potential rendering issue with the image viewer used.  No URLs or parameters are visible within the diagram itself." data-nimg="1" decoding="async" height="259" loading="lazy" src="images/img_7371117310489542791.svg" style="color: transparent;" width="311"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 2
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            <strong>
+             Real-world distributed systems
+            </strong>
+           </p>
+           <p>
+            In a distributed system, partitions cannot be avoided, and when a partition occurs, we must choose between consistency and availability. In Figure 3,
+            <em>
+             n3
+            </em>
+            goes down and cannot communicate with
+            <em>
+             n1
+            </em>
+            and
+            <em>
+             n2
+            </em>
+            . If clients write data to
+            <em>
+             n1
+            </em>
+            or
+            <em>
+             n2
+            </em>
+            , data cannot be propagated to n3. If data is written to
+            <em>
+             n3
+            </em>
+            but not propagated to
+            <em>
+             n1
+            </em>
+            and
+            <em>
+             n2
+            </em>
+            yet,
+            <em>
+             n1
+            </em>
+            and
+            <em>
+             n2
+            </em>
+            would have stale data.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simple network topology diagram showing three nodes, labeled n1, n2, and n3, depicted as cylindrical database-like icons.  Each node is connected to the other two nodes via lines representing communication links, forming a complete graph or triangle.  Node n1 is connected to both n2 and n3, and n2 and n3 are directly connected to each other.  No specific data flow direction or type is indicated on the connecting lines; the diagram only illustrates the existence of connections between the nodes.  The text 'Viewer does not support full SVG 1.1' at the bottom is a browser-related message unrelated to the network topology itself." data-nimg="1" decoding="async" height="259" loading="lazy" src="images/img_8133298418816996358.svg" style="color: transparent;" width="311"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 3
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            If we choose consistency over availability (CP system), we must block all write operations to
+            <em>
+             n1
+            </em>
+            and
+            <em>
+             n2
+            </em>
+            to avoid data inconsistency among these three servers, which makes the system unavailable. Bank systems usually have extremely high consistent requirements. For example, it is crucial for a bank system to display the most up-to-date balance info. If inconsistency occurs due to a network partition, the bank system returns an error before the inconsistency is resolved.
+           </p>
+           <p>
+            However, if we choose availability over consistency (AP system), the system keeps accepting reads, even though it might return stale data. For writes,
+            <em>
+             n1
+            </em>
+            and
+            <em>
+             n2
+            </em>
+            will keep accepting writes, and data will be synced to
+            <em>
+             n3
+            </em>
+            when the network partition is resolved.
+           </p>
+           <p>
+            Choosing the right CAP guarantees that fit your use case is an important step in building a distributed key-value store. You can discuss this with your interviewer and design the system accordingly.
+           </p>
+           <h3 id="system-components">
+            System components
+           </h3>
+           <p>
+            In this section, we will discuss the following core components and techniques used to build a key-value store:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Data partition
+             </p>
+            </li>
+            <li>
+             <p>
+              Data replication
+             </p>
+            </li>
+            <li>
+             <p>
+              Consistency
+             </p>
+            </li>
+            <li>
+             <p>
+              Inconsistency resolution
+             </p>
+            </li>
+            <li>
+             <p>
+              Handling failures
+             </p>
+            </li>
+            <li>
+             <p>
+              System architecture diagram
+             </p>
+            </li>
+            <li>
+             <p>
+              Write path
+             </p>
+            </li>
+            <li>
+             <p>
+              Read path
+             </p>
+            </li>
+           </ul>
+           <p>
+            The content below is largely based on three popular key-value store systems: Dynamo [4], Cassandra [5], and BigTable [6].
+           </p>
+           <h3 id="data-partition">
+            Data partition
+           </h3>
+           <p>
+            For large applications, it is infeasible to fit the complete data set in a single server. The simplest way to accomplish this is to split the data into smaller partitions and store them in multiple servers. There are two challenges while partitioning the data:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Distribute data across multiple servers evenly.
+             </p>
+            </li>
+            <li>
+             <p>
+              Minimize data movement when nodes are added or removed.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Consistent hashing discussed in the previous chapter is a great technique to solve these problems. Let us revisit how consistent hashing works at a high-level.
+           </p>
+           <ul>
+            <li>
+             <p>
+              First, servers are placed on a hash ring. In Figure 4, eight servers, represented by
+              <em>
+               s0, s1, …, s7
+              </em>
+              , are placed on the hash ring.
+             </p>
+            </li>
+            <li>
+             <p>
+              Next, a key is hashed onto the same ring, and it is stored on the first server encountered while moving in the clockwise direction. For instance,
+              <em>
+               key0
+              </em>
+              is stored in
+              <em>
+               s1
+              </em>
+              using this logic.
+             </p>
+            </li>
+           </ul>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of eight nodes, labeled s0 through s7, connected by a gray line forming a ring.  Each node is a circle containing its respective label.  A dark gray filled circle, labeled 'key0', is positioned slightly outside the ring, adjacent to node s0. A curved arrow originates from 'key0' and points directly to node s1, indicating a directional connection or data flow from 'key0' to s1. The text 'Viewer does not support full SVG 1.1' is present at the bottom, indicating a limitation in rendering the image fully, likely due to the viewer's inability to handle the SVG format completely.  The overall structure suggests a simplified representation of a circular data structure or a system with a key element ('key0') influencing a specific node (s1) within the circular flow." data-nimg="1" decoding="async" height="361" loading="lazy" src="images/img_3908534414286387357.svg" style="color: transparent;" width="353"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 4
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Using consistent hashing to partition data has the following advantages:
+           </p>
+           <p>
+            <strong>
+             Automatic scaling:
+            </strong>
+            servers could be added and removed automatically depending on the load.
+           </p>
+           <p>
+            <strong>
+             Heterogeneity:
+            </strong>
+            the number of virtual nodes for a server is proportional to the server capacity. For example, servers with higher capacity are assigned with more virtual nodes.
+           </p>
+           <h3 id="data-replication">
+            Data replication
+           </h3>
+           <p>
+            To achieve high availability and reliability, data must be replicated asynchronously over
+            <em>
+             N
+            </em>
+            servers, where
+            <em>
+             N
+            </em>
+            is a configurable parameter. These
+            <em>
+             N
+            </em>
+            servers are chosen using the following logic: after a key is mapped to a position on the hash ring, walk clockwise from that position and choose the first
+            <em>
+             N
+            </em>
+            servers on the ring to store data copies. In Figure 5 (
+            <em>
+             N = 3
+            </em>
+            ),
+            <em>
+             key0
+            </em>
+            is replicated at
+            <em>
+             s1, s2,
+            </em>
+            and
+            <em>
+             s3
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of eight nodes, labeled s0 through s7, connected by a gray line forming a complete ring.  Three nodes, s1, s2, and s3, are highlighted in dark green.  Node s0 is a white circle, while the remaining nodes (s1-s7) are also circles but smaller. A dark gray filled circle labeled 'key0' is positioned adjacent to s0 on the right.  The arrangement suggests a ring topology or a circular data structure.  No arrows are present, indicating an undirected relationship between the nodes.  The text 'Viewer does not support full SVG 1.1' at the bottom indicates a limitation of the viewer used to display the image, not a feature of the diagram itself.  The labels suggest that the nodes might represent states or data points within a system, with 'key0' potentially representing a key or reference point." data-nimg="1" decoding="async" height="355" loading="lazy" src="images/img_8111993033517216182.svg" style="color: transparent;" width="347"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 5
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            With virtual nodes, the first
+            <em>
+             N
+            </em>
+            nodes on the ring may be owned by fewer than
+            <em>
+             N
+            </em>
+            physical servers. To avoid this issue, we only choose unique servers while performing the clockwise walk logic.
+           </p>
+           <p>
+            Nodes in the same data center often fail at the same time due to power outages, network issues, natural disasters, etc. For better reliability, replicas are placed in distinct data centers, and data centers are connected through high-speed networks.
+           </p>
+           <h3 id="consistency">
+            Consistency
+           </h3>
+           <p>
+            Since data is replicated at multiple nodes, it must be synchronized across replicas. Quorum consensus can guarantee consistency for both read and write operations. Let us establish a few definitions first.
+           </p>
+           <p>
+            <strong>
+             <em>
+              N
+             </em>
+            </strong>
+            = The number of replicas
+           </p>
+           <p>
+            <strong>
+             <em>
+              W
+             </em>
+            </strong>
+            = A write quorum of size
+            <em>
+             W
+            </em>
+            . For a write operation to be considered as successful, write operation must be acknowledged from
+            <em>
+             W
+            </em>
+            replicas.
+           </p>
+           <p>
+            <strong>
+             <em>
+              R
+             </em>
+            </strong>
+            = A read quorum of size
+            <em>
+             R
+            </em>
+            . For a read operation to be considered as successful, read operation must wait for responses from at least
+            <em>
+             R
+            </em>
+            replicas.
+           </p>
+           <p>
+            Consider the following example shown in Figure 6 with
+            <em>
+             N = 3
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified distributed system architecture for data storage, likely a key-value store.  A central component, labeled 'coordinator...', acts as a central point of communication for three other nodes, labeled 's0,' 's1,' and 's2.'  These nodes are arranged around the coordinator in a circular fashion, connected by gray lines representing communication channels.  The arrows indicate the direction of data flow.  Each node (s0, s1, s2) sends data to the coordinator using the `put(key1, val1)` operation, which presumably stores a key-value pair.  The coordinator then sends an 'ACK' (acknowledgment) back to each node to confirm successful receipt and storage.  The dashed lines represent the asynchronous nature of the communication, implying that the coordinator doesn't necessarily respond immediately after receiving the `put` request.  The text 'Viewer does not support full SVG 1.1' indicates a limitation of the visualization software used to create the diagram." data-nimg="1" decoding="async" height="358" loading="lazy" src="images/img_4398091573006216434.svg" style="color: transparent;" width="381"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 6 (ACK = acknowledgement)
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            <em>
+             W = 1
+            </em>
+            does not mean data is written on one server. For instance, with the configuration in Figure 6, data is replicated at
+            <em>
+             s0
+            </em>
+            ,
+            <em>
+             s1,
+            </em>
+            and
+            <em>
+             s2
+            </em>
+            .
+            <em>
+             W = 1
+            </em>
+            means that the coordinator must receive at least one acknowledgment before the write operation is considered as successful. For instance, if we get an acknowledgment from
+            <em>
+             s1
+            </em>
+            , we no longer need to wait for acknowledgements from
+            <em>
+             s0
+            </em>
+            and
+            <em>
+             s2
+            </em>
+            . A coordinator acts as a proxy between the client and the nodes.
+           </p>
+           <p>
+            The configuration of
+            <em>
+             W, R
+            </em>
+            and
+            <em>
+             N
+            </em>
+            is a typical tradeoff between latency and consistency. If
+            <em>
+             W = 1
+            </em>
+            or
+            <em>
+             R = 1
+            </em>
+            , an operation is returned quickly because a coordinator only needs to wait for a response from any of the replicas. If
+            <em>
+             W
+            </em>
+            or
+            <em>
+             R &gt; 1
+            </em>
+            , the system offers better consistency; however, the query will be slower because the coordinator must wait for the response from the slowest replica.
+           </p>
+           <p>
+            If
+            <em>
+             W + R &gt; N
+            </em>
+            , strong consistency is guaranteed because there must be at least one overlapping node that has the latest data to ensure consistency.
+           </p>
+           <p>
+            How to configure
+            <em>
+             N, W
+            </em>
+            , and
+            <em>
+             R
+            </em>
+            to fit our use cases? Here are some of the possible setups:
+           </p>
+           <p>
+            If
+            <em>
+             R = 1
+            </em>
+            and
+            <em>
+             W = N
+            </em>
+            , the system is optimized for a fast read.
+           </p>
+           <p>
+            If
+            <em>
+             W = 1 and R = N
+            </em>
+            , the system is optimized for fast write.
+           </p>
+           <p>
+            If
+            <em>
+             W + R &gt; N
+            </em>
+            , strong consistency is guaranteed (Usually
+            <em>
+             N = 3, W = R = 2
+            </em>
+            ).
+           </p>
+           <p>
+            If
+            <em>
+             W + R &lt;= N
+            </em>
+            , strong consistency is not guaranteed.
+           </p>
+           <p>
+            Depending on the requirement, we can tune the values of
+            <em>
+             W, R, N
+            </em>
+            to achieve the desired level of consistency.
+           </p>
+           <h4 id="consistency-models">
+            Consistency models
+           </h4>
+           <p>
+            Consistency model is other important factor to consider when designing a key-value store. A consistency model defines the degree of data consistency, and a wide spectrum of possible consistency models exist:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Strong consistency: any read operation returns a value corresponding to the result of the most updated write data item. A client never sees out-of-date data.
+             </p>
+            </li>
+            <li>
+             <p>
+              Weak consistency: subsequent read operations may not see the most updated value.
+             </p>
+            </li>
+            <li>
+             <p>
+              Eventual consistency: this is a specific form of weak consistency. Given enough time, all updates are propagated, and all replicas are consistent.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Strong consistency is usually achieved by forcing a replica not to accept new reads/writes until every replica has agreed on current write. This approach is not ideal for highly available systems because it could block new operations. Dynamo and Cassandra adopt eventual consistency, which is our recommended consistency model for our key-value store. From concurrent writes, eventual consistency allows inconsistent values to enter the system and force the client to read the values to reconcile. The next section explains how reconciliation works with versioning.
+           </p>
+           <h3 id="inconsistency-resolution-versioning">
+            Inconsistency resolution: versioning
+           </h3>
+           <p>
+            Replication gives high availability but causes inconsistencies among replicas. Versioning and vector locks are used to solve inconsistency problems. Versioning means treating each data modification as a new immutable version of data. Before we talk about versioning, let us use an example to explain how inconsistency happens:
+           </p>
+           <p>
+            As shown in Figure 7, both replica nodes
+            <em>
+             n1
+            </em>
+            and
+            <em>
+             n2
+            </em>
+            have the same value. Let us call this value the original
+            <em>
+             value. Server 1
+            </em>
+            and
+            <em>
+             server 2
+            </em>
+            get the same value for
+            <em>
+             get(“name”)
+            </em>
+            operation.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified system architecture diagram illustrating data retrieval from two separate servers (server 1 and server 2) accessing a database.  Each server, depicted as a green rectangle labeled 'server 1' and 'server 2' respectively, sends a request 'get('name')' to a database instance.  The databases, represented as blue cylinders labeled 'n1' and 'n2', each contain a single entry 'name: john'.  Upon receiving the request, each database instance returns the value 'john' to the corresponding server.  The arrows indicate the direction of data flow, showing the request traveling from the server to the database and the response traveling back to the server.  The diagram visually demonstrates a redundant system where both servers can independently retrieve the same data ('john') from their respective database instances." data-nimg="1" decoding="async" height="263" loading="lazy" src="images/img_3416565267925763528.svg" style="color: transparent;" width="450"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 7
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Next,
+            <em>
+             server 1
+            </em>
+            changes the name to “johnSanFrancisco”, and
+            <em>
+             server 2
+            </em>
+            changes the name to “johnNewYork” as shown in Figure 8. These two changes are performed simultaneously. Now, we have conflicting values, called versions
+            <em>
+             v1
+            </em>
+            and
+            <em>
+             v2
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified system architecture diagram illustrating data insertion into two separate databases.  Two servers, labeled 'server 1' and 'server 2,' are depicted as green rectangles.  Each server sends data to a distinct database represented as blue cylinders labeled 'n1' and 'n2' respectively.  Server 1 sends a 'put' request with the key-value pair ('name', 'johnSanFrancisco') to database n1, which then stores the data as indicated by 'name: johnSanFrancisco' next to n1. Similarly, server 2 sends a 'put' request with the key-value pair ('name', 'johnNewYork') to database n2, resulting in the storage of 'name: johnNewYork' within n2.  The arrows indicate the direction of data flow from the servers to their respective databases.  There is a vertical line connecting n1 and n2, suggesting a potential relationship or connection between the two databases, although the nature of this connection is not explicitly defined in the diagram." data-nimg="1" decoding="async" height="227" loading="lazy" src="images/img_4985920213329828395.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 8
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            In this example, the original value could be ignored because the modifications were based on it. However, there is no clear way to resolve the conflict of the last two versions. To resolve this issue, we need a versioning system that can detect conflicts and reconcile conflicts. A vector clock is a common technique to solve this problem. Let us examine how vector clocks work.
+           </p>
+           <p>
+            A vector clock is a
+            <em>
+             [server, version]
+            </em>
+            pair associated with a data item. It can be used to check if one version precedes, succeeds, or in conflict with others.
+           </p>
+           <p>
+            Assume a vector clock is represented by
+            <em>
+             D([S1, v1], [S2, v2], …, [Sn, vn])
+            </em>
+            , where
+            <em>
+             D
+            </em>
+            is a data item,
+            <em>
+             v1
+            </em>
+            is a version counter, and
+            <em>
+             s1
+            </em>
+            is a server number, etc. If data item
+            <em>
+             D
+            </em>
+            is written to server
+            <em>
+             Si
+            </em>
+            , the system must perform one of the following tasks.
+           </p>
+           <ul>
+            <li>
+             <p>
+              Increment
+              <em>
+               vi
+              </em>
+              if
+              <em>
+               [Si, vi]
+              </em>
+              exists.
+             </p>
+            </li>
+            <li>
+             <p>
+              Otherwise, create a new entry
+              <em>
+               [Si, 1]
+              </em>
+              .
+             </p>
+            </li>
+           </ul>
+           <p>
+            The above abstract logic is explained with a concrete example as shown in Figure 9.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a data flow diagram illustrating a data replication and reconciliation process.  A top-down flow begins with data `D1([Sx, 1])`, where `Sx` likely represents a source and `1` a version or timestamp, written by `Sx` (step 1). This data is then written again by `Sx` to create `D2([Sx, 2])` (step 2).  `D2` then branches into two paths: one where the data is written by `Sy` (step 3) resulting in `D3([Sx, 2], [Sy, 1])`, indicating replication to `Sy` with the original source and version information included; and another where the data is written by `Sz` (step 4) resulting in `D4([Sx, 2], [Sz, 1])`, similarly replicating to `Sz`. Finally, `D3` and `D4` converge, and their data is reconciled and written by `Sx` (step 5) to produce `D5([Sx, ...])`, suggesting a final, consolidated data set incorporating information from `Sx`, `Sy`, and `Sz`.  The ellipsis in `D5` indicates potentially further information included in the final reconciled data.  The numbers in parentheses represent sequential steps in the process." data-nimg="1" decoding="async" height="467" loading="lazy" src="images/img_4505248637628763913.svg" style="color: transparent;" width="450"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 9
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            1. A client writes a data item
+            <em>
+             D1
+            </em>
+            to the system, and the write is handled by server
+            <em>
+             Sx
+            </em>
+            , which now has the vector clock
+            <em>
+             D1[(Sx, 1)]
+            </em>
+            .
+           </p>
+           <p>
+            2. Another client reads the latest
+            <em>
+             D1
+            </em>
+            , updates it to
+            <em>
+             D2
+            </em>
+            , and writes it back.
+            <em>
+             D2
+            </em>
+            descends from
+            <em>
+             D1
+            </em>
+            so it overwrites
+            <em>
+             D1
+            </em>
+            . Assume the write is handled by the same server
+            <em>
+             Sx
+            </em>
+            , which now has vector clock
+            <em>
+             D2([Sx, 2])
+            </em>
+            .
+           </p>
+           <p>
+            3. Another client reads the latest
+            <em>
+             D2
+            </em>
+            , updates it to
+            <em>
+             D3
+            </em>
+            , and writes it back. Assume the write is handled by server
+            <em>
+             Sy
+            </em>
+            , which now has vector clock
+            <em>
+             D3([Sx, 2], [Sy, 1]))
+            </em>
+            .
+           </p>
+           <p>
+            4. Another client reads the latest
+            <em>
+             D2
+            </em>
+            , updates it to
+            <em>
+             D4
+            </em>
+            , and writes it back. Assume the write is handled by server
+            <em>
+             Sz
+            </em>
+            , which now has
+            <em>
+             D4([Sx, 2], [Sz, 1]))
+            </em>
+            .
+           </p>
+           <p>
+            5. When another client reads
+            <em>
+             D3
+            </em>
+            and
+            <em>
+             D4
+            </em>
+            , it discovers a conflict, which is caused by data item
+            <em>
+             D2
+            </em>
+            being modified by both
+            <em>
+             Sy
+            </em>
+            and
+            <em>
+             Sz
+            </em>
+            . The conflict is resolved by the client and updated data is sent to the server. Assume the write is handled by
+            <em>
+             Sx
+            </em>
+            , which now has
+            <em>
+             D5([Sx, 3], [Sy, 1], [Sz, 1])
+            </em>
+            . We will explain how to detect conflict shortly.
+           </p>
+           <p>
+            Using vector clocks, it is easy to tell that a version
+            <em>
+             X
+            </em>
+            is an ancestor (i.e. no conflict) of version
+            <em>
+             Y
+            </em>
+            if the version counters for each participant in the vector clock of
+            <em>
+             Y
+            </em>
+            is greater than or equal to the ones in version
+            <em>
+             X
+            </em>
+            . For example, the vector clock
+            <em>
+             D([s0, 1], [s1, 1])]
+            </em>
+            is an ancestor of
+            <em>
+             D([s0, 1], [s1, 2])
+            </em>
+            . Therefore, no conflict is recorded.
+           </p>
+           <p>
+            Similarly, you can tell that a version
+            <em>
+             X
+            </em>
+            is a sibling (i.e., a conflict exists) of
+            <em>
+             Y
+            </em>
+            if there is any participant in
+            <em>
+             Y
+            </em>
+            's vector clock who has a counter that is less than its corresponding counter in
+            <em>
+             X
+            </em>
+            . For example, the following two vector clocks indicate there is a conflict:
+            <em>
+             D([s0, 1], [s1, 2])
+            </em>
+            and
+            <em>
+             D([s0, 2], [s1, 1]).
+            </em>
+           </p>
+           <p>
+            Even though vector clocks can resolve conflicts, there are two notable downsides. First, vector clocks add complexity to the client because it needs to implement conflict resolution logic.
+           </p>
+           <p>
+            Second, the
+            <em>
+             [server: version]
+            </em>
+            pairs in the vector clock could grow rapidly. To fix this problem, we set a threshold for the length, and if it exceeds the limit, the oldest pairs are removed. This can lead to inefficiencies in reconciliation because the descendant relationship cannot be determined accurately. However, based on Dynamo paper [4], Amazon has not yet encountered this problem in production; therefore, it is probably an acceptable solution for most companies.
+           </p>
+           <h3 id="handling-failures">
+            Handling failures
+           </h3>
+           <p>
+            As with any large system at scale, failures are not only inevitable but common. Handling failure scenarios is very important. In this section, we first introduce techniques to detect failures. Then, we go over common failure resolution strategies.
+           </p>
+           <h4 id="failure-detection">
+            Failure detection
+           </h4>
+           <p>
+            In a distributed system, it is insufficient to believe that a server is down because another server says so. Usually, it requires at least two independent sources of information to mark a server down.
+           </p>
+           <p>
+            As shown in Figure 10, all-to-all multicasting is a straightforward solution. However, this is inefficient when many servers are in the system.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a fully connected graph, or complete graph, of four nodes labeled S0, S1, S2, and S3, arranged cyclically within a larger gray circle.  Each node is connected to every other node via directed edges represented by blue arrows.  The arrows indicate the direction of information flow or communication between the nodes.  Specifically, there are bidirectional connections between S0 and each of S1, S2, and S3, meaning information flows both to and from S0.  Similarly, S1, S2, and S3 are also interconnected with bidirectional arrows, allowing for information exchange between them.  The overall structure suggests a system where each component (S0, S1, S2, S3) can communicate directly with every other component, implying a high degree of connectivity and potentially decentralized communication architecture.  The text 'Viewer does not support full SVG 1.1' at the bottom indicates a limitation of the display medium, not the diagram itself." data-nimg="1" decoding="async" height="364" loading="lazy" src="images/img_7969207795264805411.svg" style="color: transparent;" width="364"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 10
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            A better solution is to use decentralized failure detection methods like gossip protocol. Gossip protocol works as follows:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Each node maintains a node membership list, which contains member IDs and heartbeat counters.
+             </p>
+            </li>
+            <li>
+             <p>
+              Each node periodically increments its heartbeat counter.
+             </p>
+            </li>
+            <li>
+             <p>
+              Each node periodically sends heartbeats to a set of random nodes, which in turn propagate to another set of nodes.
+             </p>
+            </li>
+            <li>
+             <p>
+              Once nodes receive heartbeats, membership list is updated to the latest info.
+             </p>
+            </li>
+           </ul>
+           <p>
+            •If the heartbeat has not increased for more than predefined periods, the member is considered as offline.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system diagram showing a membership list and a ring topology network.  The top-left shows a partial membership list labeled 's0's membership list,' displaying a sample entry: 'Member IDHeartbeat counterTime01023212:00:0111022412:00:102990811:58:0231...'.  The main part of the image depicts a ring network with five nodes labeled s0, s1, s2, s3, and s5.  Nodes are represented as circles, connected by a gray arc forming the ring.  Directed blue arrows indicate communication flow.  A dashed blue line connects s0 to s2, labeled 'detected s2 is down,' indicating that s0 has detected a failure in s2.  Solid blue arrows show directed connections from s0 to s1, s0 to s3, s3 to s4, s3 to s5, and s4 to s3.  Node s2 is visually part of the ring but has no incoming or outgoing connections shown.  The bottom-right corner displays a message: 'Viewer does not support full SVG 1.1'." data-nimg="1" decoding="async" height="298" loading="lazy" src="images/img_6264887366371217279.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 11
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            As shown in Figure 11:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Node
+              <em>
+               s0
+              </em>
+              maintains a node membership list shown on the left side.
+             </p>
+            </li>
+            <li>
+             <p>
+              Node
+              <em>
+               s0
+              </em>
+              notices that node s2’s (member ID = 2) heartbeat counter has not increased for a long time.
+             </p>
+            </li>
+            <li>
+             <p>
+              Node
+              <em>
+               s0
+              </em>
+              sends heartbeats that include
+              <em>
+               s2
+              </em>
+              ’s info to a set of random nodes. Once other nodes confirm that
+              <em>
+               s2
+              </em>
+              ’s heartbeat counter has not been updated for a long time, node
+              <em>
+               s2
+              </em>
+              is marked down, and this information is propagated to other nodes.
+             </p>
+            </li>
+           </ul>
+           <h4 id="handling-temporary-failures">
+            Handling temporary failures
+           </h4>
+           <p>
+            After failures have been detected through the gossip protocol, the system needs to deploy certain mechanisms to ensure availability. In the strict quorum approach, read and write operations could be blocked as illustrated in the quorum consensus section.
+           </p>
+           <p>
+            A technique called “sloppy quorum” [4] is used to improve availability. Instead of enforcing the quorum requirement, the system chooses the first
+            <em>
+             W
+            </em>
+            healthy servers for writes and first
+            <em>
+             R
+            </em>
+            healthy servers for reads on the hash ring. Offline servers are ignored.
+           </p>
+           <p>
+            If a server is unavailable due to network or server failures, another server will process requests temporarily. When the down server is up, changes will be pushed back to achieve data consistency. This process is called hinted handoff. Since
+            <em>
+             s2
+            </em>
+            is unavailable in Figure 12, reads and writes will be handled by
+            <em>
+             s3
+            </em>
+            temporarily. When
+            <em>
+             s2
+            </em>
+            comes back online,
+            <em>
+             s3
+            </em>
+            will hand the data back to
+            <em>
+             s2
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified distributed system architecture, likely for a key-value store, depicted as a circular arrangement of four nodes: s0, s1, s2, and s3, all interconnected and communicating with a central 'coordinator'.  Solid arrows indicate the flow of data, specifically `put(key1, val1)` operations, representing the insertion of a key-value pair.  These data flows originate from the coordinator and are directed towards s0 and s1, with each receiving node sending back an 'ACK' acknowledgment to the coordinator along a separate arrow.  A dashed arrow shows a `put(key1, val1)` operation from the coordinator to s2, suggesting a less reliable or different communication method.  Node s3 is shown connected to the circle but without any explicit data flow depicted. The nodes s0, s1, s2, and s3 are likely replicas or shards of the data store, and the coordinator manages data distribution and consistency. The text 'Viewer does not support full SVG 1.1' indicates a limitation of the rendering software used to display the diagram." data-nimg="1" decoding="async" height="361" loading="lazy" src="images/img_5397109343428556747.svg" style="color: transparent;" width="381"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 12
+             </figcaption>
+            </div>
+           </figure>
+           <h4 id="handling-permanent-failures">
+            Handling permanent failures
+           </h4>
+           <p>
+            Hinted handoff is used to handle temporary failures. What if a replica is permanently unavailable? To handle such a situation, we implement an anti-entropy protocol to keep replicas in sync. Anti-entropy involves comparing each piece of data on replicas and updating each replica to the newest version. A Merkle tree is used for inconsistency detection and minimizing the amount of data transferred.
+           </p>
+           <p>
+            Quoted from Wikipedia [7]: “A hash tree or Merkle tree is a tree in which every non-leaf node is labeled with the hash of the labels or values (in case of leaves) of its child nodes. Hash trees allow efficient and secure verification of the contents of large data structures”.
+           </p>
+           <p>
+            Assuming key space is from 1 to 12, the following steps show how to build a Merkle tree. Highlighted boxes indicate inconsistency.
+           </p>
+           <p>
+            Step 1: Divide key space into buckets (4 in our example) as shown in Figure 13. A bucket is used as the root level node to maintain a limited depth of the tree.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified diagram illustrating data partitioning across two servers, labeled 'server 1' and 'server 2'.  Each server is depicted as a rounded rectangle containing several vertical rectangular blocks representing data partitions.  Server 1 shows partitions labeled '1...', '...', '7...', and '10...', indicating a range of data stored within each partition.  Similarly, server 2 displays partitions with the same labels '1...', '...', '7...', and '10...', suggesting a replication or distribution strategy. The ellipses ('...') within the labels imply that each partition contains multiple data entries, not just the numbers shown.  There are no explicit connections drawn between the servers, implying that data access might be handled independently or through a separate, unillustrated mechanism. The bottom text 'Viewer does not support full SVG 1.1' indicates a technical limitation in rendering the original diagram, not a part of the system's design." data-nimg="1" decoding="async" height="160" loading="lazy" src="images/img_7658356604407662525.svg" style="color: transparent;" width="451"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 13
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Step 2: Once the buckets are created, hash each key in a bucket using a uniform hashing method (Figure 14).
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified diagram illustrating data distribution across two servers, labeled 'server 1' and 'server 2'. Each server is depicted as a rounded rectangle containing several rectangular boxes representing data partitions.  Server 1 shows three partitions with labels indicating data mapping: '1 -&gt; 2343...', '7 -&gt; 9654...', and '10 -&gt; 3542...'.  The ellipses (...) suggest that the numerical sequences continue beyond what's shown.  Server 2 mirrors this structure, displaying identical data mapping labels in the same order.  The arrangement suggests a potential data replication or sharding strategy, where similar data is distributed across multiple servers for redundancy or load balancing.  The text 'Viewer does not support full SVG 1.1' at the bottom indicates a limitation of the image rendering software." data-nimg="1" decoding="async" height="200" loading="lazy" src="images/img_6526776103594257534.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 14
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Step 3: Create a single hash node per bucket (Figure 15).
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a diagram illustrating a distributed system architecture with two servers, labeled 'server 1' and 'server 2'. Each server contains four rectangular boxes representing processes or services, identified by numerical IDs: 6901, 6773, 8601 (highlighted in light red on server 1 and 7975 on server 2), and 7812.  These boxes are connected via lines to dashed-line-bordered rectangular boxes representing data stores or other resources.  The connections show data flow, with labels indicating the data item (a number) and an arrow indicating direction. For example, on server 1, process 6901 sends data item '1' to a data store labeled '1 -&gt; 2343...', while process 8601 sends data item '7' to a data store labeled '7 -&gt; 9654...'. Server 2 shows a similar structure with corresponding processes and data flows, but with different data items (e.g., 7975 sends '7' to '7 -&gt; 9654...').  The bottom note indicates a limitation of the viewer used to display the image." data-nimg="1" decoding="async" height="249" loading="lazy" src="images/img_4625091116062718088.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 15
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Step 4: Build the tree upwards till root by calculating hashes of children (Figure 16).
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a diagram illustrating data distribution across two servers, labeled 'server 1' and 'server 2'. Each server contains a tree-like structure.  The top node of each tree is a colored rectangle (light red/pink) containing a numerical ID (5357 for server 1 and 9213 for server 2).  These top nodes branch down to other nodes, some colored rectangles (light red/pink) and some white rectangles, each containing numerical IDs.  The white rectangles represent data chunks, while the light red/pink rectangles represent aggregations or summaries of data chunks below them.  The lowest level of each tree contains white rectangles with labels indicating a range of data (e.g., '1 -&gt; 2343...', '7 -&gt; 9654...', '10 -&gt; 3542...'), suggesting a partitioning scheme.  The structure is consistent across both servers, with similar numerical IDs appearing in both, but with different aggregations and data ranges at the bottom level, implying a distributed data storage and retrieval system.  The diagram shows a hierarchical structure where higher-level nodes summarize or aggregate data from lower-level nodes." data-nimg="1" decoding="async" height="446" loading="lazy" src="images/img_2777599376534704574.svg" style="color: transparent;" width="750"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 16
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            To compare two Merkle trees, start by comparing the root hashes. If root hashes match, both servers have the same data. If root hashes disagree, then the left child hashes are compared followed by right child hashes. You can traverse the tree to find which buckets are not synchronized and synchronize those buckets only.
+           </p>
+           <p>
+            Using Merkle trees, the amount of data needed to be synchronized is proportional to the differences between the two replicas, and not the amount of data they contain. In real-world systems, the bucket size is quite big. For instance, a possible configuration is one million buckets per one billion keys, so each bucket only contains 1000 keys.
+           </p>
+           <h4 id="handling-data-center-outage">
+            Handling data center outage
+           </h4>
+           <p>
+            Data center outage could happen due to power outage, network outage, natural disaster, etc. To build a system capable of handling data center outage, it is important to replicate data across multiple data centers. Even if a data center is completely offline, users can still access data through the other data centers.
+           </p>
+           <h3 id="system-architecture-diagram">
+            System architecture diagram
+           </h3>
+           <p>
+            Now that we have discussed different technical considerations in designing a key-value store, we can shift our focus on the architecture diagram, shown in Figure 17.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram showing a client interacting with a distributed system.  A rectangular box labeled 'Client' sends 'read/write' requests to a central node labeled 'n6' and marked as 'coordinator'.  This coordinator node receives requests and sends 'response' data back to the client via a dashed line indicating a two-way communication. Node n6 is connected to a ring of seven other nodes (n0-n5, n7) via solid grey lines.  Solid black arrows indicate data flow from n6 to nodes n0, n1, and n2, while dashed black arrows show data flow from nodes n0, n1, and n2 back to n6.  This suggests a distributed data storage or processing system where the coordinator manages communication and data distribution among the other nodes.  Nodes n0, n1, and n2 are depicted as light blue circles, suggesting they might have a different role or status compared to the other nodes in the ring (n3, n4, n5, n7), which are represented as simple white circles. The bottom of the image contains a message indicating that the viewer does not support full SVG 1.1." data-nimg="1" decoding="async" height="364" loading="lazy" src="images/img_3650356712610339427.svg" style="color: transparent;" width="634"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 17
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Main features of the architecture are listed as follows:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Clients communicate with the key-value store through simple APIs:
+              <em>
+               get(key)
+              </em>
+              and
+              <em>
+               put(key, value)
+              </em>
+              .
+             </p>
+            </li>
+            <li>
+             <p>
+              A coordinator is a node that acts as a proxy between the client and the key-value store.
+             </p>
+            </li>
+            <li>
+             <p>
+              Nodes are distributed on a ring using consistent hashing.
+             </p>
+            </li>
+            <li>
+             <p>
+              The system is completely decentralized so adding and moving nodes can be automatic.
+             </p>
+            </li>
+            <li>
+             <p>
+              Data is replicated at multiple nodes.
+             </p>
+            </li>
+            <li>
+             <p>
+              There is no single point of failure as every node has the same set of responsibilities.
+             </p>
+            </li>
+           </ul>
+           <p>
+            As the design is decentralized, each node performs many tasks as presented in Figure 18.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a single node in a distributed system, depicted as a large circle labeled 'node'.  Inside this circle are six rectangular boxes arranged in a 3x2 grid, each representing a component of the node.  The top row contains 'Client API' (on the left) which handles client requests, and 'Failure detection' (on the right) responsible for monitoring system health. The second row shows 'Conflict resolution' (left), managing data inconsistencies, and 'Failure repair mecha...' (right), indicating a mechanism for recovering from failures (the full text is cut off). The third row displays 'Replication' (left), suggesting data replication for redundancy, and 'Storage engine' (right), responsible for persistent data storage. The bottom row contains two empty boxes with '...' indicating additional unspecified components within the node.  No explicit connections are drawn between the boxes, implying internal communication and data flow between these components within the node itself." data-nimg="1" decoding="async" height="442" loading="lazy" src="images/img_1609210160356106334.svg" style="color: transparent;" width="442"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 18
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="write-path">
+            Write path
+           </h3>
+           <p>
+            Figure 19 explains what happens after a write request is directed to a specific node. Please note the proposed designs for write/read paths are primary based on the architecture of Cassandra [8].
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified architecture diagram of a write operation in a database system.  A `Client` sends a `Write` request to a `Server`.  The server first writes the data to a green `Memory cache` (labeled '2').  Concurrently, the server also writes the data to a blue `Commit log` (labeled '1') residing on `DISK` within the `MEMORY` section.  After the data is written to the memory cache, a `Flush` operation (labeled '3') moves the data from the `Memory cache` to a collection of light-blue `SSTables` (Sorted String Tables), also located on `DISK`.  The diagram illustrates the flow of data from the client, through the server's memory cache and commit log, ultimately persisting to the SSTables on disk, ensuring data durability.  The numbers (1, 2, 3) likely represent sequential steps in the process." data-nimg="1" decoding="async" height="295" loading="lazy" src="images/img_5628713831837602896.svg" style="color: transparent;" width="600"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 19
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            1. The write request is persisted on a commit log file.
+           </p>
+           <p>
+            2. Data is saved in the memory cache.
+           </p>
+           <p>
+            3. When the memory cache is full or reaches a predefined threshold, data is flushed to SSTable [9] on disk. Note: A sorted-string table (SSTable) is a sorted list of &lt;key, value&gt; pairs. For readers interested in learning more about SStable, refer to the reference material [9].
+           </p>
+           <h3 id="read-path">
+            Read path
+           </h3>
+           <p>
+            After a read request is directed to a specific node, it first checks if data is in the memory cache. If so, the data is returned to the client as shown in Figure 20.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram illustrating a read operation.  A light-blue rectangle labeled 'Client' initiates a 'Read request' which travels to a light-grey rectangle labeled 'Server'.  Within the server, a numbered circle '1' indicates a processing step. The request proceeds to a dark-green rectangle labeled 'Memory cache'. If the data is found in the cache, a dashed line indicates the 'Return result' back to the client.  Below the server, a pale-yellow section labeled 'DISK' shows the persistent storage. This section contains a light-blue rectangle labeled 'Result data', a group of six smaller light-blue squares grouped within a larger light-blue rectangle labeled 'SSTables', and a light-blue rectangle labeled 'Bloom filter'.  The 'SSTables' and 'Bloom filter' are presumably used for efficient data lookup on disk. The overall diagram depicts a tiered architecture with a memory cache for fast access, and persistent storage on disk for larger datasets, using a Bloom filter for efficient data existence checks before accessing the SSTables." data-nimg="1" decoding="async" height="282" loading="lazy" src="images/img_5359128667316894369.svg" style="color: transparent;" width="600"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 20
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            If the data is not in memory, it will be retrieved from the disk instead. We need an efficient way to find out which SSTable contains the key. Bloom filter [10] is commonly used to solve this problem.
+           </p>
+           <p>
+            The read path is shown in Figure 21 when data is not in memory.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram illustrating a read operation in a database system.  A client initiates a 'Read request' (1) to a server. The server first checks a green 'Memory cache' (1). If the data is present, it's returned directly to the client (5). If not, the server proceeds to the disk layer labeled 'DISK' (2).  Here, a 'Bloom filter' (3) is consulted to quickly check if the requested data exists in the underlying storage. If the Bloom filter indicates the data's presence, the system accesses the 'SSTables' (4), which are depicted as a collection of light blue blocks representing data segments. The retrieved 'Result data' (4) is then sent back to the client (5) via the server. The entire process is numbered sequentially (1-5) to show the flow of the request and response.  The diagram clearly separates the memory and disk layers, highlighting the caching mechanism and the use of a Bloom filter for efficient data lookup." data-nimg="1" decoding="async" height="282" loading="lazy" src="images/img_7649190443085068929.svg" style="color: transparent;" width="600"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 21
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            1. The system first checks if data is in memory. If not, go to step 2.
+           </p>
+           <p>
+            2. If data is not in memory, the system checks the bloom filter.
+           </p>
+           <p>
+            3. The bloom filter is used to figure out which SSTables might contain the key.
+           </p>
+           <p>
+            4. SSTables return the result of the data set.
+           </p>
+           <p>
+            5. The result of the data set is returned to the client.
+           </p>
+           <h2 id="summary">
+            Summary
+           </h2>
+           <p>
+            This chapter covers many concepts and techniques. To refresh your memory, the following table summarizes features and corresponding techniques used for a distributed key-value store.
+           </p>
+           <div class="table-wrap" style="--table-min-width: 500px;">
+            <table>
+             <tbody>
+              <tr class="odd">
+               <td>
+                <strong>
+                 Goal/Problems
+                </strong>
+               </td>
+               <td>
+                <strong>
+                 Technique
+                </strong>
+               </td>
+              </tr>
+              <tr class="even">
+               <td>
+                Ability to store big data
+               </td>
+               <td>
+                Use consistent hashing to spread load across servers
+               </td>
+              </tr>
+              <tr class="odd">
+               <td>
+                High availability reads
+               </td>
+               <td>
+                <p>
+                 Data replication
+                </p>
+                <p>
+                 Multi-datacenter setup
+                </p>
+               </td>
+              </tr>
+              <tr class="even">
+               <td>
+                Highly available writes
+               </td>
+               <td>
+                Versioning and conflict resolution with vector clocks
+               </td>
+              </tr>
+              <tr class="odd">
+               <td>
+                Dataset partition
+               </td>
+               <td>
+                Consistent Hashing
+               </td>
+              </tr>
+              <tr class="even">
+               <td>
+                Incremental scalability
+               </td>
+               <td>
+                Consistent Hashing
+               </td>
+              </tr>
+              <tr class="odd">
+               <td>
+                Heterogeneity
+               </td>
+               <td>
+                Consistent Hashing
+               </td>
+              </tr>
+              <tr class="even">
+               <td>
+                Tunable consistency
+               </td>
+               <td>
+                Quorum consensus
+               </td>
+              </tr>
+              <tr class="odd">
+               <td>
+                Handling temporary failures
+               </td>
+               <td>
+                Sloppy quorum and hinted handoff
+               </td>
+              </tr>
+              <tr class="even">
+               <td>
+                Handling permanent failures
+               </td>
+               <td>
+                Merkle tree
+               </td>
+              </tr>
+              <tr class="odd">
+               <td>
+                Handling data center outage
+               </td>
+               <td>
+                Cross-datacenter replication
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <p class="tableCaption">
+            Table 2
+           </p>
+           <h2 id="reference-materials">
+            Reference materials
+           </h2>
+           <p>
+            [1] Amazon DynamoDB:
+            <a href="https://aws.amazon.com/dynamodb/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://aws.amazon.com/dynamodb/
+             </u>
+            </a>
+           </p>
+           <p>
+            [2] memcached:
+            <a href="https://memcached.org/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://memcached.org/
+             </u>
+            </a>
+           </p>
+           <p>
+            [3] Redis:
+            <a href="https://redis.io/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://redis.io/
+             </u>
+            </a>
+           </p>
+           <p>
+            [4] Dynamo: Amazon’s Highly Available Key-value Store:
+            <br/>
+            <a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+             </u>
+            </a>
+           </p>
+           <p>
+            [5] Cassandra:
+            <a href="https://cassandra.apache.org/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://cassandra.apache.org/
+             </u>
+            </a>
+           </p>
+           <p>
+            [6] Bigtable: A Distributed Storage System for Structured Data:
+            <br/>
+            <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf
+             </u>
+            </a>
+           </p>
+           <p>
+            [7] Merkle tree:
+            <a href="https://en.wikipedia.org/wiki/Merkle_tree" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://en.wikipedia.org/wiki/Merkle_tree
+             </u>
+            </a>
+           </p>
+           <p>
+            [8] Cassandra architecture:
+            <a href="https://cassandra.apache.org/doc/latest/architecture/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://cassandra.apache.org/doc/latest/architecture/
+             </u>
+            </a>
+           </p>
+           <p>
+            [9] SStable:
+            <a href="https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
+             </u>
+            </a>
+           </p>
+           <p>
+            [10] Bloom filter
+            <a href="https://en.wikipedia.org/wiki/Bloom_filter" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://en.wikipedia.org/wiki/Bloom_filter
+             </u>
+            </a>
+           </p>
+           <div class="style_markCompleteWrap__YEi4w">
+            <button aria-pressed="false" class="style_markComplete__jnD2I">
+             <span class="style_emptySquare__K6JN0">
+             </span>
+             <span>
+              Mark as Complete
+             </span>
+            </button>
+           </div>
+          </article>
+         </div>
+        </main>
+        <div class="style_chatButtonContainer__NAl07">
+         <div class="style_chatButton__Gmdf9">
+          <img alt="ask alex" class="style_chatIcon___TOMK" data-nimg="1" decoding="async" height="81" loading="lazy" src="images/img_2346666373721248013.svg" style="color: transparent;" width="63"/>
+          <img alt="ask alex expend" class="style_chatIconExpend__SA0bp" data-nimg="1" decoding="async" height="122" loading="lazy" src="images/img_2588721561367293494.svg" style="color: transparent;" width="123"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div>
+  <next-route-announcer>
+   <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+   </p>
+  </next-route-announcer>
+  <div id="selection-ai-menu-container">
+  </div>
+ </body>
+</html>

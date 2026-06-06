@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style data-rc-order="prepend" rc-util-key="@ant-design-icons">
+   .anticon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  </style>
+  <style data-css-hash="1hz4ua6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   a:where(.css-133v4sd){color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}a:where(.css-133v4sd):hover{color:#69b1ff;}a:where(.css-133v4sd):active{color:#0958d9;}a:where(.css-133v4sd):active,a:where(.css-133v4sd):hover{text-decoration:none;outline:0;}a:where(.css-133v4sd):focus{text-decoration:none;outline:0;}a:where(.css-133v4sd)[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd) a{color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}:where(.css-133v4sd) a:hover{color:#69b1ff;}:where(.css-133v4sd) a:active{color:#0958d9;}:where(.css-133v4sd) a:active,:where(.css-133v4sd) a:hover{text-decoration:none;outline:0;}:where(.css-133v4sd) a:focus{text-decoration:none;outline:0;}:where(.css-133v4sd) a[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).anticon >*{line-height:1;}:where(.css-133v4sd).anticon svg{display:inline-block;}:where(.css-133v4sd).anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <style data-css-hash="9jgas6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-dropdown{position:absolute;top:-9999px;left:-9999px;z-index:1050;display:block;}:where(.css-133v4sd).ant-dropdown::before{position:absolute;inset-block:-4px;z-index:-9999;opacity:0.0001;content:"";}:where(.css-133v4sd).ant-dropdown-menu-vertical{max-height:100vh;overflow-y:auto;}:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.anticon-down,:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.ant-btn-icon>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .ant-btn>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .anticon-down::before{transition:transform 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap-open .anticon-down::before{transform:rotate(180deg);}:where(.css-133v4sd).ant-dropdown-hidden,:where(.css-133v4sd).ant-dropdown-menu-hidden,:where(.css-133v4sd).ant-dropdown-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomRight,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topRight,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpOut;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownOut;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:#ffffff;clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow:before{background:#ffffff;}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topRight>.ant-dropdown-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-topLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-topRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomRight>.ant-dropdown-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-bottomRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu{position:relative;margin:0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup{position:absolute;z-index:1050;background:transparent;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup ul,:where(.css-133v4sd).ant-dropdown-menu-submenu-popup li{list-style:none;margin:0;}:where(.css-133v4sd).ant-dropdown,:where(.css-133v4sd).ant-dropdown-menu-submenu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu{padding:4px;list-style-type:none;background-color:#ffffff;background-clip:padding-box;border-radius:8px;outline:none;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:empty,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:empty{padding:0;box-shadow:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-title{padding:5px 12px;color:rgba(0,0,0,0.45);transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item{position:relative;display:flex;align-items:center;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-icon{min-width:14px;margin-inline-end:8px;font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content{flex:auto;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a{color:inherit;transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover{color:inherit;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after{position:absolute;inset:0;content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra{padding-inline-start:16px;margin-inline-start:auto;font-size:12px;color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{display:flex;margin:0;padding:5px 12px;color:rgba(0,0,0,0.88);font-weight:normal;font-size:14px;line-height:1.5714285714285714;cursor:pointer;transition:all 0.2s;border-radius:4px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active{background-color:rgba(0,0,0,0.04);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected{color:#05673d;background-color:#95a69c;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active{background-color:#6a997e;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a{pointer-events:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider{height:1px;margin:4px 0;overflow:hidden;line-height:0;background-color:rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon{position:absolute;inset-inline-end:8px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon{margin-inline-end:0!important;color:rgba(0,0,0,0.45);font-size:12px;font-style:normal;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-list,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-list{margin:0 8px;padding:0;list-style:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{padding-inline-end:24px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-enter.ant-move-up-enter-active,:where(.css-133v4sd).ant-move-up-appear.ant-move-up-appear-active{animation-name:css-133v4sd-antMoveUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-up-leave.ant-move-up-leave-active{animation-name:css-133v4sd-antMoveUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-up-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-enter.ant-move-down-enter-active,:where(.css-133v4sd).ant-move-down-appear.ant-move-down-appear-active{animation-name:css-133v4sd-antMoveDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-down-leave.ant-move-down-leave-active{animation-name:css-133v4sd-antMoveDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-down-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled),:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled){color:#ff4d4f;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover{color:#fff;background-color:#ff4d4f;}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpIn{0%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}100%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownIn{0%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}100%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpOut{0%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownOut{0%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpIn{0%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownIn{0%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigIn{0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigOut{0%{transform:scale(1);}100%{transform:scale(0.8);opacity:0;}}
+  </style>
+  <style data-css-hash="1ihmimc" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout::before,:where(.css-133v4sd).ant-layout::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"],:where(.css-133v4sd).ant-layout [class*=" ant-layout"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"]::before,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::before,:where(.css-133v4sd).ant-layout [class^="ant-layout"]::after,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout{display:flex;flex:auto;flex-direction:column;min-height:0;background:#f5f5f5;}:where(.css-133v4sd).ant-layout,:where(.css-133v4sd).ant-layout *{box-sizing:border-box;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider{flex-direction:row;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout,:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout-content{width:0;}:where(.css-133v4sd).ant-layout .ant-layout-header,:where(.css-133v4sd).ant-layout.ant-layout-footer{flex:0 0 auto;}:where(.css-133v4sd).ant-layout-rtl{direction:rtl;}:where(.css-133v4sd).ant-layout-header{height:64px;padding:0 50px;color:rgba(0,0,0,0.88);line-height:64px;background:#001529;}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-layout-footer{padding:24px 50px;color:rgba(0,0,0,0.88);font-size:14px;background:#f5f5f5;}:where(.css-133v4sd).ant-layout-content{flex:auto;color:rgba(0,0,0,0.88);min-height:0;}
+  </style>
+  <style data-css-hash="yuvirj" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-tooltip{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:absolute;z-index:1070;display:block;width:max-content;max-width:250px;visibility:visible;--valid-offset-x:var(--arrow-offset-horizontal, var(--arrow-x));transform-origin:var(--valid-offset-x, 50%) var(--arrow-y, 50%);--antd-arrow-background-color:rgba(0,0,0,0.85);}:where(.css-133v4sd).ant-tooltip-hidden{display:none;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-inner{min-width:28px;min-height:32px;padding:6px 8px;color:#fff;text-align:start;text-decoration:none;word-wrap:break-word;background-color:rgba(0,0,0,0.85);border-radius:6px;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);box-sizing:border-box;}:where(.css-133v4sd).ant-tooltip-placement-topLeft,:where(.css-133v4sd).ant-tooltip-placement-topRight,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft,:where(.css-133v4sd).ant-tooltip-placement-bottomRight{min-width:34px;}:where(.css-133v4sd).ant-tooltip-placement-left .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftBottom .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-right .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightBottom .ant-tooltip-inner{border-radius:6px;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-content{position:relative;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-inner{background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-arrow{--antd-arrow-background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-inner{background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-arrow{--antd-arrow-background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-inner{background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-arrow{--antd-arrow-background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-inner{background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-arrow{--antd-arrow-background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-inner{background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-arrow{--antd-arrow-background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-inner{background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-arrow{--antd-arrow-background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-inner{background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-arrow{--antd-arrow-background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-inner{background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-arrow{--antd-arrow-background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-inner{background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-arrow{--antd-arrow-background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-inner{background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-arrow{--antd-arrow-background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-inner{background-color:#faad14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-arrow{--antd-arrow-background-color:#faad14;}:where(.css-133v4sd).ant-tooltip-rtl{direction:rtl;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:var(--antd-arrow-background-color);clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow:before{background:var(--antd-arrow-background-color);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topRight>.ant-tooltip-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-topLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-topRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomRight>.ant-tooltip-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-bottomRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{right:0;transform:translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{left:0;transform:translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-pure{position:relative;max-width:none;margin:16px;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-enter.ant-zoom-big-fast-enter-active,:where(.css-133v4sd).ant-zoom-big-fast-appear.ant-zoom-big-fast-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-fast-leave.ant-zoom-big-fast-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-fast-enter-prepare,:where(.css-133v4sd).ant-zoom-big-fast-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="4mhxit" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd)[class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"]{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd) .ant-menu::before{display:table;content:"";}:where(.css-133v4sd) .ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd) .ant-menu-hidden{display:none;}:where(.css-133v4sd).ant-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-menu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:0;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';margin-bottom:0;padding-inline-start:0;outline:none;transition:width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;}:where(.css-133v4sd).ant-menu::before{display:table;content:"";}:where(.css-133v4sd).ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd).ant-menu ul,:where(.css-133v4sd).ant-menu ol{margin:0;padding:0;list-style:none;}:where(.css-133v4sd).ant-menu-overflow{display:flex;}:where(.css-133v4sd).ant-menu-overflow .ant-menu-item{flex:none;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{border-radius:8px;}:where(.css-133v4sd).ant-menu .ant-menu-item-group-title{padding:8px 16px;font-size:14px;line-height:1.5714285714285714;transition:all 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-inline{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu .ant-menu-sub{cursor:initial;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-title-content{transition:color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-menu .ant-menu-title-content >.ant-typography-ellipsis-single-line{display:inline;vertical-align:unset;}:where(.css-133v4sd).ant-menu .ant-menu-title-content .ant-menu-item-extra{margin-inline-start:auto;padding-inline-start:16px;}:where(.css-133v4sd).ant-menu .ant-menu-item a::before{position:absolute;inset:0;background-color:transparent;content:"";}:where(.css-133v4sd).ant-menu .ant-menu-item-divider{overflow:hidden;line-height:0;border-color:rgba(5,5,5,0.06);border-style:solid;border-width:0;border-top-width:1px;margin-block:1px;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-divider-dashed{border-style:dashed;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list{margin:0;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-submenu-title{padding-inline:28px 16px;}:where(.css-133v4sd).ant-menu-submenu-popup{position:absolute;z-index:1050;border-radius:8px;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-popup.ant-menu-submenu{background:transparent;}:where(.css-133v4sd).ant-menu-submenu-popup::before{position:absolute;inset:0;z-index:-1;width:100%;height:100%;opacity:0;content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu{border-radius:8px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu>.ant-menu-submenu-title{border-radius:4px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title::after{transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft,:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom{padding-inline-end:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom{padding-inline-start:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft{padding-bottom:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft{padding-top:8px;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateX(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow{transform:translateY(-2px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before{transform:rotate(45deg) translateX(2.5px);}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-menu-horizontal{line-height:46px;border:0;border-bottom:1px solid rgba(5,5,5,0.06);box-shadow:none;}:where(.css-133v4sd).ant-menu-horizontal::after{display:block;clear:both;height:0;content:"\20";}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{position:relative;display:inline-block;vertical-align:bottom;padding-inline:16px;}:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-submenu .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-title{transition:border-color 0.3s,background 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-arrow{display:none;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root,:where(.css-133v4sd).ant-menu-vertical.ant-menu-root{box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-inline >.ant-menu-item,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline >.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub{min-width:160px;max-height:calc(100vh - 100px);padding:0;overflow:hidden;border-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub:not([class*='-active']){overflow-x:hidden;overflow-y:auto;}:where(.css-133v4sd).ant-menu-inline{width:100%;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title{display:flex;align-items:center;transition:border-color 0.3s,background 0.3s,padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >.ant-menu-title-content{flex:auto;min-width:0;overflow:hidden;text-overflow:ellipsis;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >*,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >*{flex:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline{padding:0;border:0;border-radius:0;box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title{padding-inline-start:32px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline-collapsed{width:80px;}:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-item >.ant-menu-inline-collapsed-noicon,:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-submenu .ant-menu-submenu-title >.ant-menu-inline-collapsed-noicon{font-size:16px;text-align:center;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title{inset-inline-start:0;padding-inline:calc(50% - 8px - 4px);text-overflow:clip;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon{opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon{margin:0;font-size:16px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon +span{display:inline-block;opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed .anticon{display:inline-block;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip{pointer-events:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .anticon{display:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a:hover{color:#fff;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-group-title{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding-inline:8px;}:where(.css-133v4sd).ant-menu-light,:where(.css-133v4sd).ant-menu-light>.ant-menu{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-extra{color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-disabled{color:rgba(0,0,0,0.25)!important;}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#fff2f0;}:where(.css-133v4sd).ant-menu-light .ant-menu-item a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-light .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#fff2f0;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:1px;margin-top:-1px;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:2px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#05673d;background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:rgba(0,0,0,0.02);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #05673d;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-dark,:where(.css-133v4sd).ant-menu-dark>.ant-menu{color:rgba(255,255,255,0.65);background:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-extra{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-disabled{color:rgba(255,255,255,0.25)!important;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:#fff;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff7875;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal{border-bottom:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:0;margin-top:0;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:0px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#fff;background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:0px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #fff;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-rtl{direction:rtl;}:where(.css-133v4sd).ant-menu-submenu-rtl{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy{overflow:hidden;}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy-active{transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-menu .ant-motion-collapse{overflow:hidden;transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="3hhlaq" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout-sider{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider::before,:where(.css-133v4sd).ant-layout-sider::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"],:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::after,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider{position:relative;min-width:0;background:#001529;transition:all 0.2s,background 0s;}:where(.css-133v4sd).ant-layout-sider-has-trigger{padding-bottom:48px;}:where(.css-133v4sd).ant-layout-sider-right{order:1;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children{height:100%;margin-top:-0.1px;padding-top:0.1px;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed{width:auto;}:where(.css-133v4sd).ant-layout-sider-zero-width .ant-layout-sider-children{overflow:hidden;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-trigger{position:fixed;bottom:0;z-index:1;height:48px;color:#fff;line-height:48px;text-align:center;background:#002140;cursor:pointer;transition:all 0.2s;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger{position:absolute;top:64px;inset-inline-end:-40px;z-index:1;width:40px;height:40px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;background:#001529;border-radius:0 8px 8px 0;cursor:pointer;transition:background 0.3s ease;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger::after{position:absolute;inset:0;background:transparent;transition:all 0.3s;content:"";}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger:hover::after{background:rgba(255, 255, 255, 0.2);}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger-right{inset-inline-start:-40px;border-radius:8px 0 0 8px;}:where(.css-133v4sd).ant-layout-sider-light{background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-trigger{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-zero-width-trigger{color:rgba(0,0,0,0.88);background:#ffffff;border:1px solid #f5f5f5;border-inline-start:0;}
+  </style>
+  <style data-css-hash="z0j72v" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-drawer{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-drawer::before,:where(.css-133v4sd).ant-drawer::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"],:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::after,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer{position:fixed;inset:0;z-index:1000;pointer-events:none;color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-drawer-pure{position:relative;background:#ffffff;display:flex;flex-direction:column;}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-left{box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-right{box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-top{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-bottom{box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-inline{position:absolute;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask{position:absolute;inset:0;z-index:1000;background:rgba(0,0,0,0.45);pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper{position:absolute;z-index:1000;max-width:100vw;transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper-hidden{display:none;}:where(.css-133v4sd).ant-drawer-left>.ant-drawer-content-wrapper{top:0;bottom:0;left:0;box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-right>.ant-drawer-content-wrapper{top:0;right:0;bottom:0;box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-top>.ant-drawer-content-wrapper{top:0;inset-inline:0;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-bottom>.ant-drawer-content-wrapper{bottom:0;inset-inline:0;box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer .ant-drawer-content{display:flex;flex-direction:column;width:100%;height:100%;overflow:auto;background:#ffffff;pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-header{display:flex;flex:0;align-items:center;padding:16px 24px;font-size:16px;line-height:1.5;border-bottom:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer .ant-drawer-header-title{display:flex;flex:1;align-items:center;min-width:0;min-height:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-extra{flex:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close{display:inline-flex;width:24px;height:24px;border-radius:4px;justify-content:center;align-items:center;margin-inline-end:8px;color:rgba(0,0,0,0.45);font-weight:600;font-size:16px;font-style:normal;line-height:1;text-align:center;text-transform:none;text-decoration:none;background:transparent;border:0;cursor:pointer;transition:all 0.2s;text-rendering:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:hover{color:rgba(0,0,0,0.88);background-color:rgba(0,0,0,0.06);text-decoration:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:active{background-color:rgba(0,0,0,0.15);}:where(.css-133v4sd).ant-drawer .ant-drawer-close:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-drawer .ant-drawer-title{flex:1;margin:0;font-weight:600;font-size:16px;line-height:1.5;}:where(.css-133v4sd).ant-drawer .ant-drawer-body{flex:1;min-width:0;min-height:0;padding:24px;overflow:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-body .ant-drawer-body-skeleton{width:100%;height:100%;display:flex;justify-content:center;}:where(.css-133v4sd).ant-drawer .ant-drawer-footer{flex-shrink:0;padding:8px 16px;border-top:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer-rtl{direction:rtl;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{transform:translateY(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transform:translateY(100%);}
+  </style>
+  <style data-css-hash="1orkko5" data-rc-order="prependQueue" data-token-hash="8yftb1">
+   .anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.anticon >*{line-height:1;}.anticon svg{display:inline-block;}.anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <meta charset="utf-8" data-next-head=""/>
+  <title data-next-head="">
+   ByteByteGo | Technical Interview Prep
+  </title>
+  <meta content="index,follow" data-next-head="" name="robots"/>
+  <meta content="Everything you need to take your system design skill to the next level" data-next-head="" name="description"/>
+  <meta content="summary_large_image" data-next-head="" name="twitter:card"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:site"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:creator"/>
+  <meta content="System Design · Coding · Behavioral · Machine Learning Interviews" data-next-head="" property="og:title"/>
+  <meta content="Ace Every Stage of Your Next Technical Interview" data-next-head="" property="og:description"/>
+  <meta content="https://bytebytego.com" data-next-head="" property="og:url"/>
+  <meta content="website" data-next-head="" property="og:type"/>
+  <meta content="https://bytebytego.com/social2.png" data-next-head="" property="og:image"/>
+  <meta content="ByteByteGo Logo" data-next-head="" property="og:image:alt"/>
+  <meta content="image/png" data-next-head="" property="og:image:type"/>
+  <meta content="2400" data-next-head="" property="og:image:width"/>
+  <meta content="1260" data-next-head="" property="og:image:height"/>
+  <meta content="en_US" data-next-head="" property="og:locale"/>
+  <meta content="ByteByteGo" data-next-head="" property="og:site_name"/>
+  <link href="https://firebase.googleapis.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <link href="https://vercel.live" rel="preconnect"/>
+  <link href="https://www.googleapis.com" rel="preconnect"/>
+  <link as="style" href="/_next/static/css/0d37f0f31c99e98b.css" rel="preload"/>
+  <link data-n-g="" href="/_next/static/css/0d37f0f31c99e98b.css" rel="stylesheet"/>
+  <link as="style" href="/_next/static/css/7e19b5f69d036867.css" rel="preload"/>
+  <link data-n-p="" href="/_next/static/css/7e19b5f69d036867.css" rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <meta content="#da532c" data-next-head="" name="msapplication-TileColor"/>
+  <meta content="#ffffff" data-next-head="" name="theme-color"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" data-next-head="" name="viewport"/>
+  <link data-next-head="" href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link data-next-head="" href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link data-next-head="" href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link data-next-head="" href="/site.webmanifest" rel="manifest"/>
+  <link color="#5bbad5" data-next-head="" href="/safari-pinned-tab.svg" rel="mask-icon"/>
+  <link as="image" data-next-head="" imagesrcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Farrow-right.42e8816e.png&amp;w=16&amp;q=75 1x" rel="preload"/>
+  <link as="image" data-next-head="" href="/_next/static/media/avatar.c6a6bd4f.svg" rel="preload"/>
+  <link as="image" data-next-head="" href="/images/courses/system-design-interview/design-a-news-feed-system/figure-11-1-UFCYN5DT.svg" rel="preload"/>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" rel="stylesheet"/>
+  <style>
+   .katex {
+        font-size: 15px !important;
+        color: #000 !important;
+      }
+      .katex-display {
+        overflow: auto hidden;
+        padding: 10px 0;
+      }
+  </style>
+  <link as="script" href="/_next/static/chunks/3892-7bc5549e31e6db74.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/my-courses-43c3e051d4c0003e.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/index-4338ea953541cde2.js" rel="prefetch"/>
+  <style>
+   body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 40px; } img { max-width: 100%; }
+  </style>
+ </head>
+ <body>
+  <div id="__next">
+   <!--$-->
+   <!--/$-->
+   <div class="ant-layout css-133v4sd">
+    <main class="ant-layout-content css-133v4sd" style="margin-top: 64px;">
+     <div class="style_container__9mWse" id="content-container">
+      <div class="ant-layout ant-layout-has-sider style_learn__wJdK1 css-133v4sd">
+       <div class="ant-layout css-133v4sd" style="margin-left: 295px;">
+        <main class="ant-layout-content style_content__Qif_T css-133v4sd">
+         <div class="style_articleWrap__Xn2yv" id="content">
+          <article class="style_learnContent__K5K7M">
+           <p>
+            In this chapter, you are asked to design a news feed system. What is news feed? According to the Facebook help page, “News feed is the constantly updating list of stories in the middle of your home page. News Feed includes status updates, photos, videos, links, app activity, and likes from people, pages, and groups that you follow on Facebook” [1]. This is a popular interview question. Similar questions commonly asked are to: design Facebook news feed, Instagram feed, Twitter timeline, etc.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a mobile phone screen displaying a news feed or similar content aggregator.  The screen shows three distinct news items, each vertically stacked and separated by dashed lines. Each item consists of a light-blue square (likely representing an app icon or source logo), a short headline in dark gray text, and a body of text in dark gray.  The second news item uniquely includes a light-green rectangular video player with a central white play button icon, suggesting multimedia content integration.  No URLs or specific parameters are visible; the information flow is implied as a unidirectional presentation of data from the application to the user, with no user interaction depicted in the image itself. The overall layout is clean and simple, suggesting a focus on content readability within a mobile context." data-nimg="1" decoding="async" height="321" src="images/img_9013386574699823607.svg" style="color: transparent;" width="164"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 1
+             </figcaption>
+            </div>
+           </figure>
+           <h2 id="step-1---understand-the-problem-and-establish-design-scope">
+            Step 1 - Understand the problem and establish design scope
+           </h2>
+           <p>
+            The first set of clarification questions are to understand what the interviewer has in mind when she asks you to design a news feed system. At the very least, you should figure out what features to support. Here is an example of candidate-interviewer interaction:
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : Is this a mobile app? Or a web app? Or both?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : Both
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : What are the important features?
+            <br/>
+            <strong>
+             Interview:
+            </strong>
+            A user can publish a post and see her friends’ posts on the news feed page.
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : Is the news feed sorted by reverse chronological order or any particular order such as topic scores? For instance, posts from your close friends have higher scores.
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : To keep things simple, let us assume the feed is sorted by reverse chronological order.
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : How many friends can a user have?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : 5000
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : What is the traffic volume?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : 10 million DAU
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : Can feed contain images, videos, or just text?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : It can contain media files, including both images and videos.
+           </p>
+           <p>
+            Now you have gathered the requirements, we focus on designing the system.
+           </p>
+           <h2 id="step-2---propose-high-level-design-and-get-buy-in">
+            Step 2 - Propose high-level design and get buy-in
+           </h2>
+           <p>
+            The design is divided into two flows: feed publishing and news feed building.
+           </p>
+           <ul>
+            <li>
+             <p>
+              Feed publishing: when a user publishes a post, corresponding data is written into cache and database. A post is populated to her friends’ news feed.
+             </p>
+            </li>
+            <li>
+             <p>
+              Newsfeed building: for simplicity, let us assume the news feed is built by aggregating friends’ posts in reverse chronological order.
+             </p>
+            </li>
+           </ul>
+           <h3 id="newsfeed-apis">
+            Newsfeed APIs
+           </h3>
+           <p>
+            The news feed APIs are the primary ways for clients to communicate with servers. Those APIs are HTTP based that allow clients to perform actions, which include posting a status, retrieving news feed, adding friends, etc. We discuss two most important APIs: feed publishing API and news feed retrieval API.
+           </p>
+           <p>
+            <strong>
+             Feed publishing API
+            </strong>
+           </p>
+           <p>
+            To publish a post, a HTTP POST request will be sent to the server. The API is shown below:
+           </p>
+           <p>
+            POST /v1/me/feed
+           </p>
+           <p>
+            Params:
+           </p>
+           <ul>
+            <li>
+             <p>
+              content: content is the text of the post.
+             </p>
+            </li>
+            <li>
+             <p>
+              auth_token: it is used to authenticate API requests.
+             </p>
+            </li>
+           </ul>
+           <p>
+            <strong>
+             Newsfeed retrieval API
+            </strong>
+           </p>
+           <p>
+            The API to retrieve news feed is shown below:
+           </p>
+           <p>
+            GET /v1/me/feed
+           </p>
+           <p>
+            Params:
+           </p>
+           <ul>
+            <li>
+             auth_token: it is used to authenticate API requests.
+            </li>
+           </ul>
+           <h3 id="feed-publishing">
+            Feed publishing
+           </h3>
+           <p>
+            Figure 2 shows the high-level design of the feed publishing flow.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram illustrating the flow of a user request for a news feed.  A user, accessing via either a web browser or mobile app, initiates a request that first resolves through a DNS server. This request, containing parameters like `v1/me/feed?content=Hello&amp;auth_token={auth_token}`, is then directed to a load balancer which distributes the traffic across multiple web servers.  These web servers communicate with three distinct services: a Post Service, a Fanout Service, and a Notification Service. The Post Service retrieves data from a Post Cache, which in turn accesses a Post DB if necessary.  The Fanout Service interacts with a News Feed Cache to provide the news feed content.  The Notification Service is shown but its interaction with other components isn't explicitly detailed.  The diagram highlights the use of caching mechanisms (Post Cache and News Feed Cache) to improve performance by storing frequently accessed data closer to the web servers.  The overall architecture demonstrates a client-server model with load balancing and caching strategies for efficient request handling." data-nimg="1" decoding="async" height="803" loading="lazy" sizes="(max-width: 840px) min(500px, 100vw), (max-width: 1200px) min(500px, 80vw), min(500px, 80vw)" src="images/img_6579232350138493322.png" srcset="/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-2-DHBRUF3G.png&amp;w=3840&amp;q=75 3840w" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 2
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             <p>
+              User: a user can view news feeds on a browser or mobile app. A user makes a post with content “Hello” through API:
+             </p>
+             <p>
+              /v1/me/feed?content=Hello&amp;auth_token={auth_token}
+             </p>
+            </li>
+            <li>
+             <p>
+              Load balancer: distribute traffic to web servers.
+             </p>
+            </li>
+            <li>
+             <p>
+              Web servers: web servers redirect traffic to different internal services.
+             </p>
+            </li>
+            <li>
+             <p>
+              Post service: persist post in the database and cache.
+             </p>
+            </li>
+            <li>
+             <p>
+              Fanout service: push new content to friends’ news feed. Newsfeed data is stored in the cache for fast retrieval.
+             </p>
+            </li>
+            <li>
+             <p>
+              Notification service: inform friends that new content is available and send out push notifications.
+             </p>
+            </li>
+           </ul>
+           <h3 id="newsfeed-building">
+            Newsfeed building
+           </h3>
+           <p>
+            In this section, we discuss how news feed is built behind the scenes. Figure 3 shows the high-level design:
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram for a news feed service.  The diagram starts with a 'User' block containing icons for a web browser and a mobile app, which connects to a DNS server.  From the User block, a request labeled 'v1/me/feed' is sent to a 'Load balancer,' which distributes the request to a cluster of 'Web servers.' These web servers then communicate with a 'News Feed Service,' which in turn accesses a 'News Feed Cache' composed of multiple cache instances (labeled 'CACHE'). The data flow is unidirectional, starting from the user's request and ending at the retrieval of data from the cache.  The web servers are depicted within a dashed-line box, suggesting a cluster or pool of servers. The News Feed Cache is also highlighted with a rounded rectangle, indicating a distinct component.  The overall architecture shows a client-server model with load balancing and caching implemented for improved performance and scalability." data-nimg="1" decoding="async" height="518" loading="lazy" sizes="(max-width: 840px) min(350px, 100vw), (max-width: 1200px) min(350px, 80vw), min(350px, 80vw)" src="images/img_1430758010142711146.png" srcset="/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-3-DJSVC462.png&amp;w=3840&amp;q=75 3840w" style="color: transparent;" width="350"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 3
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             <p>
+              User: a user sends a request to retrieve her news feed. The request looks like this: /v1/me/feed.
+             </p>
+            </li>
+            <li>
+             <p>
+              Load balancer: load balancer redirects traffic to web servers.
+             </p>
+            </li>
+            <li>
+             <p>
+              Web servers: web servers route requests to newsfeed service.
+             </p>
+            </li>
+            <li>
+             <p>
+              Newsfeed service: news feed service fetches news feed from the cache.
+             </p>
+            </li>
+            <li>
+             <p>
+              Newsfeed cache: store news feed IDs needed to render the news feed.
+             </p>
+            </li>
+           </ul>
+           <h2 id="step-3---design-deep-dive">
+            Step 3 - Design deep dive
+           </h2>
+           <p>
+            The high-level design briefly covered two flows: feed publishing and news feed building. Here, we discuss those topics in more depth.
+           </p>
+           <h3 id="feed-publishing-deep-dive">
+            Feed publishing deep dive
+           </h3>
+           <p>
+            Figure 4 outlines the detailed design for feed publishing. We have discussed most of components in high-level design, and we will focus on two components: web servers and fanout service.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram for a social media feed.  A user, accessing via web browser or mobile app (sending a request like `/v1/me/feed?content=Hello&amp;auth_token={auth_token}`), initiates the process. This request is routed through a DNS server to a load balancer, which distributes the traffic to multiple web servers.  The web servers handle authentication and rate limiting before interacting with a Post Service. The Post Service retrieves data from a Post Cache, falling back to a Post DB if necessary.  Concurrently, the Fanout Service, receiving friend IDs (1) from the web servers, queries a Graph DB for friends' data (2). This data is then placed in a Message Queue (3). Fanout Workers (4) process these messages, updating a News Feed Cache (5).  The Notification Service is also triggered by the web servers.  The system utilizes caching extensively: Post Cache for post data, User Cache for user data, and News Feed Cache for the final feed.  Data flows are numbered for clarity, showing the sequence of operations." data-nimg="1" decoding="async" height="793" loading="lazy" sizes="(max-width: 840px) min(700px, 100vw), (max-width: 1200px) min(700px, 80vw), min(700px, 80vw)" src="images/img_3250696489139177932.png" srcset="/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-4-XQVJN6AJ.png&amp;w=3840&amp;q=75 3840w" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 4
+             </figcaption>
+            </div>
+           </figure>
+           <h4 id="web-servers">
+            Web servers
+           </h4>
+           <p>
+            Besides communicating with clients, web servers enforce authentication and rate-limiting. Only users signed in with valid
+            <em>
+             auth_token
+            </em>
+            are allowed to make posts. The system limits the number of posts a user can make within a certain period, vital to prevent spam and abusive content.
+           </p>
+           <h4 id="fanout-service">
+            Fanout service
+           </h4>
+           <p>
+            Fanout is the process of delivering a post to all friends. Two types of fanout models are: fanout on write (also called push model) and fanout on read (also called pull model). Both models have pros and cons. We explain their workflows and explore the best approach to support our system.
+           </p>
+           <p>
+            <strong>
+             Fanout on write.
+            </strong>
+            With this approach, news feed is pre-computed during write time. A new post is delivered to friends’ cache immediately after it is published.
+           </p>
+           <p>
+            Pros:
+           </p>
+           <ul>
+            <li>
+             <p>
+              The news feed is generated in real-time and can be pushed to friends immediately.
+             </p>
+            </li>
+            <li>
+             <p>
+              Fetching news feed is fast because the news feed is pre-computed during write time.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Cons:
+           </p>
+           <ul>
+            <li>
+             <p>
+              If a user has many friends, fetching the friend list and generating news feeds for all of them are slow and time consuming. It is called hotkey problem.
+             </p>
+            </li>
+            <li>
+             <p>
+              For inactive users or those rarely log in, pre-computing news feeds waste computing resources.
+             </p>
+            </li>
+           </ul>
+           <p>
+            <strong>
+             Fanout on read
+            </strong>
+            . The news feed is generated during read time. This is an on-demand model. Recent posts are pulled when a user loads her home page.
+           </p>
+           <p>
+            Pros:
+           </p>
+           <ul>
+            <li>
+             <p>
+              For inactive users or those who rarely log in, fanout on read works better because it will not waste computing resources on them.
+             </p>
+            </li>
+            <li>
+             <p>
+              Data is not pushed to friends so there is no hotkey problem.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Cons:
+           </p>
+           <ul>
+            <li>
+             Fetching the news feed is slow as the news feed is not pre-computed.
+            </li>
+           </ul>
+           <p>
+            We adopt a hybrid approach to get benefits of both approaches and avoid pitfalls in them. Since fetching the news feed fast is crucial, we use a push model for the majority of users. For celebrities or users who have many friends/followers, we let followers pull news content on-demand to avoid system overload. Consistent hashing is a useful technique to mitigate the hotkey problem as it helps to distribute requests/data more evenly.
+           </p>
+           <p>
+            Let us take a close look at the fanout service as shown in Figure 5.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram for a news feed fanout service.  The process begins with a `Fanout Service` which first retrieves a list of `friend ids` (step 1) from a `Graph DB` (a graph database storing user relationships).  Next, it retrieves the `friends data` (step 2) from a `User Cache`, which in turn pulls data from a `User DB` (a relational database storing user information) if a cache miss occurs.  The `Fanout Service` then places messages (step 3) into a `Message Queue`, which are subsequently processed by `Fanout Workers` (step 4). These workers update the user's `News Feed` (step 5), which also utilizes a cache for performance optimization.  The numbered steps indicate the sequential flow of data and operations within the system.  The diagram clearly shows the interaction between different components, highlighting the use of caching mechanisms to improve efficiency and the use of a message queue for asynchronous processing." data-nimg="1" decoding="async" height="513" loading="lazy" src="images/img_525511425760327475.svg" style="color: transparent;" width="561"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 5
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            The fanout service works as follows:
+           </p>
+           <p>
+            1. Fetch friend IDs from the graph database. Graph databases are suited for managing friend relationship and friend recommendations. Interested readers wishing to learn more about this concept should refer to the reference material [2].
+           </p>
+           <p>
+            2. Get friends info from the user cache. The system then filters out friends based on user settings. For example, if you mute someone, her posts will not show up on your news feed even though you are still friends. Another reason why posts may not show is that a user could selectively share information with specific friends or hide it from other people.
+           </p>
+           <p>
+            3. Send friends list and new post ID to the message queue.
+           </p>
+           <p>
+            4. Fanout workers fetch data from the message queue and store news feed data in the news feed cache. You can think of the news feed cache as a
+            <em>
+             &lt;post_id, user_id&gt;
+            </em>
+            mapping table. Whenever a new post is made, it will be appended to the news feed table as shown in Figure 6. The memory consumption can become very large if we store the entire user and post objects in the cache. Thus, only IDs are stored. To keep the memory size small, we set a configurable limit. The chance of a user scrolling through thousands of posts in news feed is slim. Most users are only interested in the latest content, so the cache miss rate is low.
+           </p>
+           <p>
+            5. Store
+            <em>
+             &lt;post_id, user_id &gt;
+            </em>
+            in news feed cache. Figure 6 shows an example of what the news feed looks like in cache.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               post_id
+              </th>
+              <th>
+               user_id
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+             <tr>
+              <td>
+               post_id
+              </td>
+              <td>
+               user_id
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p class="tableCaption">
+            Figure 6
+           </p>
+           <h3 id="newsfeed-retrieval-deep-dive">
+            Newsfeed retrieval deep dive
+           </h3>
+           <p>
+            Figure 7 illustrates the detailed design for news feed retrieval.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram for a news feed service.  A user, accessing via web browser or mobile app, initiates a request (labeled '/v1/me/feed') which first resolves through a DNS server. This request then hits a load balancer (1), distributing the traffic across multiple web servers (2).  The web servers handle authentication and rate limiting before forwarding the request to the 'News Feed Service' (3). This service then accesses a 'News Feed Cache' (4) for data. If the data is not present in the cache, the service fetches it from the 'User DB' via the 'User Cache' (5) and 'Post DB' via the 'Post Cache' (5).  The responses are cached for future requests.  The entire system is fronted by a CDN (6) for faster content delivery, with the load balancer distributing traffic to the web servers and the mobile app connecting directly to the CDN (6).  Numbered arrows indicate the flow of requests and responses between components." data-nimg="1" decoding="async" height="553" loading="lazy" sizes="(max-width: 840px) min(550px, 100vw), (max-width: 1200px) min(550px, 80vw), min(550px, 80vw)" src="images/img_321679645945376697.png" srcset="/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-news-feed-system%2Ffigure-11-7-VBGEYZ3E.png&amp;w=3840&amp;q=75 3840w" style="color: transparent;" width="550"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 7
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            As shown in Figure 7, media content (images, videos, etc.) are stored in CDN for fast retrieval. Let us look at how a client retrieves news feed.
+           </p>
+           <p>
+            1. A user sends a request to retrieve her news feed. The request looks like this:
+            <em>
+             /v1/me/feed
+            </em>
+           </p>
+           <p>
+            2. The load balancer redistributes requests to web servers.
+           </p>
+           <p>
+            3. Web servers call the news feed service to fetch news feeds.
+           </p>
+           <p>
+            4. News feed service gets a list post IDs from the news feed cache.
+           </p>
+           <p>
+            5. A user’s news feed is more than just a list of feed IDs. It contains username, profile picture, post content, post image, etc. Thus, the news feed service fetches the complete user and post objects from caches (user cache and post cache) to construct the fully hydrated news feed.
+           </p>
+           <p>
+            6. The fully hydrated news feed is returned in JSON format back to the client for rendering.
+           </p>
+           <h3 id="cache-architecture">
+            Cache architecture
+           </h3>
+           <p>
+            Cache is extremely important for a news feed system. We divide the cache tier into 5 layers as shown in Figure 8.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system design for a news feed, structured as a table with five rows and three columns.  The first column labels the rows: 'News Feed,' 'Content,' 'Social Graph,' 'Action,' and 'Counters.' The remaining two columns represent data categories. The 'News Feed' row contains a single box labeled 'news feed.' The 'Content' row contains boxes labeled 'hot cache' and 'normal,' suggesting different caching strategies for content. The 'Social Graph' row shows boxes labeled 'follower' and 'following,' representing relationships between users. The 'Action' row displays boxes for 'liked,' 'replied,' and 'others,' indicating different user interactions. Finally, the 'Counters' row shows corresponding counters for each action: 'like counter,' 'reply counter,' and 'other counters.'  The dashed lines delineate logical groupings of related data within the system.  No explicit connections or data flow are shown between the boxes, but the arrangement implies a relationship between the data in each row, suggesting that the system tracks news feed content, user relationships, user actions, and associated counts." data-nimg="1" decoding="async" height="264" loading="lazy" src="images/img_5841416427187183005.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 8
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             <p>
+              News Feed: It stores IDs of news feeds.
+             </p>
+            </li>
+            <li>
+             <p>
+              Content: It stores every post data. Popular content is stored in hot cache.
+             </p>
+            </li>
+            <li>
+             <p>
+              Social Graph: It stores user relationship data.
+             </p>
+            </li>
+            <li>
+             <p>
+              Action: It stores info about whether a user liked a post, replied a post, or took other actions on a post.
+             </p>
+            </li>
+            <li>
+             <p>
+              Counters: It stores counters for like, reply, follower, following, etc.
+             </p>
+            </li>
+           </ul>
+           <h2 id="step-4---wrap-up">
+            Step 4 - Wrap up
+           </h2>
+           <p>
+            In this chapter, we designed a news feed system. Our design contains two flows: feed publishing and news feed retrieval.
+           </p>
+           <p>
+            Like any system design interview questions, there is no perfect way to design a system. Every company has its unique constraints, and you must design a system to fit those constraints. Understanding the tradeoffs of your design and technology choices are important. If there are a few minutes left, you can talk about scalability issues. To avoid duplicated discussion, only high-level talking points are listed below.
+           </p>
+           <p>
+            Scaling the database:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Vertical scaling vs Horizontal scaling
+             </p>
+            </li>
+            <li>
+             <p>
+              SQL vs NoSQL
+             </p>
+            </li>
+            <li>
+             <p>
+              Master-slave replication
+             </p>
+            </li>
+            <li>
+             <p>
+              Read replicas
+             </p>
+            </li>
+            <li>
+             <p>
+              Consistency models
+             </p>
+            </li>
+            <li>
+             <p>
+              Database sharding
+             </p>
+            </li>
+           </ul>
+           <p>
+            Other talking points:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Keep web tier stateless
+             </p>
+            </li>
+            <li>
+             <p>
+              Cache data as much as you can
+             </p>
+            </li>
+            <li>
+             <p>
+              Support multiple data centers
+             </p>
+            </li>
+            <li>
+             <p>
+              Loosely coupled components with message queues
+             </p>
+            </li>
+            <li>
+             <p>
+              Monitor key metrics. For instance, QPS during peak hours and latency while users refreshing their news feed are interesting to monitor.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Congratulations on getting this far! Now give yourself a pat on the back. Good job!
+           </p>
+           <h2 id="reference-materials">
+            Reference materials
+           </h2>
+           <p>
+            [1] How News Feed Works:
+            <br/>
+            <a href="https://www.facebook.com/help/327131014036297/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.facebook.com/help/327131014036297/
+             </u>
+            </a>
+           </p>
+           <p>
+            [2] Friend of Friend recommendations Neo4j and SQL Sever:
+            <br/>
+            <a href="http://geekswithblogs.net/brendonpage/archive/2015/10/26/friend-of-friend-recommendations-with-neo4j.aspx" rel="noopener noreferrer" target="_blank">
+             <u>
+              http://geekswithblogs.net/brendonpage/archive/2015/10/26/friend-of-friend-recommendations-with-neo4j.aspx
+             </u>
+            </a>
+           </p>
+           <div class="style_markCompleteWrap__YEi4w">
+            <button aria-pressed="false" class="style_markComplete__jnD2I">
+             <span class="style_emptySquare__K6JN0">
+             </span>
+             <span>
+              Mark as Complete
+             </span>
+            </button>
+           </div>
+          </article>
+         </div>
+        </main>
+        <div class="style_chatButtonContainer__NAl07">
+         <div class="style_chatButton__Gmdf9">
+          <img alt="ask alex" class="style_chatIcon___TOMK" data-nimg="1" decoding="async" height="81" loading="lazy" src="images/img_2346666373721248013.svg" style="color: transparent;" width="63"/>
+          <img alt="ask alex expend" class="style_chatIconExpend__SA0bp" data-nimg="1" decoding="async" height="122" loading="lazy" src="images/img_2588721561367293494.svg" style="color: transparent;" width="123"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div>
+  <next-route-announcer>
+   <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+   </p>
+  </next-route-announcer>
+  <div id="selection-ai-menu-container">
+  </div>
+ </body>
+</html>

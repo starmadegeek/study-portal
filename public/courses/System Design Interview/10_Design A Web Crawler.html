@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style data-rc-order="prepend" rc-util-key="@ant-design-icons">
+   .anticon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  </style>
+  <style data-css-hash="1hz4ua6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   a:where(.css-133v4sd){color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}a:where(.css-133v4sd):hover{color:#69b1ff;}a:where(.css-133v4sd):active{color:#0958d9;}a:where(.css-133v4sd):active,a:where(.css-133v4sd):hover{text-decoration:none;outline:0;}a:where(.css-133v4sd):focus{text-decoration:none;outline:0;}a:where(.css-133v4sd)[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd) a{color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}:where(.css-133v4sd) a:hover{color:#69b1ff;}:where(.css-133v4sd) a:active{color:#0958d9;}:where(.css-133v4sd) a:active,:where(.css-133v4sd) a:hover{text-decoration:none;outline:0;}:where(.css-133v4sd) a:focus{text-decoration:none;outline:0;}:where(.css-133v4sd) a[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).anticon >*{line-height:1;}:where(.css-133v4sd).anticon svg{display:inline-block;}:where(.css-133v4sd).anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <style data-css-hash="9jgas6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-dropdown{position:absolute;top:-9999px;left:-9999px;z-index:1050;display:block;}:where(.css-133v4sd).ant-dropdown::before{position:absolute;inset-block:-4px;z-index:-9999;opacity:0.0001;content:"";}:where(.css-133v4sd).ant-dropdown-menu-vertical{max-height:100vh;overflow-y:auto;}:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.anticon-down,:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.ant-btn-icon>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .ant-btn>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .anticon-down::before{transition:transform 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap-open .anticon-down::before{transform:rotate(180deg);}:where(.css-133v4sd).ant-dropdown-hidden,:where(.css-133v4sd).ant-dropdown-menu-hidden,:where(.css-133v4sd).ant-dropdown-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomRight,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topRight,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpOut;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownOut;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:#ffffff;clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow:before{background:#ffffff;}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topRight>.ant-dropdown-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-topLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-topRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomRight>.ant-dropdown-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-bottomRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu{position:relative;margin:0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup{position:absolute;z-index:1050;background:transparent;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup ul,:where(.css-133v4sd).ant-dropdown-menu-submenu-popup li{list-style:none;margin:0;}:where(.css-133v4sd).ant-dropdown,:where(.css-133v4sd).ant-dropdown-menu-submenu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu{padding:4px;list-style-type:none;background-color:#ffffff;background-clip:padding-box;border-radius:8px;outline:none;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:empty,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:empty{padding:0;box-shadow:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-title{padding:5px 12px;color:rgba(0,0,0,0.45);transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item{position:relative;display:flex;align-items:center;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-icon{min-width:14px;margin-inline-end:8px;font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content{flex:auto;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a{color:inherit;transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover{color:inherit;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after{position:absolute;inset:0;content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra{padding-inline-start:16px;margin-inline-start:auto;font-size:12px;color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{display:flex;margin:0;padding:5px 12px;color:rgba(0,0,0,0.88);font-weight:normal;font-size:14px;line-height:1.5714285714285714;cursor:pointer;transition:all 0.2s;border-radius:4px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active{background-color:rgba(0,0,0,0.04);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected{color:#05673d;background-color:#95a69c;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active{background-color:#6a997e;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a{pointer-events:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider{height:1px;margin:4px 0;overflow:hidden;line-height:0;background-color:rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon{position:absolute;inset-inline-end:8px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon{margin-inline-end:0!important;color:rgba(0,0,0,0.45);font-size:12px;font-style:normal;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-list,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-list{margin:0 8px;padding:0;list-style:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{padding-inline-end:24px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-enter.ant-move-up-enter-active,:where(.css-133v4sd).ant-move-up-appear.ant-move-up-appear-active{animation-name:css-133v4sd-antMoveUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-up-leave.ant-move-up-leave-active{animation-name:css-133v4sd-antMoveUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-up-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-enter.ant-move-down-enter-active,:where(.css-133v4sd).ant-move-down-appear.ant-move-down-appear-active{animation-name:css-133v4sd-antMoveDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-down-leave.ant-move-down-leave-active{animation-name:css-133v4sd-antMoveDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-down-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled),:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled){color:#ff4d4f;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover{color:#fff;background-color:#ff4d4f;}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpIn{0%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}100%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownIn{0%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}100%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpOut{0%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownOut{0%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpIn{0%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownIn{0%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigIn{0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigOut{0%{transform:scale(1);}100%{transform:scale(0.8);opacity:0;}}
+  </style>
+  <style data-css-hash="1ihmimc" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout::before,:where(.css-133v4sd).ant-layout::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"],:where(.css-133v4sd).ant-layout [class*=" ant-layout"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"]::before,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::before,:where(.css-133v4sd).ant-layout [class^="ant-layout"]::after,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout{display:flex;flex:auto;flex-direction:column;min-height:0;background:#f5f5f5;}:where(.css-133v4sd).ant-layout,:where(.css-133v4sd).ant-layout *{box-sizing:border-box;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider{flex-direction:row;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout,:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout-content{width:0;}:where(.css-133v4sd).ant-layout .ant-layout-header,:where(.css-133v4sd).ant-layout.ant-layout-footer{flex:0 0 auto;}:where(.css-133v4sd).ant-layout-rtl{direction:rtl;}:where(.css-133v4sd).ant-layout-header{height:64px;padding:0 50px;color:rgba(0,0,0,0.88);line-height:64px;background:#001529;}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-layout-footer{padding:24px 50px;color:rgba(0,0,0,0.88);font-size:14px;background:#f5f5f5;}:where(.css-133v4sd).ant-layout-content{flex:auto;color:rgba(0,0,0,0.88);min-height:0;}
+  </style>
+  <style data-css-hash="yuvirj" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-tooltip{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:absolute;z-index:1070;display:block;width:max-content;max-width:250px;visibility:visible;--valid-offset-x:var(--arrow-offset-horizontal, var(--arrow-x));transform-origin:var(--valid-offset-x, 50%) var(--arrow-y, 50%);--antd-arrow-background-color:rgba(0,0,0,0.85);}:where(.css-133v4sd).ant-tooltip-hidden{display:none;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-inner{min-width:28px;min-height:32px;padding:6px 8px;color:#fff;text-align:start;text-decoration:none;word-wrap:break-word;background-color:rgba(0,0,0,0.85);border-radius:6px;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);box-sizing:border-box;}:where(.css-133v4sd).ant-tooltip-placement-topLeft,:where(.css-133v4sd).ant-tooltip-placement-topRight,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft,:where(.css-133v4sd).ant-tooltip-placement-bottomRight{min-width:34px;}:where(.css-133v4sd).ant-tooltip-placement-left .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftBottom .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-right .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightBottom .ant-tooltip-inner{border-radius:6px;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-content{position:relative;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-inner{background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-arrow{--antd-arrow-background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-inner{background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-arrow{--antd-arrow-background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-inner{background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-arrow{--antd-arrow-background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-inner{background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-arrow{--antd-arrow-background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-inner{background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-arrow{--antd-arrow-background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-inner{background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-arrow{--antd-arrow-background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-inner{background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-arrow{--antd-arrow-background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-inner{background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-arrow{--antd-arrow-background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-inner{background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-arrow{--antd-arrow-background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-inner{background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-arrow{--antd-arrow-background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-inner{background-color:#faad14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-arrow{--antd-arrow-background-color:#faad14;}:where(.css-133v4sd).ant-tooltip-rtl{direction:rtl;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:var(--antd-arrow-background-color);clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow:before{background:var(--antd-arrow-background-color);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topRight>.ant-tooltip-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-topLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-topRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomRight>.ant-tooltip-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-bottomRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{right:0;transform:translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{left:0;transform:translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-pure{position:relative;max-width:none;margin:16px;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-enter.ant-zoom-big-fast-enter-active,:where(.css-133v4sd).ant-zoom-big-fast-appear.ant-zoom-big-fast-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-fast-leave.ant-zoom-big-fast-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-fast-enter-prepare,:where(.css-133v4sd).ant-zoom-big-fast-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="4mhxit" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd)[class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"]{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd) .ant-menu::before{display:table;content:"";}:where(.css-133v4sd) .ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd) .ant-menu-hidden{display:none;}:where(.css-133v4sd).ant-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-menu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:0;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';margin-bottom:0;padding-inline-start:0;outline:none;transition:width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;}:where(.css-133v4sd).ant-menu::before{display:table;content:"";}:where(.css-133v4sd).ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd).ant-menu ul,:where(.css-133v4sd).ant-menu ol{margin:0;padding:0;list-style:none;}:where(.css-133v4sd).ant-menu-overflow{display:flex;}:where(.css-133v4sd).ant-menu-overflow .ant-menu-item{flex:none;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{border-radius:8px;}:where(.css-133v4sd).ant-menu .ant-menu-item-group-title{padding:8px 16px;font-size:14px;line-height:1.5714285714285714;transition:all 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-inline{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu .ant-menu-sub{cursor:initial;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-title-content{transition:color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-menu .ant-menu-title-content >.ant-typography-ellipsis-single-line{display:inline;vertical-align:unset;}:where(.css-133v4sd).ant-menu .ant-menu-title-content .ant-menu-item-extra{margin-inline-start:auto;padding-inline-start:16px;}:where(.css-133v4sd).ant-menu .ant-menu-item a::before{position:absolute;inset:0;background-color:transparent;content:"";}:where(.css-133v4sd).ant-menu .ant-menu-item-divider{overflow:hidden;line-height:0;border-color:rgba(5,5,5,0.06);border-style:solid;border-width:0;border-top-width:1px;margin-block:1px;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-divider-dashed{border-style:dashed;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list{margin:0;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-submenu-title{padding-inline:28px 16px;}:where(.css-133v4sd).ant-menu-submenu-popup{position:absolute;z-index:1050;border-radius:8px;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-popup.ant-menu-submenu{background:transparent;}:where(.css-133v4sd).ant-menu-submenu-popup::before{position:absolute;inset:0;z-index:-1;width:100%;height:100%;opacity:0;content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu{border-radius:8px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu>.ant-menu-submenu-title{border-radius:4px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title::after{transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft,:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom{padding-inline-end:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom{padding-inline-start:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft{padding-bottom:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft{padding-top:8px;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateX(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow{transform:translateY(-2px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before{transform:rotate(45deg) translateX(2.5px);}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-menu-horizontal{line-height:46px;border:0;border-bottom:1px solid rgba(5,5,5,0.06);box-shadow:none;}:where(.css-133v4sd).ant-menu-horizontal::after{display:block;clear:both;height:0;content:"\20";}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{position:relative;display:inline-block;vertical-align:bottom;padding-inline:16px;}:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-submenu .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-title{transition:border-color 0.3s,background 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-arrow{display:none;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root,:where(.css-133v4sd).ant-menu-vertical.ant-menu-root{box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-inline >.ant-menu-item,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline >.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub{min-width:160px;max-height:calc(100vh - 100px);padding:0;overflow:hidden;border-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub:not([class*='-active']){overflow-x:hidden;overflow-y:auto;}:where(.css-133v4sd).ant-menu-inline{width:100%;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title{display:flex;align-items:center;transition:border-color 0.3s,background 0.3s,padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >.ant-menu-title-content{flex:auto;min-width:0;overflow:hidden;text-overflow:ellipsis;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >*,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >*{flex:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline{padding:0;border:0;border-radius:0;box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title{padding-inline-start:32px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline-collapsed{width:80px;}:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-item >.ant-menu-inline-collapsed-noicon,:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-submenu .ant-menu-submenu-title >.ant-menu-inline-collapsed-noicon{font-size:16px;text-align:center;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title{inset-inline-start:0;padding-inline:calc(50% - 8px - 4px);text-overflow:clip;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon{opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon{margin:0;font-size:16px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon +span{display:inline-block;opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed .anticon{display:inline-block;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip{pointer-events:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .anticon{display:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a:hover{color:#fff;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-group-title{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding-inline:8px;}:where(.css-133v4sd).ant-menu-light,:where(.css-133v4sd).ant-menu-light>.ant-menu{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-extra{color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-disabled{color:rgba(0,0,0,0.25)!important;}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#fff2f0;}:where(.css-133v4sd).ant-menu-light .ant-menu-item a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-light .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#fff2f0;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:1px;margin-top:-1px;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:2px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#05673d;background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:rgba(0,0,0,0.02);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #05673d;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-dark,:where(.css-133v4sd).ant-menu-dark>.ant-menu{color:rgba(255,255,255,0.65);background:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-extra{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-disabled{color:rgba(255,255,255,0.25)!important;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:#fff;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff7875;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal{border-bottom:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:0;margin-top:0;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:0px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#fff;background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:0px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #fff;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-rtl{direction:rtl;}:where(.css-133v4sd).ant-menu-submenu-rtl{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy{overflow:hidden;}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy-active{transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-menu .ant-motion-collapse{overflow:hidden;transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="3hhlaq" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout-sider{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider::before,:where(.css-133v4sd).ant-layout-sider::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"],:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::after,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider{position:relative;min-width:0;background:#001529;transition:all 0.2s,background 0s;}:where(.css-133v4sd).ant-layout-sider-has-trigger{padding-bottom:48px;}:where(.css-133v4sd).ant-layout-sider-right{order:1;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children{height:100%;margin-top:-0.1px;padding-top:0.1px;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed{width:auto;}:where(.css-133v4sd).ant-layout-sider-zero-width .ant-layout-sider-children{overflow:hidden;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-trigger{position:fixed;bottom:0;z-index:1;height:48px;color:#fff;line-height:48px;text-align:center;background:#002140;cursor:pointer;transition:all 0.2s;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger{position:absolute;top:64px;inset-inline-end:-40px;z-index:1;width:40px;height:40px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;background:#001529;border-radius:0 8px 8px 0;cursor:pointer;transition:background 0.3s ease;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger::after{position:absolute;inset:0;background:transparent;transition:all 0.3s;content:"";}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger:hover::after{background:rgba(255, 255, 255, 0.2);}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger-right{inset-inline-start:-40px;border-radius:8px 0 0 8px;}:where(.css-133v4sd).ant-layout-sider-light{background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-trigger{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-zero-width-trigger{color:rgba(0,0,0,0.88);background:#ffffff;border:1px solid #f5f5f5;border-inline-start:0;}
+  </style>
+  <style data-css-hash="z0j72v" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-drawer{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-drawer::before,:where(.css-133v4sd).ant-drawer::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"],:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::after,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer{position:fixed;inset:0;z-index:1000;pointer-events:none;color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-drawer-pure{position:relative;background:#ffffff;display:flex;flex-direction:column;}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-left{box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-right{box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-top{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-bottom{box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-inline{position:absolute;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask{position:absolute;inset:0;z-index:1000;background:rgba(0,0,0,0.45);pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper{position:absolute;z-index:1000;max-width:100vw;transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper-hidden{display:none;}:where(.css-133v4sd).ant-drawer-left>.ant-drawer-content-wrapper{top:0;bottom:0;left:0;box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-right>.ant-drawer-content-wrapper{top:0;right:0;bottom:0;box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-top>.ant-drawer-content-wrapper{top:0;inset-inline:0;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-bottom>.ant-drawer-content-wrapper{bottom:0;inset-inline:0;box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer .ant-drawer-content{display:flex;flex-direction:column;width:100%;height:100%;overflow:auto;background:#ffffff;pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-header{display:flex;flex:0;align-items:center;padding:16px 24px;font-size:16px;line-height:1.5;border-bottom:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer .ant-drawer-header-title{display:flex;flex:1;align-items:center;min-width:0;min-height:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-extra{flex:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close{display:inline-flex;width:24px;height:24px;border-radius:4px;justify-content:center;align-items:center;margin-inline-end:8px;color:rgba(0,0,0,0.45);font-weight:600;font-size:16px;font-style:normal;line-height:1;text-align:center;text-transform:none;text-decoration:none;background:transparent;border:0;cursor:pointer;transition:all 0.2s;text-rendering:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:hover{color:rgba(0,0,0,0.88);background-color:rgba(0,0,0,0.06);text-decoration:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:active{background-color:rgba(0,0,0,0.15);}:where(.css-133v4sd).ant-drawer .ant-drawer-close:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-drawer .ant-drawer-title{flex:1;margin:0;font-weight:600;font-size:16px;line-height:1.5;}:where(.css-133v4sd).ant-drawer .ant-drawer-body{flex:1;min-width:0;min-height:0;padding:24px;overflow:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-body .ant-drawer-body-skeleton{width:100%;height:100%;display:flex;justify-content:center;}:where(.css-133v4sd).ant-drawer .ant-drawer-footer{flex-shrink:0;padding:8px 16px;border-top:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer-rtl{direction:rtl;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{transform:translateY(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transform:translateY(100%);}
+  </style>
+  <style data-css-hash="1orkko5" data-rc-order="prependQueue" data-token-hash="8yftb1">
+   .anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.anticon >*{line-height:1;}.anticon svg{display:inline-block;}.anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <meta charset="utf-8" data-next-head=""/>
+  <title data-next-head="">
+   ByteByteGo | Technical Interview Prep
+  </title>
+  <meta content="index,follow" data-next-head="" name="robots"/>
+  <meta content="Everything you need to take your system design skill to the next level" data-next-head="" name="description"/>
+  <meta content="summary_large_image" data-next-head="" name="twitter:card"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:site"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:creator"/>
+  <meta content="System Design · Coding · Behavioral · Machine Learning Interviews" data-next-head="" property="og:title"/>
+  <meta content="Ace Every Stage of Your Next Technical Interview" data-next-head="" property="og:description"/>
+  <meta content="https://bytebytego.com" data-next-head="" property="og:url"/>
+  <meta content="website" data-next-head="" property="og:type"/>
+  <meta content="https://bytebytego.com/social2.png" data-next-head="" property="og:image"/>
+  <meta content="ByteByteGo Logo" data-next-head="" property="og:image:alt"/>
+  <meta content="image/png" data-next-head="" property="og:image:type"/>
+  <meta content="2400" data-next-head="" property="og:image:width"/>
+  <meta content="1260" data-next-head="" property="og:image:height"/>
+  <meta content="en_US" data-next-head="" property="og:locale"/>
+  <meta content="ByteByteGo" data-next-head="" property="og:site_name"/>
+  <link href="https://firebase.googleapis.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <link href="https://vercel.live" rel="preconnect"/>
+  <link href="https://www.googleapis.com" rel="preconnect"/>
+  <link as="style" href="/_next/static/css/0d37f0f31c99e98b.css" rel="preload"/>
+  <link data-n-g="" href="/_next/static/css/0d37f0f31c99e98b.css" rel="stylesheet"/>
+  <link as="style" href="/_next/static/css/7e19b5f69d036867.css" rel="preload"/>
+  <link data-n-p="" href="/_next/static/css/7e19b5f69d036867.css" rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <meta content="#da532c" data-next-head="" name="msapplication-TileColor"/>
+  <meta content="#ffffff" data-next-head="" name="theme-color"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" data-next-head="" name="viewport"/>
+  <link data-next-head="" href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link data-next-head="" href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link data-next-head="" href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link data-next-head="" href="/site.webmanifest" rel="manifest"/>
+  <link color="#5bbad5" data-next-head="" href="/safari-pinned-tab.svg" rel="mask-icon"/>
+  <link as="image" data-next-head="" imagesrcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Farrow-right.42e8816e.png&amp;w=16&amp;q=75 1x" rel="preload"/>
+  <link as="image" data-next-head="" href="/_next/static/media/avatar.c6a6bd4f.svg" rel="preload"/>
+  <link as="image" data-next-head="" imagesizes="(max-width: 840px) min(600px, 100vw), (max-width: 1200px) min(600px, 80vw), min(600px, 80vw)" imagesrcset="/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=3840&amp;q=75 3840w" rel="preload"/>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" rel="stylesheet"/>
+  <style>
+   .katex {
+        font-size: 15px !important;
+        color: #000 !important;
+      }
+      .katex-display {
+        overflow: auto hidden;
+        padding: 10px 0;
+      }
+  </style>
+  <link as="script" href="/_next/static/chunks/3892-7bc5549e31e6db74.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/my-courses-43c3e051d4c0003e.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/index-4338ea953541cde2.js" rel="prefetch"/>
+  <style>
+   body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 40px; } img { max-width: 100%; }
+  </style>
+ </head>
+ <body>
+  <div id="__next">
+   <!--$-->
+   <!--/$-->
+   <div class="ant-layout css-133v4sd">
+    <main class="ant-layout-content css-133v4sd" style="margin-top: 64px;">
+     <div class="style_container__9mWse" id="content-container">
+      <div class="ant-layout ant-layout-has-sider style_learn__wJdK1 css-133v4sd">
+       <div class="ant-layout css-133v4sd" style="margin-left: 295px;">
+        <main class="ant-layout-content style_content__Qif_T css-133v4sd">
+         <div class="style_articleWrap__Xn2yv" id="content">
+          <article class="style_learnContent__K5K7M">
+           <p>
+            In this chapter, we focus on web crawler design: an interesting and classic system design interview question.
+           </p>
+           <p>
+            A web crawler is known as a robot or spider. It is widely used by search engines to discover new or updated content on the web. Content can be a web page, an image, a video, a PDF file, etc. A web crawler starts by collecting a few web pages and then follows links on those pages to collect new content. Figure 1 shows a visual example of the crawl process.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a diagram illustrating a website's redirection or linking structure.  A central 'a.com page' box displays the URLs `www.a.com`, `www.b.com`, and `www.c.com`.  Blue arrows emanate from this central box, each pointing to another webpage representation. The first arrow connects to a 'b.com page' displaying `www.banana.com`, which in turn has an arrow pointing to a 'banana.com page'. The second arrow from 'a.com page' connects to a 'c.com page' showing `www.orange.com` and `www.plum.com`, with separate arrows leading to 'orange.com page' and 'plum.com page' respectively.  Finally, a third arrow from 'a.com page' points to an 'a.com page' displaying `www.lime.com`, `www.peach.com`, and `www.mango.com`, with subsequent arrows connecting to individual 'lime.com page', 'peach.com page', and 'mango.com page' representations.  Each webpage representation is a simple browser window icon with three dots in the address bar, suggesting multiple tabs or windows.  The overall structure shows how a single website (`a.com`) can link to and redirect users to multiple other websites." data-nimg="1" decoding="async" height="644" sizes="(max-width: 840px) min(600px, 100vw), (max-width: 1200px) min(600px, 80vw), min(600px, 80vw)" src="images/img_6046191510087642258.png" srcset="/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fdesign-a-web-crawler%2Ffigure-9-1-SY5VC26X.png&amp;w=3840&amp;q=75 3840w" style="color: transparent;" width="600"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 1
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            A crawler is used for many purposes:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Search engine indexing: This is the most common use case. A crawler collects web pages to create a local index for search engines. For example, Googlebot is the web crawler behind the Google search engine.
+             </p>
+            </li>
+            <li>
+             <p>
+              Web archiving: This is the process of collecting information from the web to preserve data for future uses. For instance, many national libraries run crawlers to archive web sites. Notable examples are the US Library of Congress [1] and the EU web archive [2].
+             </p>
+            </li>
+            <li>
+             <p>
+              Web mining: The explosive growth of the web presents an unprecedented opportunity for data mining. Web mining helps to discover useful knowledge from the internet. For example, top financial firms use crawlers to download shareholder meetings and annual reports to learn key company initiatives.
+             </p>
+            </li>
+            <li>
+             <p>
+              Web monitoring. The crawlers help to monitor copyright and trademark infringements over the Internet. For example, Digimarc [3] utilizes crawlers to discover pirated works and reports.
+             </p>
+            </li>
+           </ul>
+           <p>
+            The complexity of developing a web crawler depends on the scale we intend to support. It could be either a small school project, which takes only a few hours to complete or a gigantic project that requires continuous improvement from a dedicated engineering team. Thus, we will explore the scale and features to support below.
+           </p>
+           <h2 id="step-1---understand-the-problem-and-establish-design-scope">
+            Step 1 - Understand the problem and establish design scope
+           </h2>
+           <p>
+            The basic algorithm of a web crawler is simple:
+           </p>
+           <p>
+            1. Given a set of URLs, download all the web pages addressed by the URLs.
+           </p>
+           <p>
+            2. Extract URLs from these web pages
+           </p>
+           <p>
+            3. Add new URLs to the list of URLs to be downloaded. Repeat these 3 steps.
+           </p>
+           <p>
+            Does a web crawler work truly as simple as this basic algorithm? Not exactly. Designing a vastly scalable web crawler is an extremely complex task. It is unlikely for anyone to design a massive web crawler within the interview duration. Before jumping into the design, we must ask questions to understand the requirements and establish design scope:
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : What is the main purpose of the crawler? Is it used for search engine indexing, data mining, or something else?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : Search engine indexing.
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : How many web pages does the web crawler collect per month?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : 1 billion pages.
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : What content types are included? HTML only or other content types such as PDFs and images as well?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : HTML only.
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : Shall we consider newly added or edited web pages?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : Yes, we should consider the newly added or edited web pages.
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : Do we need to store HTML pages crawled from the web?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : Yes, up to 5 years
+           </p>
+           <p>
+            <strong>
+             Candidate
+            </strong>
+            : How do we handle web pages with duplicate content?
+            <br/>
+            <strong>
+             Interviewer
+            </strong>
+            : Pages with duplicate content should be ignored.
+           </p>
+           <p>
+            Above are some of the sample questions that you can ask your interviewer. It is important to understand the requirements and clarify ambiguities. Even if you are asked to design a straightforward product like a web crawler, you and your interviewer might not have the same assumptions.
+           </p>
+           <p>
+            Beside functionalities to clarify with your interviewer, it is also important to note down the following characteristics of a good web crawler:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Scalability: The web is very large. There are billions of web pages out there. Web crawling should be extremely efficient using parallelization.
+             </p>
+            </li>
+            <li>
+             <p>
+              Robustness: The web is full of traps. Bad HTML, unresponsive servers, crashes, malicious links, etc. are all common. The crawler must handle all those edge cases.
+             </p>
+            </li>
+            <li>
+             <p>
+              Politeness: The crawler should not make too many requests to a website within a short time interval.
+             </p>
+            </li>
+            <li>
+             <p>
+              Extensibility: The system is flexible so that minimal changes are needed to support new content types. For example, if we want to crawl image files in the future, we should not need to redesign the entire system.
+             </p>
+            </li>
+           </ul>
+           <h3 id="back-of-the-envelope-estimation">
+            Back of the envelope estimation
+           </h3>
+           <p>
+            The following estimations are based on many assumptions, and it is important to communicate with the interviewer to be on the same page.
+           </p>
+           <ul>
+            <li>
+             <p>
+              Assume 1 billion web pages are downloaded every month.
+             </p>
+            </li>
+            <li>
+             <p>
+              QPS: 1,000,000,000 / 30 days / 24 hours / 3600 seconds = ~400 pages per second.
+             </p>
+            </li>
+            <li>
+             <p>
+              Peak QPS = 2 * QPS = 800
+             </p>
+            </li>
+            <li>
+             <p>
+              Assume the average web page size is 500k.
+             </p>
+            </li>
+            <li>
+             <p>
+              1-billion-page x 500k = 500 TB storage per month. If you are unclear about digital storage units, go through “Power of 2” section in the "Back-of-the-envelope Estimation" chapter again.
+             </p>
+            </li>
+            <li>
+             <p>
+              Assuming data are stored for five years, 500 TB * 12 months * 5 years = 30 PB. A 30 PB storage is needed to store five-year content.
+             </p>
+            </li>
+           </ul>
+           <h2 id="step-2---propose-high-level-design-and-get-buy-in">
+            Step 2 - Propose high-level design and get buy-in
+           </h2>
+           <p>
+            Once the requirements are clear, we move on to the high-level design. Inspired by previous studies on web crawling [4] [5], we propose a high-level design as shown in Figure 2.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a web crawler system architecture.  The process begins with a set of `seed URLs`, which are fed into a `URL Frontier`.  The `URL Frontier` passes URLs one by one to an `HTML Downloader`, which retrieves the HTML content of each URL after resolving the domain name via a `DNS Resolver`. The downloaded HTML is then sent to a `Content Parser`.  The parsed content is checked against a `Content Seen?` component, which consults a database labeled `Content St..` (presumably Content Storage).  If the content is new, a `Link Extractor` pulls out all URLs from the parsed content. These extracted URLs are then passed through a `URL Filter` before being checked against a `URL Seen?` component, which interacts with a `URL Storag..` (presumably URL Storage) database.  URLs deemed new are then fed back into the `URL Frontier`, creating a cycle of crawling and processing new web pages.  The entire system is designed to systematically explore and process web pages, storing both visited URLs and content." data-nimg="1" decoding="async" height="509" loading="lazy" src="images/img_7938633375572155200.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 2
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            First, we explore each design component to understand their functionalities. Then, we examine the crawler workflow step-by-step.
+           </p>
+           <p>
+            <strong>
+             Seed URLs
+            </strong>
+           </p>
+           <p>
+            A web crawler uses seed URLs as a starting point for the crawl process. For example, to crawl all web pages from a university’s website, an intuitive way to select seed URLs is to use the university’s domain name.
+           </p>
+           <p>
+            To crawl the entire web, we need to be creative in selecting seed URLs. A good seed URL serves as a good starting point that a crawler can utilize to traverse as many links as possible. The general strategy is to divide the entire URL space into smaller ones. The first proposed approach is based on locality as different countries may have different popular websites. Another way is to choose seed URLs based on topics; for example, we can divide URL space into shopping, sports, healthcare, etc. Seed URL selection is an open-ended question. You are not expected to give the perfect answer. Just think out loud.
+           </p>
+           <p>
+            <strong>
+             URL Frontier
+            </strong>
+           </p>
+           <p>
+            Most modern web crawlers split the crawl state into two: to be downloaded and already downloaded. The component that stores URLs to be downloaded is called the URL Frontier. You can refer to this as a First-in-First-out (FIFO) queue. For detailed information about the URL Frontier, refer to the deep dive.
+           </p>
+           <p>
+            <strong>
+             HTML Downloader
+            </strong>
+           </p>
+           <p>
+            The HTML downloader downloads web pages from the internet. Those URLs are provided by the URL Frontier.
+           </p>
+           <p>
+            <strong>
+             DNS Resolver
+            </strong>
+           </p>
+           <p>
+            To download a web page, a URL must be translated into an IP address. The HTML Downloader calls the DNS Resolver to get the corresponding IP address for the URL. For instance, URL
+            <code>
+             www.wikipedia.org
+            </code>
+            is converted to IP address 198.35.26.96 as of 3/5/2019.
+           </p>
+           <p>
+            <strong>
+             Content Parser
+            </strong>
+           </p>
+           <p>
+            After a web page is downloaded, it must be parsed and validated because malformed web pages could provoke problems and waste storage space. Implementing a content parser in a crawl server will slow down the crawling process. Thus, the content parser is a separate component.
+           </p>
+           <p>
+            <strong>
+             Content Seen?
+            </strong>
+           </p>
+           <p>
+            Online research [6] reveals that 29% of the web pages are duplicated contents, which may cause the same content to be stored multiple times. We introduce the “Content Seen?” data structure to eliminate data redundancy and shorten processing time. It helps to detect new content previously stored in the system. To compare two HTML documents, we can compare them character by character. However, this method is slow and time-consuming, especially when billions of web pages are involved. An efficient way to accomplish this task is to compare the hash values of the two web pages [7].
+           </p>
+           <p>
+            <strong>
+             Content Storage
+            </strong>
+           </p>
+           <p>
+            It is a storage system for storing HTML content. The choice of storage system depends on factors such as data type, data size, access frequency, life span, etc. Both disk and memory are used.
+           </p>
+           <ul>
+            <li>
+             <p>
+              Most of the content is stored on disk because the data set is too big to fit in memory.
+             </p>
+            </li>
+            <li>
+             <p>
+              Popular content is kept in memory to reduce latency.
+             </p>
+            </li>
+           </ul>
+           <p>
+            <strong>
+             URL Extractor
+            </strong>
+           </p>
+           <p>
+            URL Extractor parses and extracts links from HTML pages. Figure 3 shows an example of a link extraction process. Relative paths are converted to absolute URLs by adding the
+            <code>
+             “https://en.wikipedia.org”
+            </code>
+            prefix.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified illustration of web page link extraction.  The top portion shows a snippet of HTML code defining a webpage's structure.  This code includes a `&lt;head&gt;` section containing metadata like character set and title ('Wikipedia, the free encyclopedia'), and a `&lt;body&gt;` section containing an unordered list (`&lt;ul&gt;`) of four list items (`&lt;li&gt;`). Each list item contains a hyperlink (`&lt;a&gt;`) with an `href` attribute specifying a relative URL (e.g., '/wiki/Cong_Weixi') and a `title` attribute providing descriptive text.  The text within each `&lt;a&gt;` tag represents the displayed link text (e.g., 'Cong Weixi'). A downward arrow indicates a processing step. The bottom portion shows a rectangular box labeled 'Extracted Links:' containing a partially displayed URL ('https://en.wikipedia.org/wiki/Cong_Weixi...') representing the fully qualified URLs generated from the relative URLs in the HTML code by prepending the base URL of the Wikipedia website.  The text 'Viewer does not support full SVG 1.1' suggests the image is a simplified representation of a more complex process, possibly involving SVG elements not fully rendered." data-nimg="1" decoding="async" height="362" loading="lazy" src="images/img_242695286789673489.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 3
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            <strong>
+             URL Filter
+            </strong>
+           </p>
+           <p>
+            The URL filter excludes certain content types, file extensions, error links and URLs in “blacklisted” sites.
+           </p>
+           <p>
+            <strong>
+             URL Seen?
+            </strong>
+           </p>
+           <p>
+            “URL Seen?” is a data structure that keeps track of URLs that are visited before or already in the Frontier. “URL Seen?” helps to avoid adding the same URL multiple times as this can increase server load and cause potential infinite loops.
+           </p>
+           <p>
+            Bloom filter and hash table are common techniques to implement the “URL Seen?” component. We will not cover the detailed implementation of the bloom filter and hash table here. For more information, refer to the reference materials [4] [8].
+           </p>
+           <p>
+            <strong>
+             URL Storage
+            </strong>
+           </p>
+           <p>
+            URL Storage stores already visited URLs.
+           </p>
+           <p>
+            So far, we have discussed every system component. Next, we put them together to explain the workflow.
+           </p>
+           <p>
+            <strong>
+             Web crawler workflow
+            </strong>
+           </p>
+           <p>
+            To better explain the workflow step-by-step, sequence numbers are added in the design diagram as shown in Figure 4.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a web crawler's architecture.  The process begins with a set of `seed URLs` (1) fed into a `URL Frontier` (2), which then passes them to an `HTML Downloader` (3).  The `HTML Downloader` interacts with a `DNS Resolver` (3) to obtain IP addresses before downloading the HTML content. This content is then sent to a `Content Parser` (4), which processes it and forwards the result to a `Content Seen?` (5) component, checking against a `Content Storage` database (6).  If the content is new, a `Link Extractor` (7) extracts URLs from the parsed content. These URLs are then filtered by a `URL Filter` (8) and checked against a `URL Seen?` (9) component, referencing a `URL Storage` database (10).  Finally, new, valid URLs are fed back into the `URL Frontier` (11) to continue the crawling process.  Numbers in parentheses indicate the flow of data between components." data-nimg="1" decoding="async" height="486" loading="lazy" src="images/img_2654094016552656997.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 4
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Step 1: Add seed URLs to the URL Frontier
+           </p>
+           <p>
+            Step 2: HTML Downloader fetches a list of URLs from URL Frontier.
+           </p>
+           <p>
+            Step 3: HTML Downloader gets IP addresses of URLs from DNS resolver and starts downloading.
+           </p>
+           <p>
+            Step 4: Content Parser parses HTML pages and checks if pages are malformed.
+           </p>
+           <p>
+            Step 5: After content is parsed and validated, it is passed to the “Content Seen?” component.
+           </p>
+           <p>
+            Step 6: “Content Seen” component checks if a HTML page is already in the storage.
+           </p>
+           <ul>
+            <li>
+             <p>
+              If it is in the storage, this means the same content in a different URL has already been processed. In this case, the HTML page is discarded.
+             </p>
+            </li>
+            <li>
+             <p>
+              If it is not in the storage, the system has not processed the same content before. The content is passed to Link Extractor.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Step 7: Link extractor extracts links from HTML pages.
+           </p>
+           <p>
+            Step 8: Extracted links are passed to the URL filter.
+           </p>
+           <p>
+            Step 9: After links are filtered, they are passed to the “URL Seen?” component.
+           </p>
+           <p>
+            Step 10: “URL Seen” component checks if a URL is already in the storage, if yes, it is processed before, and nothing needs to be done.
+           </p>
+           <p>
+            Step 11: If a URL has not been processed before, it is added to the URL Frontier.
+           </p>
+           <h2 id="step-3---design-deep-dive">
+            Step 3 - Design deep dive
+           </h2>
+           <p>
+            Up until now, we have discussed the high-level design. Next, we will discuss the most important building components and techniques in depth:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Depth-first search (DFS) vs Breadth-first search (BFS)
+             </p>
+            </li>
+            <li>
+             <p>
+              URL frontier
+             </p>
+            </li>
+            <li>
+             <p>
+              HTML Downloader
+             </p>
+            </li>
+            <li>
+             <p>
+              Robustness
+             </p>
+            </li>
+            <li>
+             <p>
+              Extensibility
+             </p>
+            </li>
+            <li>
+             <p>
+              Detect and avoid problematic content
+             </p>
+            </li>
+           </ul>
+           <h3 id="dfs-vs-bfs">
+            DFS vs BFS
+           </h3>
+           <p>
+            You can think of the web as a directed graph where web pages serve as nodes and hyperlinks (URLs) as edges. The crawl process can be seen as traversing a directed graph from one web page to others. Two common graph traversal algorithms are DFS and BFS. However, DFS is usually not a good choice because the depth of DFS can be very deep.
+           </p>
+           <p>
+            BFS is commonly used by web crawlers and is implemented by a first-in-first-out (FIFO) queue. In a FIFO queue, URLs are dequeued in the order they are enqueued. However, this implementation has two problems:
+           </p>
+           <ul>
+            <li>
+             Most links from the same web page are linked back to the same host. In Figure 5, all the links in wikipedia.com are internal links, making the crawler busy processing URLs from the same host (wikipedia.com). When the crawler tries to download web pages in parallel, Wikipedia servers will be flooded with requests. This is considered as “impolite”.
+            </li>
+           </ul>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a hierarchical structure depicting the organization of web pages within a website, likely Wikipedia.  The root node is 'wikipedia.com,' representing the main website domain.  From this root, several branches extend to represent different main pages, labeled 'wikipedia.com/page1,' 'wikipedia.com/page2,' and 'wikipedia.com/pageN,' indicating a variable number of main pages. Each of these main pages further branches into sub-pages, exemplified by 'wikipedia.com/page1/1,' 'wikipedia.com/page1/2,' 'wikipedia.com/page2/1,' 'wikipedia.com/page2/2,' 'wikipedia.com/pageN/1,' 'wikipedia.com/pageN/2,' and 'wikipedia.com/pageN/N.'  The ellipses (...) indicate that this pattern continues for an unspecified number of main pages and sub-pages under each main page.  The arrows show the directional relationship, indicating that accessing 'wikipedia.com' leads to the main pages, and accessing a main page leads to its respective sub-pages.  The structure visually demonstrates a tree-like organization of web pages within a domain, illustrating how a website can be structured with multiple levels of pages." data-nimg="1" decoding="async" height="480" loading="lazy" src="images/img_8152854793650160299.svg" style="color: transparent;" width="600"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 5
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             Standard BFS does not take the priority of a URL into consideration. The web is large and not every page has the same level of quality and importance. Therefore, we may want to prioritize URLs according to their page ranks, web traffic, update frequency, etc.
+            </li>
+           </ul>
+           <h3 id="url-frontier">
+            URL frontier
+           </h3>
+           <p>
+            URL frontier helps to address these problems. A URL frontier is a data structure that stores URLs to be downloaded. The URL frontier is an important component to ensure politeness, URL prioritization, and freshness. A few noteworthy papers on URL frontier are mentioned in the reference materials [5] [9]. The findings from these papers are as follows:
+           </p>
+           <h4 id="politeness">
+            Politeness
+           </h4>
+           <p>
+            Generally, a web crawler should avoid sending too many requests to the same hosting server within a short period. Sending too many requests is considered as “impolite” or even treated as denial-of-service (DOS) attack. For example, without any constraint, the crawler can send thousands of requests every second to the same website. This can overwhelm the web servers.
+           </p>
+           <p>
+            The general idea of enforcing politeness is to download one page at a time from the same host. A delay can be added between two download tasks. The politeness constraint is implemented by maintain a mapping from website hostnames to download (worker) threads. Each downloader thread has a separate FIFO queue and only downloads URLs obtained from that queue. Figure 6 shows the design that manages politeness.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram for task distribution.  A 'Queue router' component sits at the top, distributing tasks to multiple queues labeled 'b1', 'b2', and 'bn', representing different task types or priorities.  These queues are depicted as vertical rectangles.  The 'Queue router' also sends information to a 'Mapping Table' (represented as a database icon), suggesting a lookup or mapping function.  Each queue ('b1', 'b2', 'bn') feeds into a 'Queue selector', which in turn distributes tasks to multiple 'Worker threads' (labeled 'Worker thread 1', 'Worker thread 2', and 'Worker thread N'), represented as rectangles with green bars inside, signifying parallel processing.  The ellipses (...) indicate that there are multiple queues and worker threads beyond those explicitly shown.  Arrows depict the flow of tasks or information between components." data-nimg="1" decoding="async" height="478" loading="lazy" src="images/img_3983675239686383613.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 6
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             <p>
+              Queue router: It ensures that each queue (b1, b2, … bn) only contains URLs from the same host.
+             </p>
+            </li>
+            <li>
+             <p>
+              Mapping table: It maps each host to a queue.
+             </p>
+            </li>
+           </ul>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               <strong>
+                Host
+               </strong>
+              </th>
+              <th>
+               <strong>
+                Queue
+               </strong>
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               wikipedia.com
+              </td>
+              <td>
+               b1
+              </td>
+             </tr>
+             <tr>
+              <td>
+               apple.com
+              </td>
+              <td>
+               b2
+              </td>
+             </tr>
+             <tr>
+              <td>
+               ...
+              </td>
+              <td>
+               ...
+              </td>
+             </tr>
+             <tr>
+              <td>
+               nike.com
+              </td>
+              <td>
+               bn
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p class="tableCaption">
+            Table 1
+           </p>
+           <ul>
+            <li>
+             <p>
+              FIFO queues b1, b2 to bn: Each queue contains URLs from the same host.
+             </p>
+            </li>
+            <li>
+             <p>
+              Queue selector: Each worker thread is mapped to a FIFO queue, and it only downloads URLs from that queue. The queue selection logic is done by the Queue selector.
+             </p>
+            </li>
+            <li>
+             <p>
+              Worker thread 1 to N. A worker thread downloads web pages one by one from the same host. A delay can be added between two download tasks.
+             </p>
+            </li>
+           </ul>
+           <h4 id="priority">
+            Priority
+           </h4>
+           <p>
+            A random post from a discussion forum about Apple products carries very different weight than posts on the Apple home page. Even though they both have the “Apple” keyword, it is sensible for a crawler to crawl the Apple home page first.
+           </p>
+           <p>
+            We prioritize URLs based on usefulness, which can be measured by PageRank [10], website traffic, update frequency, etc. “Prioritizer” is the component that handles URL prioritization. Refer to the reference materials [5] [10] for in-depth information about this concept.
+           </p>
+           <p>
+            Figure 7 shows the design that manages URL priority.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system for processing URLs.  A stream of `input URLs` enters a `Prioritizer` component, which then distributes these URLs to multiple queues labeled `f1`, `f2`, ..., `fn`.  These queues are represented as vertically stacked rectangles, suggesting they hold multiple URLs.  The `Prioritizer` determines which queue each incoming URL should be assigned to based on some prioritization logic (not specified in the diagram).  After processing in their respective queues, the URLs from all queues are fed into a `Queue selector` component. This component selects URLs from the various queues, likely based on some selection criteria (again, not detailed), and outputs a stream of `output URLs`.  The ellipsis (...) indicates that there are more queues between `f2` and `fn` than are explicitly shown.  The overall flow is top-down, with URLs entering at the top and exiting at the bottom." data-nimg="1" decoding="async" height="502" loading="lazy" src="images/img_2114194074436491771.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 7
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             <p>
+              Prioritizer: It takes URLs as input and computes the priorities.
+             </p>
+            </li>
+            <li>
+             <p>
+              Queue f1 to fn: Each queue has an assigned priority. Queues with high priority are selected with higher probability.
+             </p>
+            </li>
+            <li>
+             <p>
+              Queue selector: Randomly choose a queue with a bias towards queues with higher priority.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Figure 8 presents the URL frontier design, and it contains two modules:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Front queues: manage prioritization
+             </p>
+            </li>
+            <li>
+             <p>
+              Back queues: manage politeness
+             </p>
+            </li>
+           </ul>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram for URL processing.  Input URLs enter the system and are processed by a `Prioritizer`, which distributes them to multiple `Front queues` (f1, f2, ..., fn), represented as vertical rectangles.  These queues feed into a `Front queue selector`, which outputs the URLs.  The `output URLs` are then routed by a `Back queue router` to multiple `Back queues` (b1, b2, ..., bn), also represented as vertical rectangles.  The `Back queue router` also sends information to a `Mapping Table`, depicted as a database icon.  Finally, a `Back queue selector` distributes URLs from the back queues to multiple `Worker threads` (1, 2, 3, ...), shown as green rectangles, for final processing.  The arrows indicate the flow of data between components.  The ellipses (...) indicate that there are more queues and worker threads than explicitly shown." data-nimg="1" decoding="async" height="899" loading="lazy" src="images/img_7727513924812164411.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 8
+             </figcaption>
+            </div>
+           </figure>
+           <h4 id="freshness">
+            Freshness
+           </h4>
+           <p>
+            Web pages are constantly being added, deleted, and edited. A web crawler must periodically recrawl downloaded pages to keep our data set fresh. Recrawl all the URLs is time-consuming and resource intensive. Few strategies to optimize freshness are listed as follows:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Recrawl based on web pages’ update history.
+             </p>
+            </li>
+            <li>
+             <p>
+              Prioritize URLs and recrawl important pages first and more frequently.
+             </p>
+            </li>
+           </ul>
+           <h4 id="storage-for-url-frontier">
+            Storage for URL Frontier
+           </h4>
+           <p>
+            In real-world crawl for search engines, the number of URLs in the frontier could be hundreds of millions [4]. Putting everything in memory is neither durable nor scalable. Keeping everything in the disk is undesirable neither because the disk is slow; and it can easily become a bottleneck for the crawl.
+           </p>
+           <p>
+            We adopted a hybrid approach. The majority of URLs are stored on disk, so the storage space is not a problem. To reduce the cost of reading from the disk and writing to the disk, we maintain buffers in memory for enqueue/dequeue operations. Data in the buffer is periodically written to the disk.
+           </p>
+           <h3 id="html-downloader">
+            HTML Downloader
+           </h3>
+           <p>
+            The HTML Downloader downloads web pages from the internet using the HTTP protocol. Before discussing the HTML Downloader, we look at Robots Exclusion Protocol first.
+           </p>
+           <p>
+            Robots.txt
+           </p>
+           <p>
+            Robots.txt, called Robots Exclusion Protocol, is a standard used by websites to communicate with crawlers. It specifies what pages crawlers are allowed to download. Before attempting to crawl a web site, a crawler should check its corresponding robots.txt first and follow its rules.
+           </p>
+           <p>
+            To avoid repeat downloads of robots.txt file, we cache the results of the file. The file is downloaded and saved to cache periodically. Here is a piece of robots.txt file taken from
+            <code>
+             https://www.amazon.com/robots.txt
+            </code>
+            . Some of the directories like creatorhub are disallowed for Google bot.
+           </p>
+           <pre><code>User-agent: Googlebot
+Disallow: /creatorhub/\*
+Disallow: /rss/people/\*/reviews
+Disallow: /gp/pdp/rss/\*/reviews
+Disallow: /gp/cdp/member-reviews/
+Disallow: /gp/aw/cr/
+</code></pre>
+           <p>
+            Besides robots.txt, performance optimization is another important concept we will cover for the HTML downloader.
+           </p>
+           <h4 id="performance-optimization">
+            Performance optimization
+           </h4>
+           <p>
+            Below is a list of performance optimizations for HTML downloader.
+           </p>
+           <p>
+            1. Distributed crawl
+           </p>
+           <p>
+            To achieve high performance, crawl jobs are distributed into multiple servers, and each server runs multiple threads. The URL space is partitioned into smaller pieces; so, each downloader is responsible for a subset of the URLs. Figure 9 shows an example of a distributed crawl.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram showing a central component labeled 'URL Frontier' distributing URLs to multiple 'HTML Downloaders.'  The URL Frontier acts as a dispatcher, sending URLs via directed arrows labeled 'distribute URLs' to three depicted HTML Downloaders (with an ellipsis '...' indicating more such downloaders exist).  Each arrow represents the flow of URLs from the URL Frontier to an individual HTML Downloader, suggesting a parallel processing or load-balancing strategy. The diagram illustrates a one-to-many relationship where a single source distributes tasks (URLs) to multiple worker nodes (HTML Downloaders) for processing.  The bottom of the image contains a note indicating that the viewer does not support full SVG 1.1." data-nimg="1" decoding="async" height="402" loading="lazy" src="images/img_6909840433935348452.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 9
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            2. Cache DNS Resolver
+           </p>
+           <p>
+            DNS Resolver is a bottleneck for crawlers because DNS requests might take time due to the synchronous nature of many DNS interfaces. DNS response time ranges from 10ms to 200ms. Once a request to DNS is carried out by a crawler thread, other threads are blocked until the first request is completed. Maintaining our DNS cache to avoid calling DNS frequently is an effective technique for speed optimization. Our DNS cache keeps the domain name to IP address mapping and is updated periodically by cron jobs.
+           </p>
+           <p>
+            3. Locality
+           </p>
+           <p>
+            Distribute crawl servers geographically. When crawl servers are closer to website hosts, crawlers experience faster download time. Design locality applies to most of the system components: crawl servers, cache, queue, storage, etc.
+           </p>
+           <p>
+            4. Short timeout
+           </p>
+           <p>
+            Some web servers respond slowly or may not respond at all. To avoid long wait time, a maximal wait time is specified. If a host does not respond within a predefined time, the crawler will stop the job and crawl some other pages.
+           </p>
+           <h3 id="robustness">
+            Robustness
+           </h3>
+           <p>
+            Besides performance optimization, robustness is also an important consideration. We present a few approaches to improve the system robustness:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Consistent hashing: This helps to distribute loads among downloaders. A new downloader server can be added or removed using consistent hashing. Refer to the "Design consistent hashing" chapter for more details.
+             </p>
+            </li>
+            <li>
+             <p>
+              Save crawl states and data: To guard against failures, crawl states and data are written to a storage system. A disrupted crawl can be restarted easily by loading saved states and data.
+             </p>
+            </li>
+            <li>
+             <p>
+              Exception handling: Errors are inevitable and common in a large-scale system. The crawler must handle exceptions gracefully without crashing the system.
+             </p>
+            </li>
+            <li>
+             <p>
+              Data validation: This is an important measure to prevent system errors.
+             </p>
+            </li>
+           </ul>
+           <h3 id="extensibility">
+            Extensibility
+           </h3>
+           <p>
+            As almost every system evolves, one of the design goals is to make the system flexible enough to support new content types. The crawler can be extended by plugging in new modules. Figure 10 shows how to add new modules.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a web crawler system architecture.  The process begins with 'seed URLs', which are fed into a 'URL Frontier'.  The 'URL Frontier' passes URLs to an 'HTML Downloader', which in turn uses a 'DNS Resolver' to obtain IP addresses before downloading the HTML content.  The downloaded HTML is then processed by a 'Content Parser', which sends the parsed data to a 'Content Seen?' module for checking against a 'Content St..' (presumably a content storage database).  If the content is new, it's passed to an 'Extension Module', containing components like 'PNG...' (representing various file types), a 'Link Extractor' (for finding new URLs), and a 'Web Monitor' (for monitoring website changes).  The 'Link Extractor' output is filtered by a 'URL Filter' and checked against a 'URL Seen?' module, which consults a 'URL Storag..' (presumably a URL storage database) to determine if the URL has already been processed.  The entire system forms a closed loop, with new URLs identified by the 'Link Extractor' being fed back into the 'URL Frontier' for further processing." data-nimg="1" decoding="async" height="459" loading="lazy" src="images/img_3314935077116523827.svg" style="color: transparent;" width="700"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 10
+             </figcaption>
+            </div>
+           </figure>
+           <ul>
+            <li>
+             <p>
+              PNG Downloader module is plugged-in to download PNG files.
+             </p>
+            </li>
+            <li>
+             <p>
+              Web Monitor module is added to monitor the web and prevent copyright and trademark infringements.
+             </p>
+            </li>
+           </ul>
+           <h3 id="detect-and-avoid-problematic-content">
+            Detect and avoid problematic content
+           </h3>
+           <p>
+            This section discusses the detection and prevention of redundant, meaningless, or harmful content.
+           </p>
+           <p>
+            1. Redundant content
+           </p>
+           <p>
+            As discussed previously, nearly 30% of the web pages are duplicates. Hashes or checksums help to detect duplication [11].
+           </p>
+           <p>
+            2. Spider traps
+           </p>
+           <p>
+            A spider trap is a web page that causes a crawler in an infinite loop. For instance, an infinite deep directory structure is listed as follows:
+            <code>
+             http://www.spidertrapexample.com/foo/bar/foo/bar/foo/bar/...
+            </code>
+           </p>
+           <p>
+            Such spider traps can be avoided by setting a maximal length for URLs. However, no one-size-fits-all solution exists to detect spider traps. Websites containing spider traps are easy to identify due to an unusually large number of web pages discovered on such websites. It is hard to develop automatic algorithms to avoid spider traps; however, a user can manually verify and identify a spider trap, and either exclude those websites from the crawler or apply some customized URL filters.
+           </p>
+           <p>
+            3. Data noise
+           </p>
+           <p>
+            Some of the contents have little or no value, such as advertisements, code snippets, spam URLs, etc. Those contents are not useful for crawlers and should be excluded if possible.
+           </p>
+           <h2 id="step-4---wrap-up">
+            Step 4 - Wrap up
+           </h2>
+           <p>
+            In this chapter, we first discussed the characteristics of a good crawler: scalability, politeness, extensibility, and robustness. Then, we proposed a design and discussed key components. Building a scalable web crawler is not a trivial task because the web is enormously large and full of traps. Even though we have covered many topics, we still miss many relevant talking points:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Server-side rendering: Numerous websites use scripts like JavaScript, AJAX, etc to generate links on the fly. If we download and parse web pages directly, we will not be able to retrieve dynamically generated links. To solve this problem, we perform server-side rendering (also called dynamic rendering) first before parsing a page [12].
+             </p>
+            </li>
+            <li>
+             <p>
+              Filter out unwanted pages: With finite storage capacity and crawl resources, an anti-spam component is beneficial in filtering out low quality and spam pages [13] [14].
+             </p>
+            </li>
+            <li>
+             <p>
+              Database replication and sharding: Techniques like replication and sharding are used to improve the data layer availability, scalability, and reliability.
+             </p>
+            </li>
+            <li>
+             <p>
+              Horizontal scaling: For large scale crawl, hundreds or even thousands of servers are needed to perform download tasks. The key is to keep servers stateless.
+             </p>
+            </li>
+            <li>
+             <p>
+              Availability, consistency, and reliability: These concepts are at the core of any large system’s success.
+             </p>
+            </li>
+            <li>
+             <p>
+              Analytics: Collecting and analyzing data are important parts of any system because data is key ingredient for fine-tuning.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Congratulations on getting this far! Now give yourself a pat on the back. Good job!
+           </p>
+           <h2 id="reference-materials">
+            Reference materials
+           </h2>
+           <p>
+            [1] US Library of Congress:
+            <a href="https://www.loc.gov/websites/" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.loc.gov/websites/
+             </u>
+            </a>
+           </p>
+           <p>
+            [2] EU Web Archive:
+            <a href="http://data.europa.eu/webarchive" rel="noopener noreferrer" target="_blank">
+             <u>
+              http://data.europa.eu/webarchive
+             </u>
+            </a>
+           </p>
+           <p>
+            [3] Digimarc:
+            <a href="https://www.digimarc.com/products/digimarc-services/piracy-intelligence" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.digimarc.com/products/digimarc-services/piracy-intelligence
+             </u>
+            </a>
+           </p>
+           <p>
+            [4] Heydon A., Najork M. Mercator: A scalable, extensible web crawler World Wide Web, 2 (4) (1999), pp. 219-229
+           </p>
+           <p>
+            [5] By Christopher Olston, Marc Najork: Web Crawling.
+            <br/>
+            <a href="http://infolab.stanford.edu/~olston/publications/crawling_survey.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              http://infolab.stanford.edu/~olston/publications/crawling_survey.pdf
+             </u>
+            </a>
+           </p>
+           <p>
+            [6] 29% Of Sites Face Duplicate Content Issues:
+            <a href="https://tinyurl.com/y6tmh55y" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://tinyurl.com/y6tmh55y
+             </u>
+            </a>
+           </p>
+           <p>
+            [7] Rabin M.O., et al. Fingerprinting by random polynomials Center for Research in Computing Techn., Aiken Computation Laboratory, Univ. (1981)
+           </p>
+           <p>
+            [8] B. H. Bloom, “Space/time trade-offs in hash coding with allowable errors,” Communications of the ACM, vol. 13, no. 7, pp. 422–426, 1970.
+           </p>
+           <p>
+            [9] Donald J. Patterson, Web Crawling:
+           </p>
+           <p>
+            <a href="https://www.ics.uci.edu/~lopes/teaching/cs221W12/slides/Lecture05.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.ics.uci.edu/~lopes/teaching/cs221W12/slides/Lecture05.pdf
+             </u>
+            </a>
+           </p>
+           <p>
+            [10] L. Page, S. Brin, R. Motwani, and T. Winograd, “The PageRank citation ranking: Bringing order to the web,” Technical Report, Stanford University, 1998.
+           </p>
+           <p>
+            [11] Burton Bloom. Space/time trade-offs in hash coding with allowable errors. Communications of the ACM, 13(7), pages 422--426, July 1970.
+           </p>
+           <p>
+            [12] Google Dynamic Rendering:
+            <a href="https://developers.google.com/search/docs/guides/dynamic-rendering" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://developers.google.com/search/docs/guides/dynamic-rendering
+             </u>
+            </a>
+           </p>
+           <p>
+            [13] T. Urvoy, T. Lavergne, and P. Filoche, “Tracking web spam with hidden style similarity,” in Proceedings of the 2nd International Workshop on Adversarial Information Retrieval on the Web, 2006.
+           </p>
+           <p>
+            [14] H.-T. Lee, D. Leonard, X. Wang, and D. Loguinov, “IRLbot: Scaling to 6 billion pages and beyond,” in Proceedings of the 17th International World Wide Web Conference, 2008.
+           </p>
+           <div class="style_markCompleteWrap__YEi4w">
+            <button aria-pressed="false" class="style_markComplete__jnD2I">
+             <span class="style_emptySquare__K6JN0">
+             </span>
+             <span>
+              Mark as Complete
+             </span>
+            </button>
+           </div>
+          </article>
+         </div>
+        </main>
+        <div class="style_chatButtonContainer__NAl07">
+         <div class="style_chatButton__Gmdf9">
+          <img alt="ask alex" class="style_chatIcon___TOMK" data-nimg="1" decoding="async" height="81" loading="lazy" src="images/img_2346666373721248013.svg" style="color: transparent;" width="63"/>
+          <img alt="ask alex expend" class="style_chatIconExpend__SA0bp" data-nimg="1" decoding="async" height="122" loading="lazy" src="images/img_2588721561367293494.svg" style="color: transparent;" width="123"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div>
+  <next-route-announcer>
+   <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+   </p>
+  </next-route-announcer>
+  <div id="selection-ai-menu-container">
+  </div>
+ </body>
+</html>

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style data-rc-order="prepend" rc-util-key="@ant-design-icons">
+   .anticon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  </style>
+  <style data-css-hash="1hz4ua6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   a:where(.css-133v4sd){color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}a:where(.css-133v4sd):hover{color:#69b1ff;}a:where(.css-133v4sd):active{color:#0958d9;}a:where(.css-133v4sd):active,a:where(.css-133v4sd):hover{text-decoration:none;outline:0;}a:where(.css-133v4sd):focus{text-decoration:none;outline:0;}a:where(.css-133v4sd)[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd) a{color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}:where(.css-133v4sd) a:hover{color:#69b1ff;}:where(.css-133v4sd) a:active{color:#0958d9;}:where(.css-133v4sd) a:active,:where(.css-133v4sd) a:hover{text-decoration:none;outline:0;}:where(.css-133v4sd) a:focus{text-decoration:none;outline:0;}:where(.css-133v4sd) a[disabled]{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).anticon >*{line-height:1;}:where(.css-133v4sd).anticon svg{display:inline-block;}:where(.css-133v4sd).anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <style data-css-hash="9jgas6" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-dropdown{position:absolute;top:-9999px;left:-9999px;z-index:1050;display:block;}:where(.css-133v4sd).ant-dropdown::before{position:absolute;inset-block:-4px;z-index:-9999;opacity:0.0001;content:"";}:where(.css-133v4sd).ant-dropdown-menu-vertical{max-height:100vh;overflow-y:auto;}:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.anticon-down,:where(.css-133v4sd).ant-dropdown-trigger.ant-btn>.ant-btn-icon>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .ant-btn>.anticon-down{font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap .anticon-down::before{transition:transform 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-wrap-open .anticon-down::before{transform:rotate(180deg);}:where(.css-133v4sd).ant-dropdown-hidden,:where(.css-133v4sd).ant-dropdown-menu-hidden,:where(.css-133v4sd).ant-dropdown-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomRight,:where(.css-133v4sd).ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topRight,:where(.css-133v4sd).ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownIn;}:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottom,:where(.css-133v4sd).ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomRight{animation-name:css-133v4sd-antSlideUpOut;}:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topLeft,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-top,:where(.css-133v4sd).ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topRight{animation-name:css-133v4sd-antSlideDownOut;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:#ffffff;clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-arrow:before{background:#ffffff;}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-topRight>.ant-dropdown-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-top>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-dropdown-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-topLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-topRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomLeft>.ant-dropdown-arrow,:where(.css-133v4sd).ant-dropdown-placement-bottomRight>.ant-dropdown-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottom>.ant-dropdown-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomLeft >.ant-dropdown-arrow{left:12px;}:where(.css-133v4sd).ant-dropdown-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-dropdown-placement-bottomRight >.ant-dropdown-arrow{right:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu{position:relative;margin:0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup{position:absolute;z-index:1050;background:transparent;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-dropdown-menu-submenu-popup ul,:where(.css-133v4sd).ant-dropdown-menu-submenu-popup li{list-style:none;margin:0;}:where(.css-133v4sd).ant-dropdown,:where(.css-133v4sd).ant-dropdown-menu-submenu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu{padding:4px;list-style-type:none;background-color:#ffffff;background-clip:padding-box;border-radius:8px;outline:none;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu:empty,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu:empty{padding:0;box-shadow:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-title{padding:5px 12px;color:rgba(0,0,0,0.45);transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item{position:relative;display:flex;align-items:center;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-icon{min-width:14px;margin-inline-end:8px;font-size:12px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content{flex:auto;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a{color:inherit;transition:all 0.2s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a:hover{color:inherit;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content >a::after{position:absolute;inset:0;content:"";}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content .ant-dropdown-menu-item-extra{padding-inline-start:16px;margin-inline-start:auto;font-size:12px;color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{display:flex;margin:0;padding:5px 12px;color:rgba(0,0,0,0.88);font-weight:normal;font-size:14px;line-height:1.5714285714285714;cursor:pointer;transition:all 0.2s;border-radius:4px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-active{background-color:rgba(0,0,0,0.04);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:focus-visible,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected{color:#05673d;background-color:#95a69c;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active{background-color:#6a997e;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled{color:rgba(0,0,0,0.25);cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled a,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled a{pointer-events:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-divider,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-divider{height:1px;margin:4px 0;overflow:hidden;line-height:0;background-color:rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon{position:absolute;inset-inline-end:8px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon{margin-inline-end:0!important;color:rgba(0,0,0,0.45);font-size:12px;font-style:normal;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-group-list,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-group-list{margin:0 8px;padding:0;list-style:none;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{padding-inline-end:24px;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-vertical{position:relative;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon{color:rgba(0,0,0,0.25);background-color:#ffffff;cursor:not-allowed;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-up-enter.ant-move-up-enter-active,:where(.css-133v4sd).ant-move-up-appear.ant-move-up-appear-active{animation-name:css-133v4sd-antMoveUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-up-leave.ant-move-up-leave-active{animation-name:css-133v4sd-antMoveUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-up-enter,:where(.css-133v4sd).ant-move-up-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-up-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-move-down-enter.ant-move-down-enter-active,:where(.css-133v4sd).ant-move-down-appear.ant-move-down-appear-active{animation-name:css-133v4sd-antMoveDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-move-down-leave.ant-move-down-leave-active{animation-name:css-133v4sd-antMoveDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-move-down-enter,:where(.css-133v4sd).ant-move-down-appear{opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-move-down-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled),:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled){color:#ff4d4f;}:where(.css-133v4sd).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover,:where(.css-133v4sd).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled):hover{color:#fff;background-color:#ff4d4f;}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpIn{0%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}100%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownIn{0%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}100%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideUpOut{0%{transform:scaleY(1);transform-origin:0% 0%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:0% 0%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antSlideDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antSlideDownOut{0%{transform:scaleY(1);transform-origin:100% 100%;opacity:1;}100%{transform:scaleY(0.8);transform-origin:100% 100%;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpIn{0%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveUpOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveUpOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, -100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownIn{0%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}100%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antMoveDownOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antMoveDownOut{0%{transform:translate3d(0, 0, 0);transform-origin:0 0;opacity:1;}100%{transform:translate3d(0, 100%, 0);transform-origin:0 0;opacity:0;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigIn" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigIn{0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1;}}
+  </style>
+  <style data-css-hash="_effect-css-133v4sd-antZoomBigOut" data-rc-order="prependQueue" data-rc-priority="-999">
+   @keyframes css-133v4sd-antZoomBigOut{0%{transform:scale(1);}100%{transform:scale(0.8);opacity:0;}}
+  </style>
+  <style data-css-hash="1ihmimc" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout::before,:where(.css-133v4sd).ant-layout::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"],:where(.css-133v4sd).ant-layout [class*=" ant-layout"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout [class^="ant-layout"]::before,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::before,:where(.css-133v4sd).ant-layout [class^="ant-layout"]::after,:where(.css-133v4sd).ant-layout [class*=" ant-layout"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout{display:flex;flex:auto;flex-direction:column;min-height:0;background:#f5f5f5;}:where(.css-133v4sd).ant-layout,:where(.css-133v4sd).ant-layout *{box-sizing:border-box;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider{flex-direction:row;}:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout,:where(.css-133v4sd).ant-layout.ant-layout-has-sider >.ant-layout-content{width:0;}:where(.css-133v4sd).ant-layout .ant-layout-header,:where(.css-133v4sd).ant-layout.ant-layout-footer{flex:0 0 auto;}:where(.css-133v4sd).ant-layout-rtl{direction:rtl;}:where(.css-133v4sd).ant-layout-header{height:64px;padding:0 50px;color:rgba(0,0,0,0.88);line-height:64px;background:#001529;}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-layout-footer{padding:24px 50px;color:rgba(0,0,0,0.88);font-size:14px;background:#f5f5f5;}:where(.css-133v4sd).ant-layout-content{flex:auto;color:rgba(0,0,0,0.88);min-height:0;}
+  </style>
+  <style data-css-hash="yuvirj" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-tooltip{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:absolute;z-index:1070;display:block;width:max-content;max-width:250px;visibility:visible;--valid-offset-x:var(--arrow-offset-horizontal, var(--arrow-x));transform-origin:var(--valid-offset-x, 50%) var(--arrow-y, 50%);--antd-arrow-background-color:rgba(0,0,0,0.85);}:where(.css-133v4sd).ant-tooltip-hidden{display:none;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-inner{min-width:28px;min-height:32px;padding:6px 8px;color:#fff;text-align:start;text-decoration:none;word-wrap:break-word;background-color:rgba(0,0,0,0.85);border-radius:6px;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);box-sizing:border-box;}:where(.css-133v4sd).ant-tooltip-placement-topLeft,:where(.css-133v4sd).ant-tooltip-placement-topRight,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft,:where(.css-133v4sd).ant-tooltip-placement-bottomRight{min-width:34px;}:where(.css-133v4sd).ant-tooltip-placement-left .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-leftBottom .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-right .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightTop .ant-tooltip-inner,:where(.css-133v4sd).ant-tooltip-placement-rightBottom .ant-tooltip-inner{border-radius:6px;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-content{position:relative;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-inner{background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-blue .ant-tooltip-arrow{--antd-arrow-background-color:#1677ff;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-inner{background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-purple .ant-tooltip-arrow{--antd-arrow-background-color:#722ed1;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-inner{background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-cyan .ant-tooltip-arrow{--antd-arrow-background-color:#13c2c2;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-inner{background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-green .ant-tooltip-arrow{--antd-arrow-background-color:#52c41a;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-magenta .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-pink .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-inner{background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-red .ant-tooltip-arrow{--antd-arrow-background-color:#f5222d;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-inner{background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-orange .ant-tooltip-arrow{--antd-arrow-background-color:#fa8c16;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-inner{background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-yellow .ant-tooltip-arrow{--antd-arrow-background-color:#fadb14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-inner{background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-volcano .ant-tooltip-arrow{--antd-arrow-background-color:#fa541c;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-inner{background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-arrow{--antd-arrow-background-color:#2f54eb;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-inner{background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-lime .ant-tooltip-arrow{--antd-arrow-background-color:#a0d911;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-inner{background-color:#faad14;}:where(.css-133v4sd).ant-tooltip.ant-tooltip-gold .ant-tooltip-arrow{--antd-arrow-background-color:#faad14;}:where(.css-133v4sd).ant-tooltip-rtl{direction:rtl;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:var(--antd-arrow-background-color);clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:2px 2px 5px rgba(0, 0, 0, 0.05);z-index:0;background:transparent;}:where(.css-133v4sd).ant-tooltip .ant-tooltip-arrow:before{background:var(--antd-arrow-background-color);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-topRight>.ant-tooltip-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-top>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-133v4sd).ant-tooltip-placement-topLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-topLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-topRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-topRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomLeft>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-bottomRight>.ant-tooltip-arrow{top:0;transform:translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottom>.ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft{--arrow-offset-horizontal:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomLeft >.ant-tooltip-arrow{left:12px;}:where(.css-133v4sd).ant-tooltip-placement-bottomRight{--arrow-offset-horizontal:calc(100% - 12px);}:where(.css-133v4sd).ant-tooltip-placement-bottomRight >.ant-tooltip-arrow{right:12px;}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{right:0;transform:translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-left>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(100%) rotate(90deg);}:where(.css-133v4sd).ant-tooltip-placement-leftTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-leftBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow,:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{left:0;transform:translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-right>.ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(-100%) rotate(-90deg);}:where(.css-133v4sd).ant-tooltip-placement-rightTop>.ant-tooltip-arrow{top:8px;}:where(.css-133v4sd).ant-tooltip-placement-rightBottom>.ant-tooltip-arrow{bottom:8px;}:where(.css-133v4sd).ant-tooltip-pure{position:relative;max-width:none;margin:16px;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-fast-enter.ant-zoom-big-fast-enter-active,:where(.css-133v4sd).ant-zoom-big-fast-appear.ant-zoom-big-fast-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-fast-leave.ant-zoom-big-fast-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-fast-enter,:where(.css-133v4sd).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-fast-enter-prepare,:where(.css-133v4sd).ant-zoom-big-fast-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-fast-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="4mhxit" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd)[class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"]{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"],:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"],:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]{box-sizing:border-box;}:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::before,:where(.css-133v4sd)[class^="ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class^="ant-menu"]::after,:where(.css-133v4sd)[class^="ant-menu"] [class*=" ant-menu"]::after,:where(.css-133v4sd)[class*=" ant-menu"] [class*=" ant-menu"]::after{box-sizing:border-box;}:where(.css-133v4sd) .ant-menu::before{display:table;content:"";}:where(.css-133v4sd) .ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd) .ant-menu-hidden{display:none;}:where(.css-133v4sd).ant-menu-submenu-hidden{display:none;}:where(.css-133v4sd).ant-menu{box-sizing:border-box;margin:0;padding:0;color:rgba(0,0,0,0.88);font-size:14px;line-height:0;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';margin-bottom:0;padding-inline-start:0;outline:none;transition:width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;}:where(.css-133v4sd).ant-menu::before{display:table;content:"";}:where(.css-133v4sd).ant-menu::after{display:table;clear:both;content:"";}:where(.css-133v4sd).ant-menu ul,:where(.css-133v4sd).ant-menu ol{margin:0;padding:0;list-style:none;}:where(.css-133v4sd).ant-menu-overflow{display:flex;}:where(.css-133v4sd).ant-menu-overflow .ant-menu-item{flex:none;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{border-radius:8px;}:where(.css-133v4sd).ant-menu .ant-menu-item-group-title{padding:8px 16px;font-size:14px;line-height:1.5714285714285714;transition:all 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu,:where(.css-133v4sd).ant-menu .ant-menu-submenu-inline{transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-submenu .ant-menu-sub{cursor:initial;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-title-content{transition:color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-title-content-with-extra{display:inline-flex;align-items:center;width:100%;}:where(.css-133v4sd).ant-menu .ant-menu-title-content >.ant-typography-ellipsis-single-line{display:inline;vertical-align:unset;}:where(.css-133v4sd).ant-menu .ant-menu-title-content .ant-menu-item-extra{margin-inline-start:auto;padding-inline-start:16px;}:where(.css-133v4sd).ant-menu .ant-menu-item a::before{position:absolute;inset:0;background-color:transparent;content:"";}:where(.css-133v4sd).ant-menu .ant-menu-item-divider{overflow:hidden;line-height:0;border-color:rgba(5,5,5,0.06);border-style:solid;border-width:0;border-top-width:1px;margin-block:1px;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-divider-dashed{border-style:dashed;}:where(.css-133v4sd).ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list{margin:0;padding:0;}:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-item,:where(.css-133v4sd).ant-menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-submenu-title{padding-inline:28px 16px;}:where(.css-133v4sd).ant-menu-submenu-popup{position:absolute;z-index:1050;border-radius:8px;box-shadow:none;transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-popup.ant-menu-submenu{background:transparent;}:where(.css-133v4sd).ant-menu-submenu-popup::before{position:absolute;inset:0;z-index:-1;width:100%;height:100%;opacity:0;content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu{border-radius:8px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title{position:relative;display:block;margin:0;white-space:nowrap;cursor:pointer;transition:border-color 0.3s,background 0.3s,padding calc(0.3s + 0.1s) cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon{min-width:14px;font-size:14px;transition:font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .anticon +span{margin-inline-start:10px;opacity:1;transition:opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),margin 0.3s,color 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon >*,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon >*{line-height:1;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item .ant-menu-item-icon svg,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg{display:inline-block;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.anticon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item.ant-menu-item-only-child >.ant-menu-item-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title.ant-menu-item-only-child >.ant-menu-item-icon{margin-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled{background:none!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled::after,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled::after{border-color:transparent!important;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled a,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled a{color:inherit!important;cursor:not-allowed;pointer-events:none;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item-disabled >.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-disabled >.ant-menu-submenu-title{color:inherit!important;cursor:not-allowed;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu>.ant-menu-submenu-title{border-radius:4px;}:where(.css-133v4sd).ant-menu-submenu-popup >.ant-menu .ant-menu-submenu-title::after{transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu{transform-origin:100% 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 100%;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft,:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu{transform-origin:0 0;}:where(.css-133v4sd).ant-menu-submenu-placement-leftTop,:where(.css-133v4sd).ant-menu-submenu-placement-leftBottom{padding-inline-end:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-rightTop,:where(.css-133v4sd).ant-menu-submenu-placement-rightBottom{padding-inline-start:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-topRight,:where(.css-133v4sd).ant-menu-submenu-placement-topLeft{padding-bottom:8px;}:where(.css-133v4sd).ant-menu-submenu-placement-bottomRight,:where(.css-133v4sd).ant-menu-submenu-placement-bottomLeft{padding-top:8px;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow{position:absolute;top:50%;inset-inline-end:16px;width:10px;color:currentcolor;transform:translateY(-50%);transition:transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.3s;}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{position:absolute;width:6px;height:1.5px;background-color:currentcolor;border-radius:6px;transition:background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::before{transform:rotate(45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateX(2.5px);}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow{transform:translateY(-2px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after{transform:rotate(-45deg) translateX(-2.5px);}:where(.css-133v4sd).ant-menu .ant-menu-submenu-open.ant-menu-submenu-inline>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before{transform:rotate(45deg) translateX(2.5px);}:where(.css-133v4sd).ant-layout-header .ant-menu{line-height:inherit;}:where(.css-133v4sd).ant-menu-horizontal{line-height:46px;border:0;border-bottom:1px solid rgba(5,5,5,0.06);box-shadow:none;}:where(.css-133v4sd).ant-menu-horizontal::after{display:block;clear:both;height:0;content:"\20";}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu{position:relative;display:inline-block;vertical-align:bottom;padding-inline:16px;}:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-horizontal >.ant-menu-submenu .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-item,:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-title{transition:border-color 0.3s,background 0.3s;}:where(.css-133v4sd).ant-menu-horizontal .ant-menu-submenu-arrow{display:none;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root,:where(.css-133v4sd).ant-menu-vertical.ant-menu-root{box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-inline >.ant-menu-item,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline >.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item{position:relative;overflow:hidden;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{height:40px;line-height:40px;padding-inline:16px;overflow:hidden;text-overflow:ellipsis;margin-inline:4px;margin-block:4px;width:calc(100% - 8px);}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-item,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title{padding-inline-end:34px;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub{min-width:160px;max-height:calc(100vh - 100px);padding:0;overflow:hidden;border-inline-end:0;}:where(.css-133v4sd).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub:not([class*='-active']){overflow-x:hidden;overflow-y:auto;}:where(.css-133v4sd).ant-menu-inline{width:100%;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title{display:flex;align-items:center;transition:border-color 0.3s,background 0.3s,padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >.ant-menu-title-content{flex:auto;min-width:0;overflow:hidden;text-overflow:ellipsis;}:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-item >*,:where(.css-133v4sd).ant-menu-inline.ant-menu-root .ant-menu-submenu-title >*{flex:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline{padding:0;border:0;border-radius:0;box-shadow:none;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title{padding-inline-start:32px;}:where(.css-133v4sd).ant-menu-inline .ant-menu-item{height:40px;line-height:40px;list-style-position:inside;list-style-type:disc;}:where(.css-133v4sd).ant-menu-inline-collapsed{width:80px;}:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-item >.ant-menu-inline-collapsed-noicon,:where(.css-133v4sd).ant-menu-inline-collapsed.ant-menu-root .ant-menu-submenu .ant-menu-submenu-title >.ant-menu-inline-collapsed-noicon{font-size:16px;text-align:center;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title{inset-inline-start:0;padding-inline:calc(50% - 8px - 4px);text-overflow:clip;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-arrow,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-submenu-expand-icon{opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon{margin:0;font-size:16px;line-height:40px;}:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .anticon +span,:where(.css-133v4sd).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title .anticon +span{display:inline-block;opacity:0;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed .anticon{display:inline-block;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip{pointer-events:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .ant-menu-item-icon,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip .anticon{display:none;}:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a,:where(.css-133v4sd).ant-menu-inline-collapsed-tooltip a:hover{color:#fff;}:where(.css-133v4sd).ant-menu-inline-collapsed .ant-menu-item-group-title{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding-inline:8px;}:where(.css-133v4sd).ant-menu-light,:where(.css-133v4sd).ant-menu-light>.ant-menu{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-light .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-extra{color:rgba(0,0,0,0.45);}:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-light .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-submenu-disabled{color:rgba(0,0,0,0.25)!important;}:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:rgba(0,0,0,0.06);}:where(.css-133v4sd).ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#fff2f0;}:where(.css-133v4sd).ant-menu-light .ant-menu-item a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-light .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{color:#05673d;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected{background-color:#95a69c;}:where(.css-133v4sd).ant-menu-light .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-light>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#fff2f0;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#ffffff;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:1px;margin-top:-1px;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:2px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#05673d;background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:2px;border-bottom-color:#05673d;}:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-light.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:rgba(0,0,0,0.02);}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #05673d;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-light.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-light>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-dark,:where(.css-133v4sd).ant-menu-dark>.ant-menu{color:rgba(255,255,255,0.65);background:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root:focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-group-title,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-extra,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-extra{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title{color:rgba(255,255,255,0.65);}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-title:not(.ant-menu-item-disabled):focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-disabled,:where(.css-133v4sd).ant-menu-dark .ant-menu-submenu-disabled,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-submenu-disabled{color:rgba(255,255,255,0.25)!important;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,:where(.css-133v4sd).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{color:#fff;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:active{background-color:transparent;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger{color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected){color:#ff7875;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-danger.ant-menu-item:active,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-danger.ant-menu-item:active{background:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{color:#fff;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a,:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected a:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected a:hover{color:inherit;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,:where(.css-133v4sd).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger{background-color:#ff4d4f;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu>.ant-menu{background-color:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-submenu-popup>.ant-menu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-submenu-popup>.ant-menu{background-color:#001529;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal{border-bottom:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu{top:0;margin-top:0;margin-bottom:0;border-radius:0;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu::after{position:absolute;inset-inline:16px;bottom:0;border-bottom:0px solid transparent;transition:border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open{background:transparent;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-open::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{color:#fff;background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected:hover,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected:hover,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected:hover{background-color:#05673d;}:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{border-bottom-width:0;border-bottom-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark.ant-menu-root.ant-menu-vertical,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical{border-inline-end:0px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{background:#000c17;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item{position:relative;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item::after{position:absolute;inset-block:0;inset-inline-end:0;border-inline-end:0px solid #fff;transform:scaleY(0.0001);opacity:0;transition:transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);content:"";}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after{border-inline-end-color:#fff;}:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-selected::after,:where(.css-133v4sd).ant-menu-dark.ant-menu-inline .ant-menu-item-selected::after,:where(.css-133v4sd).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item-selected::after{transform:scaleY(1);opacity:1;transition:transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}:where(.css-133v4sd).ant-menu-rtl{direction:rtl;}:where(.css-133v4sd).ant-menu-submenu-rtl{transform-origin:100% 0;}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::before,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::before{transform:rotate(-45deg) translateY(-2.5px);}:where(.css-133v4sd).ant-menu-rtl.ant-menu-vertical .ant-menu-submenu-arrow::after,:where(.css-133v4sd).ant-menu-submenu-rtl .ant-menu-vertical .ant-menu-submenu-arrow::after{transform:rotate(45deg) translateY(2.5px);}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy{overflow:hidden;}:where(.css-133v4sd).ant-menu .ant-motion-collapse-legacy-active{transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-menu .ant-motion-collapse{overflow:hidden;transition:height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)!important;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-up-enter.ant-slide-up-enter-active,:where(.css-133v4sd).ant-slide-up-appear.ant-slide-up-appear-active{animation-name:css-133v4sd-antSlideUpIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-up-leave.ant-slide-up-leave-active{animation-name:css-133v4sd-antSlideUpOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-up-enter,:where(.css-133v4sd).ant-slide-up-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-up-enter-prepare,:where(.css-133v4sd).ant-slide-up-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-up-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-slide-down-enter.ant-slide-down-enter-active,:where(.css-133v4sd).ant-slide-down-appear.ant-slide-down-appear-active{animation-name:css-133v4sd-antSlideDownIn;animation-play-state:running;}:where(.css-133v4sd).ant-slide-down-leave.ant-slide-down-leave-active{animation-name:css-133v4sd-antSlideDownOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-slide-down-enter,:where(.css-133v4sd).ant-slide-down-appear{transform:scale(0);transform-origin:0% 0%;opacity:0;animation-timing-function:cubic-bezier(0.23, 1, 0.32, 1);}:where(.css-133v4sd).ant-slide-down-enter-prepare,:where(.css-133v4sd).ant-slide-down-appear-prepare{transform:scale(1);}:where(.css-133v4sd).ant-slide-down-leave{animation-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-leave{animation-duration:0.2s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-133v4sd).ant-zoom-big-enter.ant-zoom-big-enter-active,:where(.css-133v4sd).ant-zoom-big-appear.ant-zoom-big-appear-active{animation-name:css-133v4sd-antZoomBigIn;animation-play-state:running;}:where(.css-133v4sd).ant-zoom-big-leave.ant-zoom-big-leave-active{animation-name:css-133v4sd-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-133v4sd).ant-zoom-big-enter,:where(.css-133v4sd).ant-zoom-big-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-133v4sd).ant-zoom-big-enter-prepare,:where(.css-133v4sd).ant-zoom-big-appear-prepare{transform:none;}:where(.css-133v4sd).ant-zoom-big-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}
+  </style>
+  <style data-css-hash="3hhlaq" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-layout-sider{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider::before,:where(.css-133v4sd).ant-layout-sider::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"],:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::before,:where(.css-133v4sd).ant-layout-sider [class^="ant-layout-sider"]::after,:where(.css-133v4sd).ant-layout-sider [class*=" ant-layout-sider"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-layout-sider{position:relative;min-width:0;background:#001529;transition:all 0.2s,background 0s;}:where(.css-133v4sd).ant-layout-sider-has-trigger{padding-bottom:48px;}:where(.css-133v4sd).ant-layout-sider-right{order:1;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children{height:100%;margin-top:-0.1px;padding-top:0.1px;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed{width:auto;}:where(.css-133v4sd).ant-layout-sider-zero-width .ant-layout-sider-children{overflow:hidden;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-trigger{position:fixed;bottom:0;z-index:1;height:48px;color:#fff;line-height:48px;text-align:center;background:#002140;cursor:pointer;transition:all 0.2s;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger{position:absolute;top:64px;inset-inline-end:-40px;z-index:1;width:40px;height:40px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;background:#001529;border-radius:0 8px 8px 0;cursor:pointer;transition:background 0.3s ease;}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger::after{position:absolute;inset:0;background:transparent;transition:all 0.3s;content:"";}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger:hover::after{background:rgba(255, 255, 255, 0.2);}:where(.css-133v4sd).ant-layout-sider .ant-layout-sider-zero-width-trigger-right{inset-inline-start:-40px;border-radius:8px 0 0 8px;}:where(.css-133v4sd).ant-layout-sider-light{background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-trigger{color:rgba(0,0,0,0.88);background:#ffffff;}:where(.css-133v4sd).ant-layout-sider-light .ant-layout-sider-zero-width-trigger{color:rgba(0,0,0,0.88);background:#ffffff;border:1px solid #f5f5f5;border-inline-start:0;}
+  </style>
+  <style data-css-hash="z0j72v" data-rc-order="prependQueue" data-rc-priority="-999" data-token-hash="1320huz">
+   :where(.css-133v4sd).ant-drawer{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-133v4sd).ant-drawer::before,:where(.css-133v4sd).ant-drawer::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"],:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::before,:where(.css-133v4sd).ant-drawer [class^="ant-drawer"]::after,:where(.css-133v4sd).ant-drawer [class*=" ant-drawer"]::after{box-sizing:border-box;}:where(.css-133v4sd).ant-drawer{position:fixed;inset:0;z-index:1000;pointer-events:none;color:rgba(0,0,0,0.88);}:where(.css-133v4sd).ant-drawer-pure{position:relative;background:#ffffff;display:flex;flex-direction:column;}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-left{box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-right{box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-top{box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-pure.ant-drawer-bottom{box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-inline{position:absolute;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask{position:absolute;inset:0;z-index:1000;background:rgba(0,0,0,0.45);pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper{position:absolute;z-index:1000;max-width:100vw;transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-content-wrapper-hidden{display:none;}:where(.css-133v4sd).ant-drawer-left>.ant-drawer-content-wrapper{top:0;bottom:0;left:0;box-shadow:6px 0 16px 0 rgba(0, 0, 0, 0.08),3px 0 6px -4px rgba(0, 0, 0, 0.12),9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-right>.ant-drawer-content-wrapper{top:0;right:0;bottom:0;box-shadow:-6px 0 16px 0 rgba(0, 0, 0, 0.08),-3px 0 6px -4px rgba(0, 0, 0, 0.12),-9px 0 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-top>.ant-drawer-content-wrapper{top:0;inset-inline:0;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer-bottom>.ant-drawer-content-wrapper{bottom:0;inset-inline:0;box-shadow:0 -6px 16px 0 rgba(0, 0, 0, 0.08),0 -3px 6px -4px rgba(0, 0, 0, 0.12),0 -9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-133v4sd).ant-drawer .ant-drawer-content{display:flex;flex-direction:column;width:100%;height:100%;overflow:auto;background:#ffffff;pointer-events:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-header{display:flex;flex:0;align-items:center;padding:16px 24px;font-size:16px;line-height:1.5;border-bottom:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer .ant-drawer-header-title{display:flex;flex:1;align-items:center;min-width:0;min-height:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-extra{flex:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close{display:inline-flex;width:24px;height:24px;border-radius:4px;justify-content:center;align-items:center;margin-inline-end:8px;color:rgba(0,0,0,0.45);font-weight:600;font-size:16px;font-style:normal;line-height:1;text-align:center;text-transform:none;text-decoration:none;background:transparent;border:0;cursor:pointer;transition:all 0.2s;text-rendering:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:hover{color:rgba(0,0,0,0.88);background-color:rgba(0,0,0,0.06);text-decoration:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-close:active{background-color:rgba(0,0,0,0.15);}:where(.css-133v4sd).ant-drawer .ant-drawer-close:focus-visible{outline:3px solid #4a8c69;outline-offset:1px;transition:outline-offset 0s,outline 0s;}:where(.css-133v4sd).ant-drawer .ant-drawer-title{flex:1;margin:0;font-weight:600;font-size:16px;line-height:1.5;}:where(.css-133v4sd).ant-drawer .ant-drawer-body{flex:1;min-width:0;min-height:0;padding:24px;overflow:auto;}:where(.css-133v4sd).ant-drawer .ant-drawer-body .ant-drawer-body-skeleton{width:100%;height:100%;display:flex;justify-content:center;}:where(.css-133v4sd).ant-drawer .ant-drawer-footer{flex-shrink:0;padding:8px 16px;border-top:1px solid rgba(5,5,5,0.06);}:where(.css-133v4sd).ant-drawer-rtl{direction:rtl;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-mask-motion-leave-active{opacity:0;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-left-leave-active{transform:translateX(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-right-leave-active{transform:translateX(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-top-leave-active{transform:translateY(-100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-start,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-start{transition:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transition:all 0.3s;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{opacity:1;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{opacity:0.7;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear{transform:translateY(100%);}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-enter-active,:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-appear-active{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave{transform:none;}:where(.css-133v4sd).ant-drawer .ant-drawer-panel-motion-bottom-leave-active{transform:translateY(100%);}
+  </style>
+  <style data-css-hash="1orkko5" data-rc-order="prependQueue" data-token-hash="8yftb1">
+   .anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.anticon >*{line-height:1;}.anticon svg{display:inline-block;}.anticon .anticon .anticon-icon{display:block;}
+  </style>
+  <meta charset="utf-8" data-next-head=""/>
+  <title data-next-head="">
+   ByteByteGo | Technical Interview Prep
+  </title>
+  <meta content="index,follow" data-next-head="" name="robots"/>
+  <meta content="Everything you need to take your system design skill to the next level" data-next-head="" name="description"/>
+  <meta content="summary_large_image" data-next-head="" name="twitter:card"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:site"/>
+  <meta content="@bytebytego" data-next-head="" name="twitter:creator"/>
+  <meta content="System Design · Coding · Behavioral · Machine Learning Interviews" data-next-head="" property="og:title"/>
+  <meta content="Ace Every Stage of Your Next Technical Interview" data-next-head="" property="og:description"/>
+  <meta content="https://bytebytego.com" data-next-head="" property="og:url"/>
+  <meta content="website" data-next-head="" property="og:type"/>
+  <meta content="https://bytebytego.com/social2.png" data-next-head="" property="og:image"/>
+  <meta content="ByteByteGo Logo" data-next-head="" property="og:image:alt"/>
+  <meta content="image/png" data-next-head="" property="og:image:type"/>
+  <meta content="2400" data-next-head="" property="og:image:width"/>
+  <meta content="1260" data-next-head="" property="og:image:height"/>
+  <meta content="en_US" data-next-head="" property="og:locale"/>
+  <meta content="ByteByteGo" data-next-head="" property="og:site_name"/>
+  <link href="https://firebase.googleapis.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <link href="https://vercel.live" rel="preconnect"/>
+  <link href="https://www.googleapis.com" rel="preconnect"/>
+  <link as="style" href="/_next/static/css/0d37f0f31c99e98b.css" rel="preload"/>
+  <link data-n-g="" href="/_next/static/css/0d37f0f31c99e98b.css" rel="stylesheet"/>
+  <link as="style" href="/_next/static/css/7e19b5f69d036867.css" rel="preload"/>
+  <link data-n-p="" href="/_next/static/css/7e19b5f69d036867.css" rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <meta content="#da532c" data-next-head="" name="msapplication-TileColor"/>
+  <meta content="#ffffff" data-next-head="" name="theme-color"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" data-next-head="" name="viewport"/>
+  <link data-next-head="" href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link data-next-head="" href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link data-next-head="" href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link data-next-head="" href="/site.webmanifest" rel="manifest"/>
+  <link color="#5bbad5" data-next-head="" href="/safari-pinned-tab.svg" rel="mask-icon"/>
+  <link as="image" data-next-head="" imagesrcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Farrow-right.42e8816e.png&amp;w=16&amp;q=75 1x" rel="preload"/>
+  <link as="image" data-next-head="" href="/_next/static/media/avatar.c6a6bd4f.svg" rel="preload"/>
+  <link as="image" data-next-head="" href="/images/courses/system-design-interview/design-consistent-hashing/figure-5-1-JYB5LSFH.svg" rel="preload"/>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" rel="stylesheet"/>
+  <style>
+   .katex {
+        font-size: 15px !important;
+        color: #000 !important;
+      }
+      .katex-display {
+        overflow: auto hidden;
+        padding: 10px 0;
+      }
+  </style>
+  <link as="script" href="/_next/static/chunks/3892-7bc5549e31e6db74.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/my-courses-43c3e051d4c0003e.js" rel="prefetch"/>
+  <link as="script" href="/_next/static/chunks/pages/index-4338ea953541cde2.js" rel="prefetch"/>
+  <style>
+   body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 40px; } img { max-width: 100%; }
+  </style>
+ </head>
+ <body>
+  <div id="__next">
+   <!--$-->
+   <!--/$-->
+   <div class="ant-layout css-133v4sd">
+    <main class="ant-layout-content css-133v4sd" style="margin-top: 64px;">
+     <div class="style_container__9mWse" id="content-container">
+      <div class="ant-layout ant-layout-has-sider style_learn__wJdK1 css-133v4sd">
+       <div class="ant-layout css-133v4sd" style="margin-left: 295px;">
+        <main class="ant-layout-content style_content__Qif_T css-133v4sd">
+         <div class="style_articleWrap__Xn2yv" id="content">
+          <article class="style_learnContent__K5K7M">
+           <p>
+            To achieve horizontal scaling, it is important to distribute requests/data efficiently and evenly across servers. Consistent hashing is a commonly used technique to achieve this goal. But first, let us take an in-depth look at the problem.
+           </p>
+           <h2 id="the-rehashing-problem">
+            The rehashing problem
+           </h2>
+           <p>
+            If you have
+            <em>
+             n
+            </em>
+            cache servers, a common way to balance the load is to use the following hash method:
+           </p>
+           <p>
+            <em>
+             serverIndex = hash(key) % N
+            </em>
+            , where
+            <em>
+             N
+            </em>
+            is the size of the server pool.
+           </p>
+           <p>
+            Let us use an example to illustrate how it works. As shown in Table 1, we have 4 servers and 8 string keys with their hashes.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               <strong>
+                key
+               </strong>
+              </th>
+              <th>
+               <strong>
+                hash
+               </strong>
+              </th>
+              <th>
+               <strong>
+                hash % 4
+               </strong>
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               key0
+              </td>
+              <td>
+               18358617
+              </td>
+              <td>
+               1
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key1
+              </td>
+              <td>
+               26143584
+              </td>
+              <td>
+               0
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key2
+              </td>
+              <td>
+               18131146
+              </td>
+              <td>
+               2
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key3
+              </td>
+              <td>
+               35863496
+              </td>
+              <td>
+               0
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key4
+              </td>
+              <td>
+               34085809
+              </td>
+              <td>
+               1
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key5
+              </td>
+              <td>
+               27581703
+              </td>
+              <td>
+               3
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key6
+              </td>
+              <td>
+               38164978
+              </td>
+              <td>
+               2
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key7
+              </td>
+              <td>
+               22530351
+              </td>
+              <td>
+               3
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p class="tableCaption">
+            Table 1
+           </p>
+           <p>
+            To fetch the server where a key is stored, we perform the modular operation
+            <em>
+             f(key) % 4
+            </em>
+            . For instance,
+            <em>
+             hash(key0) % 4 = 1
+            </em>
+            means a client must contact server 1 to fetch the cached data. Figure 1 shows the distribution of keys based on Table 1.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simple consistent hashing scheme for distributing keys across four servers.  The top line shows the formula `serverIndex = hash % 4`, indicating that a key's hash value (presumably a numerical representation generated from the key itself) is modulo-4'd to determine which server (indexed 0-3) it's assigned to. Below, four servers (`server 0`, `server 1`, `server 2`, `server 3`) are depicted as colored boxes, each associated with a server index (0, 1, 2, 3 respectively).  Underneath the servers, a list of keys (`key1`, `key0`, `key2`, `key5`, `key6`, `key7`) is shown, with some keys (e.g., `key1`, `key0`) visually associated with specific servers based on their implied hash value and the modulo operation.  The text 'keover does not luppo full SVG ikey6' appears to be a corrupted or incomplete label associated with `key6`, suggesting a potential issue with the image's OCR.  The overall diagram illustrates a basic load balancing strategy where keys are distributed across servers using a consistent hashing algorithm to ensure even distribution and minimize data movement during rebalancing." data-nimg="1" decoding="async" height="189" src="images/img_3728875523049676282.svg" style="color: transparent;" width="370"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 1
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            This approach works well when the size of the server pool is fixed, and the data distribution is even. However, problems arise when new servers are added, or existing servers are removed. For example, if server 1 goes offline, the size of the server pool becomes 3. Using the same hash function, we get the same hash value for a key. But applying modular operation gives us different server indexes because the number of servers is reduced by 1. We get the results as shown in Table 2 by applying
+            <em>
+             hash % 3
+            </em>
+            :
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               <strong>
+                key
+               </strong>
+              </th>
+              <th>
+               <strong>
+                hash
+               </strong>
+              </th>
+              <th>
+               <strong>
+                hash % 3
+               </strong>
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               key0
+              </td>
+              <td>
+               18358617
+              </td>
+              <td>
+               0
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key1
+              </td>
+              <td>
+               26143584
+              </td>
+              <td>
+               0
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key2
+              </td>
+              <td>
+               18131146
+              </td>
+              <td>
+               1
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key3
+              </td>
+              <td>
+               35863496
+              </td>
+              <td>
+               2
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key4
+              </td>
+              <td>
+               34085809
+              </td>
+              <td>
+               1
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key5
+              </td>
+              <td>
+               27581703
+              </td>
+              <td>
+               0
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key6
+              </td>
+              <td>
+               38164978
+              </td>
+              <td>
+               1
+              </td>
+             </tr>
+             <tr>
+              <td>
+               key7
+              </td>
+              <td>
+               22530351
+              </td>
+              <td>
+               0
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p class="tableCaption">
+            Table 2
+           </p>
+           <p>
+            Figure 2 shows the new distribution of keys based on Table 2.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simple consistent hashing scheme for distributing keys across three servers.  The top line shows the formula `serverIndex = hash % 3`, indicating that a key's hash value (modulo 3) determines its assigned server.  Below, 'Server Index' labels columns representing server indices 0, 1, and 2.  Corresponding to each index is a labeled server box ('server 0', 'server 1', 'server 2', and 'server 3' although only three are used in the hashing scheme).  The 'Keys' section lists example keys ('key0', 'key1', 'key2', 'key3', 'key4', 'key5', 'key6') which would be distributed across the servers based on their hash values.  For instance, `hash('key0') % 3` would likely result in 0, assigning `key0` to `server 0`, and similarly for other keys.  The visual arrangement shows a conceptual mapping of keys to servers using the modulo operation.  The presence of 'server 3' suggests potential future expansion beyond the current three-server setup." data-nimg="1" decoding="async" height="229" loading="lazy" src="images/img_688752738482932809.svg" style="color: transparent;" width="370"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 2
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            As shown in Figure 2, most keys are redistributed, not just the ones originally stored in the offline server (server 1). This means that when server 1 goes offline, most cache clients will connect to the wrong servers to fetch data. This causes a storm of cache misses. Consistent hashing is an effective technique to mitigate this problem.
+           </p>
+           <h2 id="consistent-hashing">
+            Consistent hashing
+           </h2>
+           <p>
+            Quoted from Wikipedia: "Consistent hashing is a special kind of hashing such that when a hash table is re-sized and consistent hashing is used, only k/n keys need to be remapped on average, where k is the number of keys, and n is the number of slots. In contrast, in most traditional hash tables, a change in the number of array slots causes nearly all keys to be remapped [1]”.
+           </p>
+           <h3 id="hash-space-and-hash-ring">
+            Hash space and hash ring
+           </h3>
+           <p>
+            Now we understand the definition of consistent hashing, let us find out how it works. Assume SHA-1 is used as the hash function f, and the output range of the hash function is:
+            <em>
+             x0, x1, x2, x3, …, xn
+            </em>
+            . In cryptography, SHA-1’s hash space goes from 0 to 2^160 - 1. That means
+            <em>
+             x0
+            </em>
+            corresponds to 0,
+            <em>
+             xn
+            </em>
+            corresponds to 2^160 – 1, and all the other hash values in the middle fall between 0 and 2^160 - 1. Figure 3 shows the hash space.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified diagram illustrating data processing or transformation.  A long, rectangular box, representing a system or process, is shown horizontally.  On the left, an arrow labeled 'x0' points downwards into the top of the box, indicating input data labeled 'x0' entering the system. On the right, an arrow labeled 'xn' points downwards into the top of the box from above, indicating output data labeled 'xn' exiting the system. The box itself contains the text 'Viewer does not support full SVG 1.1,' indicating that the original diagram was likely an SVG image that cannot be fully rendered by the current viewer.  The overall structure suggests a linear transformation where input 'x0' is processed within the system to produce output 'xn.'  No internal details of the processing within the box are visible." data-nimg="1" decoding="async" height="59" loading="lazy" src="images/img_1786671386101513919.svg" style="color: transparent;" width="500"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 3
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            By collecting both ends, we get a hash ring as shown in Figure 4:
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a simplified diagram illustrating a circular buffer or ring buffer data structure.  The circle depicts the buffer itself, a fixed-size memory region used for storing data.  A short vertical line segment inside the circle represents the current write pointer, indicating the location where the next data element will be written.  Two arrows point to the top of this vertical line, labeled 'x0' and 'xn'.  'x0' likely indicates the starting address or index of the buffer, while 'xn' represents the current write index, showing the location where the next data element will be written.  The data flows into the buffer at 'xn', and as the buffer fills, 'xn' moves around the circle.  Once 'xn' reaches the end, it wraps around to the beginning, overwriting older data if the buffer is full.  The absence of a read pointer suggests a simplified representation focusing solely on the write operation. The text 'Viewer does not support full SVG 1.1' at the bottom is a browser-related message indicating the image rendering limitations and is not part of the data structure itself." data-nimg="1" decoding="async" height="256" loading="lazy" src="images/img_1500680758324323230.svg" style="color: transparent;" width="203"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 4
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="hash-servers">
+            Hash servers
+           </h3>
+           <p>
+            Using the same hash function f, we map servers based on server IP or name onto the ring. Figure 5 shows that 4 servers are mapped on the hash ring.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a conceptual diagram illustrating a system of four servers (server 0, server 1, server 2, and server 3), each represented by a colored square on the left, and their arrangement in a ring topology.  The servers are also represented as nodes (s0, s1, s2, s3) in a circular gray line forming the ring.  Each node is color-coded to match its corresponding server label on the left.  A dark gray arrow points from the top to node s0, labeled 'f (server 0),' indicating a function or operation 'f' is performed on server 0.  The text 's0 = server 0...' to the right of the ring suggests that node s0 represents server 0 and potentially additional information associated with it.  The nodes are connected by the circular line, implying communication or data flow between them within the ring structure.  The bottom of the image contains a message indicating that the viewer does not support full SVG 1.1, which is likely a rendering issue unrelated to the core system representation." data-nimg="1" decoding="async" height="362" loading="lazy" src="images/img_3258237410129739292.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 5
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="hash-keys">
+            Hash keys
+           </h3>
+           <p>
+            One thing worth mentioning is that hash function used here is different from the one in “the rehashing problem,” and there is no modular operation. As shown in Figure 6, 4 cache keys (key0, key1, key2, and key3) are hashed onto the hash ring
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of components depicting a system architecture.  A gray circle forms the backbone, upon which four colored nodes (s0, s1, s2, s3) are placed equidistantly. These nodes, labeled s0, s1, s2, and s3, represent servers, with their corresponding server numbers (server 0, server 1, server 2, server 3) listed in colored boxes to the left.  The colors of the server boxes match the colors of the corresponding nodes on the circle. Four black nodes (k0, k1, k2, k3) are also placed on the circle, interspersed between the colored server nodes.  These black nodes likely represent keys or other control points within the system.  A text annotation 's0 = server 0s1...' to the right indicates that the s0 node's label is shorthand for a more complex identifier potentially including other server instances.  The gray circle connecting all nodes suggests a ring topology or a cyclical dependency between the components. No explicit information flow is shown, but the arrangement implies interaction or communication between adjacent nodes along the circle." data-nimg="1" decoding="async" height="336" loading="lazy" src="images/img_4246160935181345651.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 6
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="server-lookup">
+            Server lookup
+           </h3>
+           <p>
+            To determine which server a key is stored on, we go clockwise from the key position on the ring until a server is found. Figure 7 explains this process. Going clockwise,
+            <em>
+             key0
+            </em>
+            is stored on
+            <em>
+             server 0
+            </em>
+            ;
+            <em>
+             key1
+            </em>
+            is stored on
+            <em>
+             server 1
+            </em>
+            ;
+            <em>
+             key2
+            </em>
+            is stored on
+            <em>
+             server 2
+            </em>
+            and
+            <em>
+             key3
+            </em>
+            is stored on
+            <em>
+             server 3
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of nodes representing servers and keys, connected by a gray circular path.  Four colored nodes labeled `s0`, `s1`, `s2`, and `s3` represent servers, with `s0` (light purple) being explicitly identified as 'server 0s1...' suggesting it represents a composite of servers.  These server nodes are positioned along the outer edge of the circle. Four black nodes labeled `k0`, `k1`, `k2`, and `k3` represent keys and are located on the same circular path, but slightly inward from the server nodes.  Black arrows indicate the direction of information flow or connections.  `k0` connects to `s0`, `k3` connects to `s3`, `k2` connects to `s2`, and `k1` connects to `s1`.  A separate box on the left lists 'Servers' and shows four colored rectangles labeled 'server 0,' 'server 1,' 'server 2,' and 'server 3,' mirroring the colors of the corresponding server nodes in the circular diagram.  The overall structure suggests a ring topology with keys associated with each server, implying a system where keys control access to or interaction with the servers." data-nimg="1" decoding="async" height="356" loading="lazy" src="images/img_8078833500946984319.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 7
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="add-a-server">
+            Add a server
+           </h3>
+           <p>
+            Using the logic described above, adding a new server will only require redistribution of a fraction of keys.
+           </p>
+           <p>
+            In Figure 8, after a new
+            <em>
+             server 4
+            </em>
+            is added, only
+            <em>
+             key0
+            </em>
+            needs to be redistributed.
+            <em>
+             k1, k2,
+            </em>
+            and
+            <em>
+             k3
+            </em>
+            remain on the same servers. Let us take a close look at the logic. Before
+            <em>
+             server 4
+            </em>
+            is added,
+            <em>
+             key0
+            </em>
+            is stored on
+            <em>
+             server 0
+            </em>
+            . Now,
+            <em>
+             key0
+            </em>
+            will be stored on
+            <em>
+             server 4
+            </em>
+            because
+            <em>
+             server 4
+            </em>
+            is the first server it encounters by going clockwise from
+            <em>
+             key0
+            </em>
+            ’s position on the ring. The other keys are not redistributed based on consistent hashing algorithm.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of nodes representing servers and keys.  Five colored nodes labeled `s0`, `s1`, `s2`, `s3`, and `s4` represent servers 0 through 4 respectively, with their corresponding colors matching a legend on the left showing server labels and colors (purple, light blue, pink, orange, and green).  Five black nodes labeled `k0`, `k1`, `k2`, `k3`, and implicitly `k4` (though not explicitly labeled) represent keys.  A thick gray arc connects the server nodes in a circular fashion.  Solid arrows indicate a directed connection from `k0` to `s4` labeled 'keyo' and a dashed arrow shows a connection from `k0` to `s0`.  A text annotation states that `s0` represents server 0, server 1, and so on.  The keys are positioned between the servers, and the image suggests a relationship between keys and servers, possibly indicating ownership or access control.  The bottom of the image shows 'key2' indicating the label for key `k2`.  The text 'Viewer does not support full SVG 1.1' indicates a rendering issue." data-nimg="1" decoding="async" height="403" loading="lazy" src="images/img_861137380656351848.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 8
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="remove-a-server">
+            Remove a server
+           </h3>
+           <p>
+            When a server is removed, only a small fraction of keys require redistribution with consistent hashing. In Figure 9, when
+            <em>
+             server 1
+            </em>
+            is removed, only
+            <em>
+             key1
+            </em>
+            must be remapped to
+            <em>
+             server 2
+            </em>
+            . The rest of the keys are unaffected.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of nodes connected by a gray arc, representing a ring topology.  Four colored nodes labeled `s0`, `s1`, `s2`, and `s3` are positioned along the outer arc, representing servers.  These server nodes are color-coded and correspond to a list of servers on the left: `s0` (light purple) corresponds to `server 0` (light purple box), `s1` (light blue) to `server 1` (light blue box), `s2` (pink) to `server 2` (pink box), and `s3` (light orange) to `server 3` (light orange box). Four black nodes labeled `k0`, `k1`, `k2`, and `k3` are interspersed between the server nodes along the same arc, likely representing keys or control points. A thick black curved arrow points from `k2` to `s2`, suggesting a unidirectional data flow or control mechanism.  The text 's0 = server 0s1...' indicates that the `s0` node's label is an abbreviation representing a sequence of servers. The bottom of the image contains a message indicating that the viewer does not fully support the SVG format used to create the diagram." data-nimg="1" decoding="async" height="393" loading="lazy" src="images/img_2961210516035209966.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 9
+             </figcaption>
+            </div>
+           </figure>
+           <h3 id="two-issues-in-the-basic-approach">
+            Two issues in the basic approach
+           </h3>
+           <p>
+            The consistent hashing algorithm was introduced by Karger et al. at MIT [1]. The basic steps are:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Map servers and keys on to the ring using a uniformly distributed hash function.
+             </p>
+            </li>
+            <li>
+             <p>
+              To find out which server a key is mapped to, go clockwise from the key position until the first server on the ring is found.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Two problems are identified with this approach. First, it is impossible to keep the same size of partitions on the ring for all servers considering a server can be added or removed. A partition is the hash space between adjacent servers. It is possible that the size of the partitions on the ring assigned to each server is very small or fairly large. In Figure 10, if
+            <em>
+             s1
+            </em>
+            is removed,
+            <em>
+             s2’s
+            </em>
+            partition (highlighted with the bidirectional arrows) is twice as large as
+            <em>
+             s0
+            </em>
+            and
+            <em>
+             s3’s
+            </em>
+            partition.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of four servers (s0, s1, s2, s3) depicted as colored circles, labeled with 's' followed by a number.  These servers are positioned along a grey circular path.  To the left, a vertical stack of colored rectangular boxes labeled 'Servers' lists 'server 0,' 'server 1,' 'server 2,' and 'server 3,' seemingly corresponding to the colored circles on the ring.  A bright pink curved arrow indicates data flow, starting from server s1, proceeding to server s2, and then continuing to server s0.  The text 's0 = server 0s1...' suggests that server s0's identity incorporates information from servers 0 and 1.  At the bottom, a message 'Viewer does not support full SVG 1.1' indicates a limitation in rendering the diagram's full visual detail." data-nimg="1" decoding="async" height="342" loading="lazy" src="images/img_709036946459998361.svg" style="color: transparent;" width="617"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 10
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            Second, it is possible to have a non-uniform key distribution on the ring. For instance, if servers are mapped to positions listed in Figure 11, most of the keys are stored on
+            <em>
+             server 2
+            </em>
+            . However,
+            <em>
+             server 1
+            </em>
+            and
+            <em>
+             server 3
+            </em>
+            have no data.
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of servers, depicted as a gray ring with colored nodes representing individual servers.  Four colored nodes, labeled `s0`, `s1`, `s2`, and `s3`, are positioned along the ring's circumference, each representing a specific server.  `s0` is light purple, `s1` is light blue, `s2` is pink, and `s3` is light orange.  A text annotation next to `s0` clarifies that `s0` corresponds to `server 0s1...`, suggesting a naming convention.  Between the colored nodes are four uncolored, white circles along the ring, indicating potential additional server locations or connection points.  To the left of the circular arrangement, a vertical list displays four rectangular boxes, each labeled `server 0`, `server 1`, `server 2`, and `server 3`, respectively, mirroring the color scheme of the nodes on the ring and providing a key to their identification.  The bottom of the image contains a message indicating that the viewer does not support full SVG 1.1.  The overall diagram suggests a ring topology or a distributed system where servers are interconnected in a circular fashion." data-nimg="1" decoding="async" height="327" loading="lazy" src="images/img_8087955098902598698.svg" style="color: transparent;" width="549"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 11
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            A technique called virtual nodes or replicas is used to solve these problems.
+           </p>
+           <h3 id="virtual-nodes">
+            Virtual nodes
+           </h3>
+           <p>
+            A virtual node refers to the real node, and each server is represented by multiple virtual nodes on the ring. In Figure 12, both
+            <em>
+             server 0
+            </em>
+            and
+            <em>
+             server 1
+            </em>
+            have 3 virtual nodes. The 3 is arbitrarily chosen; and in real-world systems, the number of virtual nodes is much larger. Instead of using
+            <em>
+             s0
+            </em>
+            , we have
+            <em>
+             s0_0, s0_1
+            </em>
+            , and
+            <em>
+             s0_2
+            </em>
+            to represent
+            <em>
+             server 0
+            </em>
+            on the ring. Similarly,
+            <em>
+             s1_0, s1_1
+            </em>
+            , and
+            <em>
+             s1_2
+            </em>
+            represent server 1 on the ring. With virtual nodes, each server is responsible for multiple partitions. Partitions (edges) with label
+            <em>
+             s0
+            </em>
+            are managed by server 0. On the other hand, partitions with label
+            <em>
+             s1
+            </em>
+            are managed by
+            <em>
+             server 1
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram illustrating data flow between two servers (labeled 'server 0' and 'server 1') using a ring topology.  The diagram shows a circular arrangement of nodes, with four nodes colored purple (labeled `s0_0`, `s0_1`, `s0_2`, representing server 0's data) and four nodes colored light blue (`s1_0`, `s1_1`, `s1_2`, representing server 1's data).  A thick dark gray line connects these nodes in a circular fashion, representing the main data pathway.  Thinner lines, colored light purple and light blue, depict data transfer between specific nodes.  Light purple lines (labeled `s0`) represent data flow originating from server 0, while light blue lines (labeled `s1`) represent data flow from server 1.  For example, a light purple line connects `s0_2` to `s1_2`, indicating data transfer from server 0's second data point to server 1's second data point.  Similarly, a light blue line connects `s1_0` to `s0_0`, showing data transfer in the opposite direction.  The text 's0 = server 0s1...' suggests that the `s0` labels represent a composite data identifier combining data from both servers.  A note at the bottom indicates that the viewer does not fully support the SVG format used in the diagram." data-nimg="1" decoding="async" height="383" loading="lazy" src="images/img_494822933760344495.svg" style="color: transparent;" width="557"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 12
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            To find which server a key is stored on, we go clockwise from the key’s location and find the first virtual node encountered on the ring. In Figure 13, to find out which server
+            <em>
+             k0
+            </em>
+            is stored on, we go clockwise from
+            <em>
+             k0
+            </em>
+            ’s location and find virtual node
+            <em>
+             s1_1
+            </em>
+            , which refers to
+            <em>
+             server 1
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a system architecture diagram showing two servers, labeled 'server 0' (purple) and 'server 1' (cyan), and their interaction with a ring-shaped network.  The ring consists of six nodes:  three labeled `s0_0`, `s0_1`, `s0_2` (purple) representing instances on server 0, and three labeled `s1_0`, `s1_1`, `s1_2` (cyan) representing instances on server 1.  These nodes are arranged around a grey circular line, indicating a ring topology.  A separate black node, labeled `k0`, is connected to the ring and has a self-looping arrow pointing back to itself, suggesting a control or coordination function.  A text annotation near the top right clarifies that `s0` represents server 0 instances (`0s1...`), implying a naming convention.  The bottom of the diagram displays a message indicating that the viewer does not fully support the SVG format used to create the image." data-nimg="1" decoding="async" height="336" loading="lazy" src="images/img_5382038653351591831.svg" style="color: transparent;" width="557"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 13
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            As the number of virtual nodes increases, the distribution of keys becomes more balanced. This is because the standard deviation gets smaller with more virtual nodes, leading to balanced data distribution. Standard deviation measures how data are spread out. The outcome of an experiment carried out by online research [2] shows that with one or two hundred virtual nodes, the standard deviation is between 5% (200 virtual nodes) and 10% (100 virtual nodes) of the mean. The standard deviation will be smaller when we increase the number of virtual nodes. However, more spaces are needed to store data about virtual nodes. This is a tradeoff, and we can tune the number of virtual nodes to fit our system requirements.
+           </p>
+           <h3 id="find-affected-keys">
+            Find affected keys
+           </h3>
+           <p>
+            When a server is added or removed, a fraction of data needs to be redistributed. How can we find the affected range to redistribute the keys?
+           </p>
+           <p>
+            In Figure 14,
+            <em>
+             server 4
+            </em>
+            is added onto the ring. The affected range starts from
+            <em>
+             s4
+            </em>
+            (newly added node) and moves anticlockwise around the ring until a server is found (
+            <em>
+             s3
+            </em>
+            ). Thus, keys located between
+            <em>
+             s3
+            </em>
+            and
+            <em>
+             s4
+            </em>
+            need to be redistributed to
+            <em>
+             s4
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of nodes representing servers and keys.  Five colored nodes labeled `s0`, `s1`, `s2`, `s3`, and `s4` represent servers 0 through 4 respectively, with their corresponding colors matching a legend of rectangular server boxes on the left.  Five black nodes labeled `k0`, `k1`, `k2`, `k3`, and implicitly `k4` (though not explicitly labeled) represent keys.  A thick gray arc connects the server nodes in a circular fashion.  Solid arrows indicate a directed connection from `k0` to `s4` labeled 'keyo' and a dashed arrow shows a connection from `k0` to `s0`.  Another dashed arrow shows a connection from `s4` to `s0`. The text 's0 = server 0s1...' indicates that `s0` represents a composite or aggregated server.  The keys are positioned between the servers along the gray arc.  The overall structure suggests a ring topology with keys potentially acting as routing or access points between servers." data-nimg="1" decoding="async" height="403" loading="lazy" src="images/img_4509636813507547582.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 14
+             </figcaption>
+            </div>
+           </figure>
+           <p>
+            When a server (
+            <em>
+             s1
+            </em>
+            ) is removed as shown in Figure 15, the affected range starts from
+            <em>
+             s1
+            </em>
+            (removed node) and moves anticlockwise around the ring until a server is found (
+            <em>
+             s0
+            </em>
+            ). Thus, keys located between
+            <em>
+             s0
+            </em>
+            and
+            <em>
+             s1
+            </em>
+            must be redistributed to
+            <em>
+             s2
+            </em>
+            .
+           </p>
+           <figure class="py-1">
+            <div style="display: flex; justify-content: center;">
+             <img alt="Image represents a circular arrangement of nodes connected by a gray arc, representing a ring topology.  Four colored nodes labeled `s0`, `s1`, `s2`, and `s3` are positioned along the outer arc, representing servers.  `s0` is light purple, `s1` is light blue, `s2` is pink, and `s3` is light orange.  These server nodes are further identified by a text annotation stating `s0 = server 0s1...`, implying a naming convention. Four black-filled nodes labeled `k0`, `k1`, `k2`, and `k3` are placed at the intersections of the gray arc and the imaginary radii connecting the colored server nodes to the center. These `k` nodes likely represent key components or points within the system. A thick black curved arrow points from `k2` to `s2`, suggesting a unidirectional flow or dependency.  To the left, a rectangular box labeled 'Servers' lists four colored rectangles representing servers 0, 1, 2, and 3, mirroring the colors of the `s` nodes in the ring.  The bottom of the image contains a message indicating that the viewer does not fully support the SVG format used to create the diagram." data-nimg="1" decoding="async" height="393" loading="lazy" src="images/img_4894796177489976956.svg" style="color: transparent;" width="587"/>
+            </div>
+            <div style="display: flex; justify-content: center;">
+             <figcaption class="py-1">
+              Figure 15
+             </figcaption>
+            </div>
+           </figure>
+           <h2 id="wrap-up">
+            Wrap up
+           </h2>
+           <p>
+            In this chapter, we had an in-depth discussion about consistent hashing, including why it is needed and how it works. The benefits of consistent hashing include:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Minimized keys are redistributed when servers are added or removed.
+             </p>
+            </li>
+            <li>
+             <p>
+              It is easy to scale horizontally because data are more evenly distributed.
+             </p>
+            </li>
+            <li>
+             <p>
+              Mitigate hotspot key problem. Excessive access to a specific shard could cause server overload. Imagine data for Katy Perry, Justin Bieber, and Lady Gaga all end up on the same shard. Consistent hashing helps to mitigate the problem by distributing the data more evenly.
+             </p>
+            </li>
+           </ul>
+           <p>
+            Consistent hashing is widely used in real-world systems, including some notable ones:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Partitioning component of Amazon’s Dynamo database [3]
+             </p>
+            </li>
+            <li>
+             <p>
+              Data partitioning across the cluster in Apache Cassandra [4]
+             </p>
+            </li>
+            <li>
+             <p>
+              Discord chat application [5]
+             </p>
+            </li>
+            <li>
+             <p>
+              Akamai content delivery network [6]
+             </p>
+            </li>
+            <li>
+             <p>
+              Maglev network load balancer [7]
+             </p>
+            </li>
+           </ul>
+           <p>
+            Congratulations on getting this far! Now give yourself a pat on the back. Good job!
+           </p>
+           <h2 id="reference-materials">
+            Reference materials
+           </h2>
+           <p>
+            [1] Consistent hashing:
+            <br/>
+            <a href="https://en.wikipedia.org/wiki/Consistent_hashing" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://en.wikipedia.org/wiki/Consistent_hashing
+             </u>
+            </a>
+           </p>
+           <p>
+            [2] Consistent Hashing:
+            <br/>
+            <a href="https://tom-e-white.com/2007/11/consistent-hashing.html" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://tom-e-white.com/2007/11/consistent-hashing.html
+             </u>
+            </a>
+           </p>
+           <p>
+            [3] Dynamo: Amazon’s Highly Available Key-value Store:
+            <br/>
+            <a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+             </u>
+            </a>
+           </p>
+           <p>
+            [4] Cassandra - A Decentralized Structured Storage System:
+            <br/>
+            <a href="http://www.cs.cornell.edu/Projects/ladis2009/papers/Lakshman-ladis2009.PDF" rel="noopener noreferrer" target="_blank">
+             <u>
+              http://www.cs.cornell.edu/Projects/ladis2009/papers/Lakshman-ladis2009.PDF
+             </u>
+            </a>
+           </p>
+           <p>
+            [5] How Discord Scaled Elixir to 5,000,000 Concurrent Users:
+            <br/>
+            <a href="https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users
+             </u>
+            </a>
+           </p>
+           <p>
+            [6] CS168: The Modern Algorithmic Toolbox Lecture #1: Introduction and Consistent Hashing:
+            <br/>
+            <a href="http://theory.stanford.edu/~tim/s16/l/l1.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              http://theory.stanford.edu/~tim/s16/l/l1.pdf
+             </u>
+            </a>
+           </p>
+           <p>
+            [7] Maglev: A Fast and Reliable Software Network Load Balancer:
+            <br/>
+            <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44824.pdf" rel="noopener noreferrer" target="_blank">
+             <u>
+              https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44824.pdf
+             </u>
+            </a>
+           </p>
+           <div class="style_markCompleteWrap__YEi4w">
+            <button aria-pressed="false" class="style_markComplete__jnD2I">
+             <span class="style_emptySquare__K6JN0">
+             </span>
+             <span>
+              Mark as Complete
+             </span>
+            </button>
+           </div>
+          </article>
+         </div>
+        </main>
+        <div class="style_chatButtonContainer__NAl07">
+         <div class="style_chatButton__Gmdf9">
+          <img alt="ask alex" class="style_chatIcon___TOMK" data-nimg="1" decoding="async" height="81" loading="lazy" src="images/img_2346666373721248013.svg" style="color: transparent;" width="63"/>
+          <img alt="ask alex expend" class="style_chatIconExpend__SA0bp" data-nimg="1" decoding="async" height="122" loading="lazy" src="images/img_2588721561367293494.svg" style="color: transparent;" width="123"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div>
+  <next-route-announcer>
+   <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+   </p>
+  </next-route-announcer>
+  <div id="selection-ai-menu-container">
+  </div>
+ </body>
+</html>
