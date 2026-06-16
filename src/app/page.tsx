@@ -21,7 +21,7 @@ export default function HomePage() {
         {courses.map(course => (
           <Link key={course.slug} href={`/course/${encodeURIComponent(course.slug)}/${encodeURIComponent(course.lessons[0]?.slug || '')}`} style={{ textDecoration: 'none' }}>
             <div className="course-card">
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '8px', color: '#fff' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '8px', color: 'var(--text-primary)' }}>
                 {course.title}
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: 'auto' }}>

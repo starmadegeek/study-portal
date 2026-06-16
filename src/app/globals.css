@@ -1,5 +1,5 @@
 :root {
-  /* Premium Dark Theme Variables */
+  /* Premium Dark Theme Variables (Default) */
   --bg-base: #0f1115;
   --bg-sidebar: #16181d;
   --bg-hover: #ffffff0a;
@@ -19,6 +19,28 @@
   --transition-speed: 0.2s;
   --transition-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Image visibility fix for dark mode */
+  --img-bg: rgba(255, 255, 255, 0.05);
+  --img-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --bg-base: #ffffff;
+  --bg-sidebar: #f8f9fa;
+  --bg-hover: #00000008;
+  --bg-active: #0000000c;
+  
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+
+  --border-color: #e5e7eb;
+  
+  --img-bg: transparent;
+  --img-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 
 * {
@@ -36,6 +58,7 @@ body {
   line-height: 1.5;
   height: 100vh;
   overflow: hidden; /* Main window doesn't scroll, inner areas scroll */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -57,6 +80,7 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .sidebar-header {
@@ -68,7 +92,10 @@ a {
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .sidebar-header {
   background: linear-gradient(90deg, #fff, #a1a1aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -88,11 +115,8 @@ a {
   background: transparent;
 }
 .sidebar-content::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-active);
   border-radius: 10px;
-}
-.sidebar-content:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-content {
@@ -101,6 +125,7 @@ a {
   flex-direction: column;
   position: relative;
   min-width: 0;
+  background-color: var(--bg-base);
 }
 
 /* Accordion Course Group */
@@ -222,10 +247,14 @@ a {
   flex-direction: column;
 }
 
+[data-theme="light"] .course-card h3 {
+  color: var(--text-primary) !important;
+}
+
 .course-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 /* -------------------------------------
@@ -234,14 +263,15 @@ a {
 .lesson-content {
   font-size: 1.1rem;
   line-height: 1.75;
-  color: #d1d5db; /* A bit softer than pure white for reading */
+  color: var(--text-primary);
+  opacity: 0.9;
 }
 
 .lesson-content h1, 
 .lesson-content h2, 
 .lesson-content h3, 
 .lesson-content h4 {
-  color: #ffffff;
+  color: var(--text-primary);
   font-weight: 600;
   margin-top: 2em;
   margin-bottom: 0.75em;
@@ -257,13 +287,13 @@ a {
 }
 
 .lesson-content a {
-  color: var(--accent-hover);
+  color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-bottom var(--transition-speed);
 }
 .lesson-content a:hover {
-  border-bottom: 1px solid var(--accent-hover);
+  border-bottom: 1px solid var(--accent);
 }
 
 .lesson-content img {
@@ -272,7 +302,14 @@ a {
   height: auto;
   border-radius: 8px;
   margin: 2em auto;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  background-color: var(--img-bg);
+  box-shadow: var(--img-shadow);
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .lesson-content img[src$=".png"] {
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.5));
 }
 
 .lesson-content ul, 
@@ -301,13 +338,14 @@ a {
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
-  color: #e2e8f0;
+  color: var(--accent);
 }
 
 .lesson-content pre code {
   background-color: transparent;
   padding: 0;
   border-radius: 0;
+  color: var(--text-primary);
 }
 
 .lesson-content blockquote {
@@ -408,4 +446,23 @@ a {
 math {
   display: inline-block;
   padding: 0 0.2rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-hover);
+  color: var(--accent);
 }
