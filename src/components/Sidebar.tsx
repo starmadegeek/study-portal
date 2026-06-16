@@ -48,44 +48,34 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
   };
 
   return (
-    <>
-      <button 
-        className="sidebar-toggle-floating"
-        onClick={() => setIsCollapsed(!isCollapsed)}
-        aria-label="Toggle Sidebar"
-        data-visible={isCollapsed}
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </button>
-
-      <aside className="sidebar-wrapper" ref={sidebarRef} data-collapsed={isCollapsed}>
-        <div className="sidebar-header">
-          <div style={{ display: 'flex', alignItems: 'center', flex: 1, overflow: 'hidden' }}>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit', whiteSpace: 'nowrap' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', color: 'var(--accent)', flexShrink: 0}}>
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-              </svg>
-              <span className="sidebar-title-text">Study Portal</span>
-            </Link>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <ThemeToggle />
-            <button 
-              className="theme-toggle" 
-              onClick={() => setIsCollapsed(true)}
-              aria-label="Collapse Sidebar"
-              title="Collapse Sidebar"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-          </div>
+    <aside className="sidebar-wrapper" ref={sidebarRef} data-collapsed={isCollapsed}>
+      <div className="sidebar-header">
+        <div className="sidebar-brand-area" style={{ opacity: isCollapsed ? 0 : 1 }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit', whiteSpace: 'nowrap' }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', color: 'var(--accent)', flexShrink: 0}}>
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+            </svg>
+            <span className="sidebar-title-text">Study Portal</span>
+          </Link>
         </div>
-        <div className="sidebar-content">
-          {courses.map(course => (
+        
+        <div className="sidebar-controls">
+          {!isCollapsed && <ThemeToggle />}
+          <button 
+            className="sidebar-toggle-btn" 
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            aria-label={isCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+            title={isCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+            data-collapsed={isCollapsed}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d={isCollapsed ? "M9 18l6-6-6-6" : "M15 18l-6-6 6-6"} />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div className="sidebar-content" style={{ opacity: isCollapsed ? 0 : 1 }}>
+        {courses.map(course => (
             <div key={course.slug} className="course-group">
               <div 
                 className="course-title" 

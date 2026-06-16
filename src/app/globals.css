@@ -80,61 +80,65 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible; /* Changed from hidden to allow button to stick out if needed */
   flex-shrink: 0;
+  position: relative;
 }
 
 .sidebar-wrapper[data-collapsed="true"] {
-  width: 0;
-  border-right-width: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar-toggle-floating {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  width: 44px;
-  height: 44px;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: scale(0.8) translateX(-100px);
-  pointer-events: none;
-}
-
-.sidebar-toggle-floating[data-visible="true"] {
-  opacity: 1;
-  transform: scale(1) translateX(0);
-  pointer-events: auto;
-}
-
-.sidebar-toggle-floating:hover {
-  background-color: var(--accent-hover);
-  transform: scale(1.1);
+  width: 60px; /* Mini-rail width */
 }
 
 .sidebar-header {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  justify-content: space-between;
+  padding: 0 16px; /* Reduced from 24px */
   border-bottom: 1px solid var(--border-color);
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: -0.02em;
   color: var(--text-primary);
+  overflow: hidden;
+}
+
+.sidebar-brand-area {
+  flex: 1;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sidebar-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--accent);
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  transition: opacity 0.2s ease;
 }
 
 [data-theme="dark"] .sidebar-header {
