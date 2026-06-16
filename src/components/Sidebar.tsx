@@ -122,6 +122,7 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
             </div>
           ))}
         </div>
-      </aside>
+      )}
+    </aside>
   );
 }
