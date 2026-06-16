@@ -12,6 +12,7 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
   const activeItemRef = useRef<HTMLAnchorElement>(null);
   
   const [expandedCourses, setExpandedCourses] = useState<Record<string, boolean>>({});
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   // Initialize and update expanded state based on pathname
   useEffect(() => {
@@ -47,59 +48,88 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
   };
 
   return (
-    <aside className="sidebar-wrapper" ref={sidebarRef}>
-      <div className="sidebar-header" style={{ justifyContent: 'space-between' }}>
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit' }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', color: 'var(--accent)'}}>
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-          </svg>
-          Study Portal
-        </Link>
-        <ThemeToggle />
-      </div>
-      <div className="sidebar-content">
-        {courses.map(course => (
-          <div key={course.slug} className="course-group">
-            <div 
-              className="course-title" 
-              onClick={() => toggleCourse(course.slug)}
-              data-expanded={expandedCourses[course.slug]}
-            >
-              <span style={{ flex: 1, marginRight: '8px' }}>{course.title}</span>
-              <svg 
-                className="course-icon" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2"
-              >
-                <path d="M9 18l6-6-6-6" />
+    <>
+      <button 
+        className="sidebar-toggle-floating"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        aria-label="Toggle Sidebar"
+        data-visible={isCollapsed}
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+
+      <aside className="sidebar-wrapper" ref={sidebarRef} data-collapsed={isCollapsed}>
+        <div className="sidebar-header">
+          <div style={{ display: 'flex', alignItems: 'center', flex: 1, overflow: 'hidden' }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit', whiteSpace: 'nowrap' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', color: 'var(--accent)', flexShrink: 0}}>
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
               </svg>
-            </div>
-            <ul 
-              className="lesson-list" 
-              data-expanded={expandedCourses[course.slug]}
-            >
-              {course.lessons.map(lesson => {
-                const href = `/course/${encodeURIComponent(course.slug)}/${encodeURIComponent(lesson.slug)}`;
-                const isActive = pathname === href;
-                return (
-                  <li key={lesson.slug}>
-                    <Link 
-                      href={href} 
-                      className="lesson-item" 
-                      data-active={isActive}
-                      ref={isActive ? activeItemRef : null}
-                    >
-                      {lesson.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+              <span className="sidebar-title-text">Study Portal</span>
+            </Link>
           </div>
-        ))}
-      </div>
-    </aside>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <ThemeToggle />
+            <button 
+              className="theme-toggle" 
+              onClick={() => setIsCollapsed(true)}
+              aria-label="Collapse Sidebar"
+              title="Collapse Sidebar"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="sidebar-content">
+          {courses.map(course => (
+            <div key={course.slug} className="course-group">
+              <div 
+                className="course-title" 
+                onClick={() => toggleCourse(course.slug)}
+                data-expanded={expandedCourses[course.slug]}
+              >
+                <span style={{ flex: 1, marginRight: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {course.title}
+                </span>
+                <svg 
+                  className="course-icon" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </div>
+              <ul 
+                className="lesson-list" 
+                data-expanded={expandedCourses[course.slug]}
+              >
+                {course.lessons.map(lesson => {
+                  const href = `/course/${encodeURIComponent(course.slug)}/${encodeURIComponent(lesson.slug)}`;
+                  const isActive = pathname === href;
+                  return (
+                    <li key={lesson.slug}>
+                      <Link 
+                        href={href} 
+                        className="lesson-item" 
+                        data-active={isActive}
+                        ref={isActive ? activeItemRef : null}
+                      >
+                        {lesson.title}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </aside>
+    </>
   );
 }
