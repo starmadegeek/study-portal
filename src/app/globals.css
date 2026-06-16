@@ -95,13 +95,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px; /* Reduced from 24px */
+  padding: 0 12px; /* Balanced padding */
   border-bottom: 1px solid var(--border-color);
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  overflow: hidden;
+}
+
+.sidebar-wrapper[data-collapsed="true"] .sidebar-header {
+  padding: 0; /* Clear padding to center button in rail */
 }
 
 .sidebar-brand-area {

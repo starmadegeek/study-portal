@@ -49,17 +49,19 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
 
   return (
     <aside className="sidebar-wrapper" ref={sidebarRef} data-collapsed={isCollapsed}>
-      <div className="sidebar-header">
-        <div className="sidebar-brand-area" style={{ opacity: isCollapsed ? 0 : 1 }}>
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit', whiteSpace: 'nowrap' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', color: 'var(--accent)', flexShrink: 0}}>
-              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-            </svg>
-            <span className="sidebar-title-text">Study Portal</span>
-          </Link>
-        </div>
+      <div className="sidebar-header" style={{ justifyContent: isCollapsed ? 'center' : 'space-between' }}>
+        {!isCollapsed && (
+          <div className="sidebar-brand-area">
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit', whiteSpace: 'nowrap' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', color: 'var(--accent)', flexShrink: 0}}>
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+              </svg>
+              <span className="sidebar-title-text">Study Portal</span>
+            </Link>
+          </div>
+        )}
         
-        <div className="sidebar-controls">
+        <div className="sidebar-controls" style={{ width: isCollapsed ? '100%' : 'auto', justifyContent: 'center' }}>
           {!isCollapsed && <ThemeToggle />}
           <button 
             className="sidebar-toggle-btn" 
@@ -74,8 +76,9 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
           </button>
         </div>
       </div>
-      <div className="sidebar-content" style={{ opacity: isCollapsed ? 0 : 1 }}>
-        {courses.map(course => (
+      {!isCollapsed && (
+        <div className="sidebar-content">
+          {courses.map(course => (
             <div key={course.slug} className="course-group">
               <div 
                 className="course-title" 
