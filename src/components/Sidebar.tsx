@@ -120,6 +120,5 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
           ))}
         </div>
       </aside>
-    </>
   );
 }
