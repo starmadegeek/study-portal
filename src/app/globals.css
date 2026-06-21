@@ -21,8 +21,8 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   /* Image visibility fix for dark mode */
-  --img-bg: rgba(255, 255, 255, 0.05);
-  --img-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  --img-bg: #e5e7eb; /* Light background so dark text is readable in transparent images */
+  --img-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="light"] {
@@ -175,6 +175,7 @@ a {
   position: relative;
   min-width: 0;
   background-color: var(--bg-base);
+  overflow-y: auto;
 }
 
 /* Accordion Course Group */
@@ -357,9 +358,7 @@ a {
   transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .lesson-content img[src$=".png"] {
-  filter: drop-shadow(0 0 1px rgba(255,255,255,0.5));
-}
+
 
 .lesson-content ul, 
 .lesson-content ol {

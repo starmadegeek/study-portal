@@ -5,6 +5,8 @@ import path from 'path';
 import * as cheerio from 'cheerio';
 import Link from 'next/link';
 import TabsManager from '@/components/TabsManager';
+import { getCompletedLessons } from '@/app/actions/progress';
+import MarkCompleteButton from '@/components/MarkCompleteButton';
 
 export async function generateStaticParams() {
   const courses = getCourses();
@@ -31,6 +33,9 @@ export default async function LessonPage({
   const courses = getCourses();
   const course = courses.find((c) => c.slug === courseSlug);
   const lesson = course?.lessons.find((l) => l.slug === lessonSlug);
+
+  const completedLessons = await getCompletedLessons(courseSlug);
+  const isCompleted = completedLessons.some((l: { lessonSlug: string }) => l.lessonSlug === lessonSlug);
 
   if (!course || !lesson) {
     notFound();
@@ -115,6 +120,21 @@ export default async function LessonPage({
     container.find('[aria-selected="false"]').remove();
     container.find('[style*="display: none"]').remove();
     container.find('[style*="display:none"]').remove();
+
+    // Remove native ByteByteGo pagination and mark complete buttons
+    container.find('div, button, a').each((i, el) => {
+      const $el = $(el);
+      const text = $el.text().trim();
+      if (
+        text === 'Mark as Complete' || 
+        text === '← Previous Lesson' || 
+        text === 'Mark Complete & Continue →' ||
+        text.includes('Previous Lesson') ||
+        text.includes('Mark Complete & Continue')
+      ) {
+        $el.remove();
+      }
+    });
 
     // Remove specific classes so native Next.js CSS takes over cleanly, EXCEPT our custom tabs and their contents
     container.find('*').each((i, el) => {
@@ -211,15 +231,19 @@ export default async function LessonPage({
           ) : <div />}
           
           {nextLesson ? (
-            <Link 
-              href={`/course/${course.slug}/${nextLesson.slug}`}
-              className="pagination-btn hover-glow"
-              style={{ textAlign: 'right' }}
-            >
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Next Lesson →</div>
-              <div style={{ fontWeight: 500, marginTop: '4px', color: 'var(--accent)' }}>{nextLesson.title}</div>
-            </Link>
-          ) : <div />}
+            <MarkCompleteButton 
+              courseSlug={course.slug}
+              lessonSlug={lesson.slug}
+              nextLessonSlug={nextLesson.slug}
+              isCompleted={isCompleted}
+            />
+          ) : (
+            <MarkCompleteButton 
+              courseSlug={course.slug}
+              lessonSlug={lesson.slug}
+              isCompleted={isCompleted}
+            />
+          )}
         </div>
       </div>
     </div>

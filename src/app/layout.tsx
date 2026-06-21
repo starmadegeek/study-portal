@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar";
-import { getCourses } from "@/lib/courses";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: "ByteByteGo | Study Portal",
-  description: "Offline study portal for ByteByteGo courses.",
+  title: "Study Portal",
+  description: "Study portal for your courses.",
 };
 
 export default function RootLayout({
@@ -13,8 +12,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const courses = getCourses();
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -39,12 +36,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="app-container">
-          <Sidebar courses={courses} />
-          <main className="main-content fade-in">
-            {children}
-          </main>
-        </div>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

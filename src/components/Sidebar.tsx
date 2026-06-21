@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Course, Lesson } from '../lib/types';
 import ThemeToggle from './ThemeToggle';
+import AuthButton from './AuthButton';
 
-export default function Sidebar({ courses }: { courses: Course[] }) {
+export default function Sidebar({ courses, completedLessons = [] }: { courses: Course[], completedLessons?: { courseSlug: string, lessonSlug: string }[] }) {
   const pathname = usePathname();
   const sidebarRef = useRef<HTMLDivElement>(null);
   const activeItemRef = useRef<HTMLAnchorElement>(null);
@@ -105,6 +106,7 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
                 {course.lessons.map(lesson => {
                   const href = `/course/${encodeURIComponent(course.slug)}/${encodeURIComponent(lesson.slug)}`;
                   const isActive = pathname === href;
+                  const isCompleted = completedLessons.some(c => c.courseSlug === course.slug && c.lessonSlug === lesson.slug);
                   return (
                     <li key={lesson.slug}>
                       <Link 
@@ -113,7 +115,14 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
                         data-active={isActive}
                         ref={isActive ? activeItemRef : null}
                       >
-                        {lesson.title}
+                        <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'space-between' }}>
+                          <span>{lesson.title}</span>
+                          {isCompleted && (
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          )}
+                        </div>
                       </Link>
                     </li>
                   );
@@ -121,6 +130,12 @@ export default function Sidebar({ courses }: { courses: Course[] }) {
               </ul>
             </div>
           ))}
+        </div>
+      )}
+      
+      {!isCollapsed && (
+        <div style={{ padding: '16px', borderTop: '1px solid var(--border-color)', marginTop: 'auto' }}>
+          <AuthButton />
         </div>
       )}
     </aside>
